@@ -8,14 +8,44 @@
       with_items:
         - wget
         - vim
+        - bash
+        - bash-completion
+        - ant
+        - maven
+        - pstree
+        - oath-toolkit
+        - gs
+        - watch
+        - graphviz
+        - docker
+        - boot2docker
+        - coreutils
+        - tree
+        - iftop
+        - pandoc    # Used to build the documentation
+        - hub       # Github extension
+        - qemu
+        - rbenv
+        - ruby-build
+        - ssh-copy-id
+        - dos2unix
 
     - name: Install apps with brew-cask
       homebrew_cask: name={{ item }} state=present
       with_items:
-      #      - google-chrome
-      #      - firefox
-      #      - sublime-text
-      #      - transmit
-            - atom
-            - iterm2
-            - aerial
+        - google-chrome
+        - firefox
+        # File management
+        - transmit
+        - path-finder
+        - dropbox
+        # Coding
+        - iterm2
+        - sourcetree
+        # Text editors
+        - sublime-text
+        - atom
+        # Screen saver
+        - aerial
+        # Other
+        - 1password

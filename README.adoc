@@ -8,7 +8,7 @@ OS X environment provisioning using Ansible.
 ----
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" # <1>
 brew install ansible # <2>
-mkdir -Rf ~/git
+mkdir -p ~/git
 cd ~/git
 git clone https://github.com/Maarc/ansiblOSX # <3>
 cd ansiblOSX
