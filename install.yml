@@ -8,28 +8,29 @@
       with_items:
         - ant
         - ack
-        - wget
-        - vim
         - bash
         - bash-completion
-        - maven
-        - pstree
-        - oath-toolkit
-        - gs
-        - watch
-        - graphviz
-        - docker
         - boot2docker
+        - docker
         - coreutils
-        - tree
-        - iftop
-        - pandoc    # Used to build the documentation
+        - dos2unix
+        - graphviz
+        - gs
         - hub       # Github extension
+        - iftop
+        - maven
+        - oath-toolkit
+        - pandoc    # Used to build the documentation
+        - pstree
         - qemu
         - rbenv
         - ruby-build
         - ssh-copy-id
-        - dos2unix
+        - tree
+        - vagrant-completion
+        - vim
+        - watch
+        - wget
 
     - name: Install applications with brew-cask
       homebrew_cask: name={{ item }} state=present
