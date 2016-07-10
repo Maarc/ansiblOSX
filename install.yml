@@ -5,147 +5,26 @@
   tasks:
     - name: Install libraries with homebrew (brew)
       homebrew: name={{ item }} state=present
-      with_items:
-        - ant
-        - ack
-        - bash
-        - bash-completion
-        - boot2docker
-        - docker
-        - coreutils
-        - dos2unix
-        - graphviz
-        - gs
-        - hub       # Github extension
-        - iftop
-        - maven
-        - oath-toolkit
-        - pandoc    # Used to build the documentation
-        - pstree
-        - qemu
-        - rbenv
-        - ruby-build
-        - ssh-copy-id
-        - tree
-        - vim
-        - watch
-        - wget
+      with_items: homebrew_libraries
 
     - name: Install applications with brew-cask
       homebrew_cask: name={{ item }} state=present
-      with_items:
-
-        # System
-        - appcleaner
-        - cleanmymac
-        - alfred
-        - onyx
-        - spectacle     # windows management
-        - xquartz
-        - iterm2
-        - synergy
-
-        # Internet
-        - google-chrome
-        - firefox
-        - torbrowser
-
-        # File management
-        - transmit
-        - path-finder
-        - dropbox
-        - google-drive
-        - beyond-compare
-        - gemini
-
-        # Coding
-        - iterm2
-        - sourcetree
-        - jd-gui
-        - pycharm
-        - eclipse-jee
-
-        # Office
-        - sublime-text
-        - atom
-        - gitbook-editor
-        - libreoffice
-        - evernote
-        - balsamiq-mockups
-        - things
-        - caffeine
-        - flycut
-        - fantastical
-        # - plain-clip   -> not working currently
-        - projectlibre
-
-        # Virtualisation
-        - vagrant
-        - virtualbox
-
-        # Screen saver
-        - aerial
-
-        # Media
-        - spotify
-        - vlc
-        - calibre
-        - adobe-reader
-        - flash
-        - handbrake
-        - kindle
-        - silverlight
-
-        # Communication
-        - limechat
-        - skype
-        - telegram
-
-        # Security
-        - 1password
-        - wireshark
-        - owasp-zap
-        - nmap
-        - viscosity
-        - hands-off
-
-        # Draw
-        - inkscape
-        - gimp
-        - dia
-
-        # Optional
-        # - macupdate-desktop
-        # - blue-jeans-launcher
-        # - blue-jeans-browser-plugin
-        # - camtasia
-        # - capture-one
-        # - reflector
-        # - vmware-horizon-client
-
-
-### iterm2 bash integration:
-# curl -L https://iterm2.com/misc/install_shell_integration.sh | bash
-
-## GCViewer app
-## Docfetcher
-## Plot2
-# Keynote + aperture + numbers + pages
-
-## Add malewarebyte
-# https://www.malwarebytes.com/mac-download/
-
-## cakewall
-## Camtasia
-## Cobook
-## Betterzip
-
-### Not interesting anymore
-## "ControlAir" -> control desktop with gestures
+      with_items: homebrew_cask_applications
 
     - name: Install gems
       gem: name={{item.name}} pre_release={{item.pre}} state=present
-      with_items:
-        - { name: asciidoctor-pdf, pre: true }
-        - { name: coderay, pre: false }
-        - { name: pygments.rb, pre: false }
+      with_items: gems
+
+    - name: Remove icons from Dock
+      shell: dockutil --remove '{{ item }}'
+      ignore_errors: true
+      with_items: dockitems_to_remove
+
+
+    - name: Check if items in dock exist
+      shell: dockutil --find '{{ item.name }}' || dockutil --add '{{ item.path }}'
+      with_items: dockitems_to_persist
+
+    - name: Fix order
+      shell: dockutil --move '{{ item.name }}' --position {{ item.pos }}
+      with_items: dockitems_to_persist

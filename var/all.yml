@@ -1,0 +1,245 @@
+---
+
+homebrew_libraries:
+  - ant
+  - ack
+  - bash
+  - bash-completion
+  - boot2docker
+  - docker
+  - dockutil    # https://github.com/kcrawford/dockutil
+  - coreutils
+  - dos2unix
+  - graphviz
+  - gs
+  - hub       # Github extension
+  - iftop
+  - maven
+  - oath-toolkit
+  - pandoc    # Used to build the documentation
+  - pstree
+  - qemu
+  - rbenv
+  - ruby-build
+  - ssh-copy-id
+  - tree
+  - vim
+  - watch
+  - wget
+
+homebrew_cask_applications:
+  # System
+  - appcleaner
+  - cleanmymac
+  - alfred
+  - onyx
+  - spectacle     # windows management
+  - xquartz
+  - iterm2
+  - synergy
+
+  # Internet
+  - google-chrome
+  - firefox
+  - torbrowser
+
+  # File management
+  - transmit
+  - path-finder
+  - dropbox
+  - google-drive
+  - beyond-compare
+  - gemini
+
+  # Coding
+  - iterm2
+  - sourcetree
+  - jd-gui
+  - pycharm
+  - eclipse-jee
+
+  # Office
+  - sublime-text
+  - atom
+  - gitbook-editor
+  - libreoffice
+  - evernote
+  - balsamiq-mockups
+  - things
+  - caffeine
+  - flycut
+  - fantastical
+  # - plain-clip   -> not working currently
+  - projectlibre
+
+  # Virtualisation
+  - vagrant
+  - virtualbox
+
+  # Screen saver
+  - aerial
+
+  # Media
+  - spotify
+  - vlc
+  - calibre
+  - adobe-reader
+  - flash
+  - handbrake
+  - kindle
+  - silverlight
+
+  # Communication
+  - limechat
+  - skype
+  - telegram
+
+  # Security
+  - 1password
+  - wireshark
+  - owasp-zap
+  - nmap
+  - viscosity
+  - hands-off
+
+  # Draw
+  - inkscape
+  - gimp
+  - dia
+
+  # Optional
+  # - macupdate-desktop
+  # - blue-jeans-launcher
+  # - blue-jeans-browser-plugin
+  # - camtasia
+  # - capture-one
+  # - reflector
+  # - vmware-horizon-client
+
+
+### iterm2 bash integration:
+# curl -L https://iterm2.com/misc/install_shell_integration.sh | bash
+
+## GCViewer app
+## Docfetcher
+## Plot2
+# Keynote + aperture + numbers + pages
+
+## Add malewarebyte
+# https://www.malwarebytes.com/mac-download/
+
+## cakewall
+## Camtasia
+## Cobook
+## Betterzip
+
+### Not interesting anymore
+## "ControlAir" -> control desktop with gestures
+
+gems:
+  - { name: asciidoctor-pdf, pre: true }
+  - { name: coderay, pre: false }
+  - { name: pygments.rb, pre: false }
+
+dockitems_to_remove:
+  - Finder
+  - Launchpad
+  - Mail
+  - Safari
+  - Contacts
+  - Notes
+  - Reminders
+  - Maps
+  - Photos
+  - Messages
+  - FaceTime
+  - iTunes
+  - iBooks
+  - Calendar
+
+dockitems_to_persist:
+  - name: Path Finder
+    path: "/Applications/Path Finder.app"
+    pos: 1
+  - name: Google Chrome
+    path: "/Applications/Google Chrome.app"
+    pos: 2
+  - name: Firefox
+    path: "/Applications/Firefox.app"
+    pos: 3
+  - name: Things
+    path: /Applications/Things.app
+    pos: 4
+  - name: 1Password
+    path: /Applications/1Password 6.app
+    pos: 5
+  - name: Spotify
+    path: /Applications/Spotify.app
+    pos: 6
+  - name: iTerm
+    path: /Applications/iTerm.app
+    pos: 7
+  - name: Atom
+    path: /Applications/Atom.app
+    pos: 8
+  - name: Sublime
+    path: /Applications/Sublime Text.app
+    pos: 9
+  - name: Calibre
+    path: /Applications/calibre.app
+    pos: 10
+  - name: Evernote
+    path: /Applications/Evernote.app
+    pos: 11
+  - name: SourceTree
+    path: /Applications/SourceTree.app
+    pos: 12
+  # Docfetcher
+  - name: Beyond Compare
+    path: /Applications/Beyond Compare.app
+    pos: 13
+  - name: Transmit
+    path: /Applications/Transmit.app
+    pos: 14
+  - name: Telegram
+    path: /Applications/Telegram.app
+    pos: 15
+  - name: Skype
+    path: /Applications/Skype.app
+    pos: 16
+  - name: LimeChat
+    path: /Applications/LimeChat.app
+    pos: 17
+  - name: Eclipse
+    path: /Applications/Eclipse.app
+    pos: 18
+  - name: PyCharm
+    path: /Applications/PyCharm.app
+    pos: 19
+  - name: JD-GUI
+    path: /Applications/JD-GUI.app
+    pos: 20
+  - name: Balsamiq Mockups 3
+    path: /Applications/Balsamiq Mockups 3.app
+    pos: 21
+  - name: VirtualBox
+    path: /Applications/VirtualBox.app
+    pos: 22
+  - name: Wireshark
+    path: /Applications/Wireshark.app
+    pos: 23
+  - name: OWASP ZAP
+    path: /Applications/OWASP ZAP.app
+    pos: 24
+  - name: CleanMyMac 3
+    path: /Applications/CleanMyMac 3.app
+    pos: 25
+  - name: Gemini
+    path: /Applications/Gemini 2.app
+    pos: 26
+  - name: OnyX
+    path: /Applications/OnyX.app
+    pos: 27
+    #  - name: Slack
+    #    path: /Applications/Slack.app
+    #    pos:
