@@ -76,7 +76,7 @@
         - caffeine
         - flycut
         - fantastical
-        - plain-clip
+        # - plain-clip   -> not working currently
         - projectlibre
 
         # Virtualisation
