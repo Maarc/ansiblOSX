@@ -146,6 +146,6 @@
     - name: Install gems
       gem: name={{item.name}} pre_release={{item.pre}} state=present
       with_items:
-        - { name: "asciidoctor-pdf", pre=yes }
-        - { name: "coderay", pre=no }
-        - { name: "pygments.rb", pre=no }
+        - { name: asciidoctor-pdf, pre: true }
+        - { name: coderay, pre: false }
+        - { name: pygments.rb, pre: false }
