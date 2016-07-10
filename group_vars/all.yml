@@ -233,7 +233,7 @@ dockitems_to_persist:
   - name: CleanMyMac 3
     path: /Applications/CleanMyMac 3.app
     pos: 25
-  - name: Gemini
+  - name: Gemini 2
     path: /Applications/Gemini 2.app
     pos: 26
   - name: OnyX
