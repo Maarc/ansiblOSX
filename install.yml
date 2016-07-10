@@ -65,10 +65,6 @@
         - limechat
         - skype
         - telegram
-        # Draw
-        - inkscape
-        - gimp
-        - dia
         # Security
         - 1password
         - wireshark
@@ -79,3 +75,9 @@
         - cleanmymac
         - alfred
         - onyx
+        - spectacle     # windows management
+        - xquartz
+        # Draw
+        - inkscape
+        - gimp
+        - dia
