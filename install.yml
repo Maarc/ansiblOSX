@@ -47,7 +47,7 @@
         # Internet
         - google-chrome
         - firefox
-        - torbrowsers
+        - torbrowser
 
         # File management
         - transmit
