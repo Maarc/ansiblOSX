@@ -33,6 +33,7 @@
     - name: Install apps with brew-cask
       homebrew_cask: name={{ item }} state=present
       with_items:
+
         # System
         - appcleaner
         - cleanmymac
@@ -46,6 +47,7 @@
         # Internet
         - google-chrome
         - firefox
+        - torbrowsers
 
         # File management
         - transmit
@@ -65,6 +67,7 @@
         # Office
         - sublime-text
         - atom
+        - gitbook-editor
         - libreoffice
         - evernote
         - balsamiq-mockups
@@ -72,6 +75,8 @@
         - caffeine
         - flycut
         - fantastical
+        - plain-clip
+        - projectlibre
 
         # Virtualisation
         - vagrant
@@ -86,6 +91,9 @@
         - calibre
         - adobe-reader
         - flash
+        - handbrake
+        - kindle
+        - silverlight
 
         # Communication
         - limechat
@@ -107,3 +115,29 @@
 
         # Optional
         # - macupdate-desktop
+        # - blue-jeans-launcher
+        # - blue-jeans-browser-plugin
+        # - camtasia
+        # - capture-one
+        # - reflector
+        # - vmware-horizon-client
+
+
+### iterm2 bash integration:
+# curl -L https://iterm2.com/misc/install_shell_integration.sh | bash
+
+## GCViewer app
+## Docfetcher
+## Plot2
+# Keynote + aperture + numbers + pages
+
+## Add malewarebyte
+# https://www.malwarebytes.com/mac-download/
+
+## cakewall
+## Camtasia
+## Cobook
+## Betterzip
+
+### Not interesting anymore
+## "ControlAir" -> control desktop with gestures
