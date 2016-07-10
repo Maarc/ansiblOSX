@@ -142,7 +142,6 @@ gems:
   - { name: pygments.rb, pre: false }
 
 dockitems_to_remove:
-  - Finder
   - Launchpad
   - Mail
   - Safari
@@ -240,6 +239,12 @@ dockitems_to_persist:
   - name: OnyX
     path: /Applications/OnyX.app
     pos: 27
+  - name: App Store
+    path: /Applications/App Store.app
+    pos: 28
+  - name: System Preferences
+    path: /Applications/System Preferences.app
+    pos: 29
     #  - name: Slack
     #    path: /Applications/Slack.app
     #    pos:
