@@ -20,6 +20,11 @@
       ignore_errors: true
       with_items: '{{dockitems_to_remove}}'
 
+    - name: Remove icons from Dock
+      shell: dockutil --remove '{{ item.name }}'
+      ignore_errors: true
+      with_items: '{{dockitems_to_persist}}'
+
     - name: Check if items in dock exist
       shell: dockutil --find '{{ item.name }}' || dockutil --add '{{ item.path }}'
       with_items: '{{dockitems_to_persist}}'
