@@ -39,13 +39,43 @@
         - transmit
         - path-finder
         - dropbox
+        - beyond-compare
+        - gemini
         # Coding
         - iterm2
         - sourcetree
         # Text editors
         - sublime-text
         - atom
+        # Virtualisation
+        - vagrant
+        - virtualbox
+        # Task management
+        - things
         # Screen saver
         - aerial
         # Other
+        - evernote
+        - balsamiq-mockups
+        - jd-gui
+        # Media
+        - spotify
+        - vlc
+        # Communication
+        - limechat
+        - skype
+        - telegram
+        # Draw
+        - inkscape
+        - gimp
+        - dia
+        # Security
         - 1password
+        - wireshark
+        - owasp-zap
+        - nmap
+        # System
+        - appcleaner
+        - cleanmymac
+        - alfred
+        - onyx
