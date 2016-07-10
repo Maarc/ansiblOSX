@@ -181,10 +181,10 @@ dockitems_to_persist:
   - name: Atom
     path: /Applications/Atom.app
     pos: 8
-  - name: Sublime
+  - name: Sublime Text
     path: /Applications/Sublime Text.app
     pos: 9
-  - name: Calibre
+  - name: calibre
     path: /Applications/calibre.app
     pos: 10
   - name: Evernote
