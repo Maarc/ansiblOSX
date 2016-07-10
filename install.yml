@@ -27,7 +27,6 @@
         - ruby-build
         - ssh-copy-id
         - tree
-        - vagrant-completion
         - vim
         - watch
         - wget
