@@ -169,7 +169,7 @@ dockitems_to_persist:
   - name: Things
     path: /Applications/Things.app
     pos: 4
-  - name: 1Password
+  - name: 1Password 6
     path: /Applications/1Password 6.app
     pos: 5
   - name: Spotify
