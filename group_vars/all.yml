@@ -108,8 +108,8 @@ homebrew_cask_applications:
   - dia
 
   # Optional
-  # - macupdate-desktop
-  # - blue-jeans-launcher
+  - macupdate-desktop
+  - blue-jeans-launcher
   # - blue-jeans-browser-plugin
   # - camtasia
   # - capture-one
