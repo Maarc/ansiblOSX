@@ -11,6 +11,12 @@
       homebrew_cask: name={{ item }} state=present
       with_items: '{{homebrew_cask_applications}}'
 
+    # Need to wait for a better brew cask version for improving this
+    - name: Force installation
+      sudo: true
+      shell: brew cask install --force {{ item }}
+      with_items: '{{homebrew_cask_applications}}'
+
     - name: Install gems
       gem: name={{item.name}} pre_release={{item.pre}} state=present
       with_items: '{{gems}}'
