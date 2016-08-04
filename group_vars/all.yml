@@ -50,6 +50,7 @@ homebrew_cask_applications:
   - google-drive
   - beyond-compare
   - gemini
+  #  - crashplan
 
   # Coding
   - iterm2
@@ -57,6 +58,7 @@ homebrew_cask_applications:
   - jd-gui
   - pycharm
   - eclipse-jee
+  - java
 
   # Office
   - sublime-text
@@ -69,8 +71,9 @@ homebrew_cask_applications:
   - caffeine
   - flycut
   - fantastical
-  # - plain-clip   -> not working currently
+  # - plain-clip   -> does not work currently
   - projectlibre
+  - yed
 
   # Virtualisation
   - vagrant
@@ -93,6 +96,7 @@ homebrew_cask_applications:
   - limechat
   - skype
   - telegram
+  - adium
 
   # Security
   - 1password
@@ -101,6 +105,7 @@ homebrew_cask_applications:
   - nmap
   - viscosity
   - hands-off
+  - veracrypt
 
   # Draw
   - inkscape
@@ -115,7 +120,12 @@ homebrew_cask_applications:
   # - capture-one
   # - reflector
   # - vmware-horizon-client
+  # - paragon-ntfs
+  # - battle-net
+  # - iexplorer
+  # - reflector
 
+### add tinker-tool installation:  https://www.bresink.com/osx/TinkerTool.html
 
 ### iterm2 bash integration:
 # curl -L https://iterm2.com/misc/install_shell_integration.sh | bash
