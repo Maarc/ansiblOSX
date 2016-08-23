@@ -1,26 +1,50 @@
 ---
 
 homebrew_libraries:
-  - ant
   - ack
+  - ansible
+  - ant
+  - autoconf
   - bash
   - bash-completion
   - boot2docker
+  - brew-cask-completion
+  - coreutils
   - docker
   - dockutil    # https://github.com/kcrawford/dockutil
-  - coreutils
   - dos2unix
+  - freetype
+  - gdbm
+  - gettext
+  - ghostscript
+  - git
+  - glib
+  - gmp
+  - gnutls
   - graphviz
   - gs
   - hub       # Github extension
   - iftop
+  - jbig2dec
+  - jpeg
+  - little-cms2
   - maven
+  - nettle
   - oath-toolkit
+  - openssl
   - pandoc    # Used to build the documentation
+  - pcre
+  - perl
+  - pixman
+  - pkg-config
   - pstree
+  - python
   - qemu
   - rbenv
+  - readline
+  - ruby
   - ruby-build
+  - sqlite
   - ssh-copy-id
   - tree
   - vim
