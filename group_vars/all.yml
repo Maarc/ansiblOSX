@@ -7,10 +7,8 @@ homebrew_libraries:
   - autoconf
   - bash
   - bash-completion
-  - boot2docker
   - brew-cask-completion
   - coreutils
-  - docker
   - dockutil    # https://github.com/kcrawford/dockutil
   - dos2unix
   - freetype
@@ -102,6 +100,7 @@ homebrew_cask_applications:
   # Virtualisation
   - vagrant
   - virtualbox
+  - docker-toolbox
 
   # Screen saver
   - aerial
