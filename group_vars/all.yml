@@ -45,6 +45,7 @@ homebrew_libraries:
   - ruby-build
   - sqlite
   - ssh-copy-id
+  - umlet     # uml diagram editor
   - tree
   - vim
   - watch
