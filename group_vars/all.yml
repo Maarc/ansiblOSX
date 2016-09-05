@@ -24,6 +24,7 @@ homebrew_libraries:
   - hub       # Github extension
   - iftop
   - jbig2dec
+  - jmeter
   - jpeg
   - little-cms2
   - maven
