@@ -1,7 +1,7 @@
 = AnsiblOSX
 
 [link=https://travis-ci.org/Maarc/ansiblOSX]
-image::https://travis-ci.org/Maarc/ansiblOSX.svg?branch=master[Build status]
+image::https://travis-ci.org/Maarc/ansiblOSX.svg?branch=master
 
 OS X environment provisioning using Ansible.
 
