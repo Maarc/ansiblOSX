@@ -1,8 +1,21 @@
 ---
 
-homebrew_libraries:
+# $ brew tap | sed 's/^/  - /'
+
+brew_taps:
+  - caskroom/cask
+  - caskroom/fonts
+  - caskroom/versions
+  - homebrew/completions
+  - homebrew/core
+  - homebrew/versions
+  - vitorgalvao/tiny-scripts
+
+# $ brew list | sed 's/^/  - /'
+
+brew_apps:
   - ack
-  - android-sdk
+  - aircrack-ng     # CTF tools
   - ansible
   - ant
   - aspcud
@@ -10,18 +23,20 @@ homebrew_libraries:
   - bash
   - bash-completion
   - bazel
+  - bfg             # CTF tools
   - brew-cask-completion
   - camlp4
   - cask-repair
   - chromedriver
   - clasp
   - cmake
-  - coreutils
+  - coreutils   #GNU core utilities (those that come with macOS are outdated).
   - dependency-check
   - docker-machine
   - docker-machine-driver-xhyve
   - dockutil    # https://github.com/kcrawford/dockutil
   - dos2unix
+  - findutils   # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
   - ffmpeg
   - fontconfig
   - freetype
@@ -34,15 +49,20 @@ homebrew_libraries:
   - glib
   - gmp
   - gnutls
+  - gnu-sed   # Install GNU `sed`, overwriting the built-in `sed`.
   - go
   - graphviz
   - gringo
   - gs
+  - homebrew/dupes/grep       # more recent versions of some macOS tools
+  - homebrew/dupes/openssh    # more recent versions of some macOS tools
+  - homebrew/dupes/screen     # more recent versions of some macOS tools
   - hr
   - httpie
   - hub       # Github extension
   - icu4c
   - iftop
+  - imagemagick
   - iperf
   - jasper
   - jbig2dec
@@ -71,8 +91,10 @@ homebrew_libraries:
   - mas
   - maven
   - mono
+  - moreutils   # Install some other useful utilities like `sponge`.
   - net-snmp
   - nettle
+  - ngrep
   - nmap
   - node
   - oath-toolkit
@@ -90,6 +112,7 @@ homebrew_libraries:
   - pkg-config
   - popt
   - pstree
+  - pv                 # Monitor Progress of Data Sent Via a Pipe
   - python
   - python3
   - qemu
@@ -98,12 +121,16 @@ homebrew_libraries:
   - ruby
   - ruby-build
   - sane-backends
+  - sfnt2woff           # font tools
+  - sfnt2woff-zopfli    # font tools
+  - woff2               # font tools
   - sqlite
   - ssh-copy-id
   - swig
+  - testssl
   - tree
   - umlet     # uml diagram editor
-  - vim
+  - vim       # More recent version of default macos tool
   - watch
   - webp
   - wget
@@ -112,12 +139,16 @@ homebrew_libraries:
   - xvid
   - xz
   - youtube-dl
+  - zopfli
 
-homebrew_cask_applications:
+# $ brew cask list | sed 's/^/  - /'
+
+brew_casks:
   - 1password
   - adium
   - adobe-reader
   - aerial
+  - android-sdk
   - alfred
   - appcleaner
   - atom
@@ -140,7 +171,7 @@ homebrew_cask_applications:
   - eclipse-jee
   - evernote
   - fantastical
-  - fing
+  - fing            # scans and displays all active hosts in the current WLAN
   - firefox
   - flash
   - flash-player
@@ -177,7 +208,6 @@ homebrew_cask_applications:
   - macx-video-converter-pro
   - mat
   - mediathekview
-  - minishift
   - mono-mdk
   - moom
   - nvalt
@@ -239,6 +269,7 @@ homebrew_cask_applications:
 # - iexplorer
 # - tableau
 # - ControlAir -> control desktop with gestures
+# - minishift
 
 ## To add
 # - tinker-tool installation:  https://www.bresink.com/osx/TinkerTool.html
@@ -252,6 +283,3 @@ homebrew_cask_applications:
 
 ### iterm2 bash integration:
 # curl -L https://iterm2.com/misc/install_shell_integration.sh | bash
-
-# Apple store
-# Keynote + aperture + numbers + pages

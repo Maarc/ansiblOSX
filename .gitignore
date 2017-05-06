@@ -1,1 +1,8 @@
+# Ansible
 *.retry
+
+# Temporary local files
+*_to_review
+
+# Dotfiles
+.extra
