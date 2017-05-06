@@ -1,11 +1,15 @@
 ---
-- name: <BREW> Application installation with homebrew (brew)
-  homebrew: name={{ item }} state=present
-  with_items: '{{homebrew_libraries}}'
+- name: <BREW> Install taps with homebrew
+  homebrew_tap: name={{ item }} state=present
+  with_items: '{{brew_taps}}'
 
-- name: <BREW> Applications installation with brew-cask
+- name: <BREW> Install apps with homebrew
+  homebrew: name={{ item }} state=present
+  with_items: '{{brew_apps}}'
+
+- name: <BREW> Install casks with homebrew
   homebrew_cask: name={{ item }} state=present
-  with_items: '{{homebrew_cask_applications}}'
+  with_items: '{{brew_casks}}'
 
 #- name: [BREW] Force application installation with brew-cask
 #  homebrew_cask: name={{ item }} state=present install_options=force

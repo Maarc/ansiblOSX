@@ -24,24 +24,40 @@ ansible-playbook main.yml # <4>
 <4> Install the used software
 
 
-== Update software list
+== Update software lists
+
+This section helps you to update the lists of software to install (group_vars/*_var.yml) based on your current setup.
+
+=== Brew
+
+Dump all installed taps:
+
+    $ brew tap | sed 's/^/  - /'
+
+Dump all installed apps:
+
+    $ brew list | sed 's/^/  - /'
+
+Dump all installed casks:
+
+    $ brew cask list | sed 's/^/  - /'
+
 
 === Ruby gem
 
-Inspired by http://jhshi.me/2014/11/08/replicate-gem-installation/[this article] ...
-
-Dump all and format all installed gems and their version:
+Dump all installed gems and their version:
 
     $ gem list | tail -n+1 | sed 's/^/  - { name: /' |sed 's/ (/, version: /' | sed 's/)/, pre: false }/' | sed 's/ default: / /'
 
-Then update "asciidoctor-pdf" TO pre: "true" and remove the multiple versions.
+Update the field "pre" to "true" for "asciidoctor-pdf" and remove the duplicated versions.
 
 
 === Apple store (mas)
 
-Dump all installed gems and their version to a text file:
+Dump all installed applications from the app store and their unique id:
 
     $ mas list |sort -k2 |rev |cut -f2- -d' ' |rev |sed 's/ /, name: "/1' |sed 's/^/  - { id: /' |sed 's/$/" }/'
+
 
 == Sources
 
@@ -50,5 +66,4 @@ Dump all installed gems and their version to a text file:
 * https://github.com/ricbra/dotfiles[dotfiles]
 * http://blog.james-carr.org/2016/03/29/managing-your-macbook-with-ansible/[Managing your macbook with Ansible] (https://github.com/jamescarr/ansible-mac-demo[demo])
 * https://blog.vandenbrand.org/2016/01/04/how-to-automate-your-mac-os-x-setup-with-ansible/[How to automate your Mac OS X setup with Ansible]
-* https://github.com/herrbischoff/awesome-osx-command-line[Awesome mac os command line]
-* https://github.com/sindresorhus/awesome[Awesone]
+* https://github.com/herrbischoff/awesome-osx-command-line[Awesome mac os command line] and https://github.com/sindresorhus/awesome[Awesome list]
