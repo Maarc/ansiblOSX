@@ -38,7 +38,7 @@ Then update "asciidoctor-pdf" TO pre: "true" and remove the multiple versions.
 
 Dump all installed gems and their version to a text file:
 
-    $ mas list | rev | cut -f2- -d' ' | rev | sed "s/ /, name: /1"| sed 's/^/  - { id: /' | sed "s/$/ }/"
+    $ mas list |sort -k2 |rev |cut -f2- -d' ' |rev |sed 's/ /, name: "/1' |sed 's/^/  - { id: /' |sed 's/$/" }/'
 
 == Sources
 
