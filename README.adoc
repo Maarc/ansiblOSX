@@ -12,12 +12,33 @@ mkdir -p ~/git
 cd ~/git
 git clone https://github.com/Maarc/ansiblOSX # <3>
 cd ansiblOSX
-ansible-playbook install.yml # <4>
+# Edit the group_wars/*_vars.yml file to select the software you want to install
+ansible-playbook main.yml # <4>
 ----
 <1> Setup http://brew.sh/[Homebrew]
 <2> Install Ansible
 <3> Clone this project
 <4> Install the used software
+
+
+== Update software list
+
+=== Ruby gem
+
+Inspired by http://jhshi.me/2014/11/08/replicate-gem-installation/[this article] ...
+
+Dump all and format all installed gems and their version:
+
+    $ gem list | tail -n+1 | sed 's/^/  - { name: /' |sed 's/ (/, version: /' | sed 's/)/, pre: false }/' | sed 's/ default: / /'
+
+Then update "asciidoctor-pdf" TO pre: "true" and remove the multiple versions.
+
+
+=== Apple store (mas)
+
+Dump all installed gems and their version to a text file:
+
+    $ mas list | rev | cut -f2- -d' ' | rev | sed "s/ /, name: /1"| sed 's/^/  - { id: /' | sed "s/$/ }/"
 
 == Sources
 
@@ -26,3 +47,5 @@ ansible-playbook install.yml # <4>
 * https://github.com/ricbra/dotfiles[dotfiles]
 * http://blog.james-carr.org/2016/03/29/managing-your-macbook-with-ansible/[Managing your macbook with Ansible] (https://github.com/jamescarr/ansible-mac-demo[demo])
 * https://blog.vandenbrand.org/2016/01/04/how-to-automate-your-mac-os-x-setup-with-ansible/[How to automate your Mac OS X setup with Ansible]
+* https://github.com/herrbischoff/awesome-osx-command-line[Awesome mac os command line]
+* https://github.com/sindresorhus/awesome[Awesone]

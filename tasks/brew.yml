@@ -1,0 +1,18 @@
+---
+- name: <BREW> Application installation with homebrew (brew)
+  homebrew: name={{ item }} state=present
+  with_items: '{{homebrew_libraries}}'
+
+- name: <BREW> Applications installation with brew-cask
+  homebrew_cask: name={{ item }} state=present
+  with_items: '{{homebrew_cask_applications}}'
+
+#- name: [BREW] Force application installation with brew-cask
+#  homebrew_cask: name={{ item }} state=present install_options=force
+#  with_items: '{{homebrew_cask_applications}}'
+
+# Need to wait for a better brew cask version for improving this
+#- name: [BREW] Force installation
+#  become: true
+#  shell: brew cask install --force {{ item }}
+#  with_items: '{{homebrew_cask_applications}}'

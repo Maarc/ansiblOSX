@@ -1,0 +1,257 @@
+---
+
+homebrew_libraries:
+  - ack
+  - android-sdk
+  - ansible
+  - ant
+  - aspcud
+  - autoconf
+  - bash
+  - bash-completion
+  - bazel
+  - brew-cask-completion
+  - camlp4
+  - cask-repair
+  - chromedriver
+  - clasp
+  - cmake
+  - coreutils
+  - dependency-check
+  - docker-machine
+  - docker-machine-driver-xhyve
+  - dockutil    # https://github.com/kcrawford/dockutil
+  - dos2unix
+  - ffmpeg
+  - fontconfig
+  - freetype
+  - gd
+  - gdbm
+  - gettext
+  - ghostscript
+  - git
+  - git-lfs
+  - glib
+  - gmp
+  - gnutls
+  - go
+  - graphviz
+  - gringo
+  - gs
+  - hr
+  - httpie
+  - hub       # Github extension
+  - icu4c
+  - iftop
+  - iperf
+  - jasper
+  - jbig2dec
+  - jmeter
+  - jpeg
+  - jq
+  - lame
+  - libev
+  - libffi
+  - libgcrypt
+  - libgpg-error
+  - libgphoto2
+  - libicns
+  - libpng
+  - librsync
+  - libtasn1
+  - libtiff
+  - libtool
+  - libunistring
+  - libusb
+  - libusb-compat
+  - libxmlsec1
+  - libyaml
+  - little-cms2
+  - makedepend
+  - mas
+  - maven
+  - mono
+  - net-snmp
+  - nettle
+  - nmap
+  - node
+  - oath-toolkit
+  - ocaml
+  - ocamlbuild
+  - oniguruma
+  - opam
+  - openssl
+  - openssl@1.1
+  - p11-kit
+  - pandoc
+  - pcre
+  - perl
+  - pixman
+  - pkg-config
+  - popt
+  - pstree
+  - python
+  - python3
+  - qemu
+  - rbenv
+  - readline
+  - ruby
+  - ruby-build
+  - sane-backends
+  - sqlite
+  - ssh-copy-id
+  - swig
+  - tree
+  - umlet     # uml diagram editor
+  - vim
+  - watch
+  - webp
+  - wget
+  - wine
+  - x264
+  - xvid
+  - xz
+  - youtube-dl
+
+homebrew_cask_applications:
+  - 1password
+  - adium
+  - adobe-reader
+  - aerial
+  - alfred
+  - appcleaner
+  - atom
+  - balsamiq-mockups
+  - bartender
+  - betterzip
+  - beyond-compare
+  - blue-jeans-launcher
+  - burp-suite
+  - caffeine
+  - calibre
+  - capture-one
+  - citrix-receiver
+  - cleanmymac
+  - dbeaver-community
+  - dia
+  - docker-toolbox
+  - dropbox
+  - duet
+  - eclipse-jee
+  - evernote
+  - fantastical
+  - fing
+  - firefox
+  - flash
+  - flash-player
+  - flip4mac
+  - flux
+  - flycut
+  - font-liberation-sans
+  - freemind
+  - gemini
+  - gimp
+  - gitbook-editor
+  - github-desktop
+  - gog-galaxy
+  - google-chrome
+  - google-drive
+  - grammarly
+  - handbrake
+  - hands-off
+  - hugin
+  - iexplorer
+  - inkscape
+  - intellij-idea
+  - istat-menus
+  - iterm2
+  - java
+  - jd-gui
+  - jprofiler
+  - kindle
+  - libreoffice
+  - licecap
+  - limechat
+  - mac-informer
+  - macupdate-desktop
+  - macx-video-converter-pro
+  - mat
+  - mediathekview
+  - minishift
+  - mono-mdk
+  - moom
+  - nvalt
+  - onyx
+  - osxfuse
+  - owasp-zap
+  - path-finder
+  - paragon-ntfs
+  - pinta
+  - plain-clip
+  - projectlibre
+  - pycharm
+  - reaper
+  - reflector
+  - rocket-chat
+  - sequel-pro
+  - silverlight
+  - skype
+  - slack
+  - sourcetree
+  - spectacle
+  - spotify
+  - sublime-text
+  - synergy
+  - teamviewer
+  - telegram
+  - textexpander
+  - things
+  - tinymediamanager
+  - toggldesktop
+  - torbrowser
+  - transmit
+  - unetbootin
+  - utorrent
+  - vagrant-manager
+  - veracrypt
+  - viscosity
+  - vlc
+  - vmware-horizon-client
+  - webstorm
+  - wireshark
+  - xquartz
+  - yed
+
+## Optional
+# - battle-net
+# - steam
+
+## Do not use the latest version
+#- vagrant
+#- virtualbox
+# - capture-one
+
+## Not used anymore ...
+# - camtasia
+# - reflector
+# - vmware-horizon-client
+# - paragon-ntfs
+# - iexplorer
+# - tableau
+# - ControlAir -> control desktop with gestures
+
+## To add
+# - tinker-tool installation:  https://www.bresink.com/osx/TinkerTool.html
+# - GCViewer app https://github.com/chewiebug/GCViewer/wiki/Changelog
+# - Docfetcher
+# - Plot2
+# - malewarebyte https://www.malwarebytes.com/mac-download/
+# - cakewall
+# - Cobook
+
+
+### iterm2 bash integration:
+# curl -L https://iterm2.com/misc/install_shell_integration.sh | bash
+
+# Apple store
+# Keynote + aperture + numbers + pages

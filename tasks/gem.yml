@@ -1,0 +1,4 @@
+---
+- name: <GEM> Install ruby gems
+  gem: name={{item.name}} pre_release={{item.pre}} version={{item.version}} state=present
+  with_items: '{{gems}}'

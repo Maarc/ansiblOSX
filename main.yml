@@ -1,0 +1,25 @@
+---
+- hosts: localhost
+  connection: local
+  become_method: sudo
+
+  pre_tasks:
+    - include_vars: "{{ item }}"
+      with_fileglob:
+        - group_vars/brew_var.yml
+        - group_vars/dock_var.yml
+        - group_vars/gem_var.yml
+        - group_vars/mas_var.yml
+
+  tasks:
+    - include: tasks/brew.yml
+      when: configure_brew
+
+    - include: tasks/gem.yml
+      when: configure_gem
+
+    - include: tasks/mas.yml
+      when: configure_mas
+
+    - include: tasks/dock.yml
+      when: configure_dock

@@ -1,0 +1,27 @@
+---
+## Generated mas_installed_apps variable using ....
+# $ mas list | rev | cut -f2- -d' ' | rev | sed 's/ /, name: "/1'| sed 's/^/  - { id: /' | sed 's/$/" }/'
+## Mac OS app store applications can be deleted using the launchpad.
+
+mas_installed_apps:
+- { id: 1037126344, name: "Apple Configurator 2" }
+- { id: 497799835, name: "Xcode" }
+- { id: 425264550, name: "Blackmagic Disk Speed Test" }
+- { id: 409183694, name: "Keynote" }
+- { id: 485812721, name: "TweetDeck" }
+- { id: 846509360, name: "Plot2" }
+- { id: 525225808, name: "Cobook" }
+- { id: 409201541, name: "Pages" }
+- { id: 838744420, name: "FreeDiskSpace" }
+- { id: 447521961, name: "XChat Azure" }
+- { id: 439654198, name: "SimpleMind Free" }
+- { id: 592704001, name: "Photos Duplicate Cleaner" }
+- { id: 808647808, name: "ActivityTimer" }
+- { id: 409203825, name: "Numbers" }
+- { id: 950009491, name: "ControlAir" }
+- { id: 523620159, name: "CleanMyDrive 2" }
+
+mas_email: ""
+mas_password: ""
+mas_upgrade_all_apps: yes
+mas_signin_dialog: no
