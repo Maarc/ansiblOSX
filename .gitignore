@@ -3,6 +3,7 @@
 
 # Temporary local files
 *_to_review
+save_*
 
 # Dotfiles
 .extra

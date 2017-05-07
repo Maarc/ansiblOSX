@@ -7,7 +7,7 @@
     - ruby-build
 
 - name: <GEM> Install ruby gems with version
-  gem: name={{item.name}} pre_release={{item.pre}} version={{item.version}} state=present
+  gem: name={{item.name}} pre_release={{item.pre}} state=present
   with_items: '{{gems_with_version}}'
 
 - name: <GEM> Install ruby gems
