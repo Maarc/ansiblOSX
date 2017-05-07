@@ -2,7 +2,7 @@
 
 #  $ gem list | tail -n+1 | sed 's/^/  - { name: /' |sed 's/ (/, version: /' | sed 's/)/, pre: false }/' | sed 's/ default: / /'
 gems_with_version:
-  - { name: asciidoctor-pdf, version: 1.5.0.alpha.15 , pre: false }
+  - { name: asciidoctor-pdf, version: 1.5.0.alpha.15 , pre: true }
 
 #  $ gem list | tail -n+1 | sed 's/^/  - { name: /' |sed 's/ (.*/ }/'
 gems:
@@ -82,3 +82,4 @@ gems:
   - { name: treetop }
   - { name: ttfunk }
   - { name: varia_model }
+  - { name: xmlrpc }
