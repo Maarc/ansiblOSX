@@ -2,8 +2,8 @@
 
 export ANSIBLOSX_DIR="${HOME}/git/private/OSX/ansiblOSX"
 
-#export CURRENT_PROJECT="${ANSIBLOSX_DIR}"
-export CURRENT_PROJECT="${HOME}/Work/Projects/AMM"
+export CURRENT_PROJECT="${ANSIBLOSX_DIR}"
+#export CURRENT_PROJECT="${HOME}/Work/Projects/AMM"
 #export CURRENT_PROJECT="${HOME}/vm/vagrant/ocp/cdk/components/rhel/rhel-ose"
 #export CURRENT_PROJECT="${HOME}/Work/Projects/2016/EAP7"
 #export CURRENT_PROJECT="${HOME}/Work/Projects/2016/Summit_2016__Ansible_SOE"
