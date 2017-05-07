@@ -33,6 +33,8 @@ export MAVEN_OPTS="-Xmx1024m -Dmaven.multiModuleProjectDirectory=${M3_HOME}"
 
 export BREW_PREFIX="$(brew --prefix)"
 export HOMEBREW_CASK_OPTS="--caskroom=/opt/homebrew-cask/Caskroom --appdir=/Applications"
+# Remove analytics
+export HOMEBREW_NO_ANALYTICS=1
 
 ##############################################################
 # Editor
