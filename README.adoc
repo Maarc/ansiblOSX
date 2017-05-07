@@ -49,6 +49,10 @@ Dump all installed gems and their version:
 
     $ gem list | tail -n+1 | sed 's/^/  - { name: /' |sed 's/ (/, version: /' | sed 's/)/, pre: false }/' | sed 's/ default: / /'
 
+... or without version:
+
+    $ gem list | tail -n+1 | sed 's/^/  - { name: /' |sed 's/ (.*/ }/'
+
 Update the field "pre" to "true" for "asciidoctor-pdf" and remove the duplicated versions.
 
 
