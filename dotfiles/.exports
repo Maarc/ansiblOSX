@@ -1,0 +1,86 @@
+#!/usr/bin/env bash
+
+export ANSIBLOSX_DIR="${HOME}/git/private/OSX/ansiblOSX"
+
+#export CURRENT_PROJECT="${ANSIBLOSX_DIR}"
+export CURRENT_PROJECT="${HOME}/Work/Projects/AMM"
+#export CURRENT_PROJECT="${HOME}/vm/vagrant/ocp/cdk/components/rhel/rhel-ose"
+#export CURRENT_PROJECT="${HOME}/Work/Projects/2016/EAP7"
+#export CURRENT_PROJECT="${HOME}/Work/Projects/2016/Summit_2016__Ansible_SOE"
+#export CURRENT_PROJECT="${HOME}/vm/vagrant/ansible/soe/ansible_middleware_soe"
+
+#export JAVA_HOME="$(/usr/libexec/java_home -v 1.7)"
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+
+export JBOSS_HOME="/opt/tools/jboss/jboss-eap-7.0"
+
+export WINDUP_SRC="${HOME}/git/products/windup/dist_last"
+export WINDUP_HOME="/opt/tools/windup/windup-distribution-3.0.0.final"
+
+export FUSE_VERSION="jboss-fuse-pre-patched-6.2.0.redhat-143-p1"
+export FUSE_ZIP="${HOME}/install/distributions/Fuse/6.2/${FUSE_VERSION}.zip"
+export KARAF_BASE="/opt/tools/jboss/${FUSE_VERSION}"
+
+export ANT_HOME="/usr/local/Cellar/ant/1.9.7/libexec"
+
+export DROPBOX_HOME='${HOME}/Dropbox'
+
+export M3_HOME="/usr/local/Cellar/maven/3.5.0/libexec"
+export M3="${M3_HOME}/bin"
+export MAVEN_HOME="${M3}"
+#MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=128M -Dmaven.multiModuleProjectDirectory=${M2_HOME}"
+export MAVEN_OPTS="-Xmx1024m -Dmaven.multiModuleProjectDirectory=${M3_HOME}"
+
+export BREW_PREFIX="$(brew --prefix)"
+export HOMEBREW_CASK_OPTS="--caskroom=/opt/homebrew-cask/Caskroom --appdir=/Applications"
+
+##############################################################
+# Editor
+##############################################################
+# Make vim the default editor.
+export EDITOR='vim';
+
+##############################################################
+# Node
+##############################################################
+# Enable persistent REPL history for `node`.
+export NODE_REPL_HISTORY=${HOME}/.node_history;
+# Allow 32³ entries; the default is 1000.
+export NODE_REPL_HISTORY_SIZE='32768';
+# Use sloppy mode by default, matching web browsers.
+export NODE_REPL_MODE='sloppy';
+
+##############################################################
+# Python
+##############################################################
+# Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
+export PYTHONIOENCODING='UTF-8';
+
+##############################################################
+# History
+##############################################################
+# Increase Bash history size. Allow 32³ entries; the default is 500.
+export HISTSIZE='500000';
+export HISTFILESIZE="${HISTSIZE}";
+# Omit duplicates and commands that begin with a space from history.
+export HISTCONTROL='ignoreboth';
+
+##############################################################
+# Lang
+##############################################################
+# for the tr command - https://unix.stackexchange.com/questions/141420/tr-complains-of-illegal-byte-sequence
+export LC_CTYPE=C
+# Fix for a puppet encoding issue
+export LANG='en_US.UTF-8';
+export LANGUAGE="${LANG}";
+export LANG="${LANG}";
+export LC_ALL="${LANG}";
+
+##############################################################
+# Man
+##############################################################
+# Highlight section titles in manual pages.
+export LESS_TERMCAP_md="${yellow}";
+
+# Don’t clear the screen after quitting a manual page.
+export MANPAGER='less -X';

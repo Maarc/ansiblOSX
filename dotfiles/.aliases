@@ -1,0 +1,203 @@
+#!/usr/bin/env bash
+
+##############################################################
+# Shortcuts
+##############################################################
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+alias c='cd ${CURRENT_PROJECT}'
+alias jb='cd ${JBOSS_HOME}'
+alias d="cd ~/Downloads"
+alias i="cd ~/Work/Administration/Interviews"
+alias o="cd ~/vm/vagrant/ocp"
+alias db="cd ~/Dropbox"
+alias dt="cd ~/Desktop"
+alias gd="cd ~/Google\ Drive"
+
+alias g="git"
+alias h="history"
+alias j="jobs"
+alias p='pwd'
+alias qwd='printf "%q\n" "$(pwd)"'
+
+##############################################################
+# ls
+##############################################################
+
+# Detect which `ls` flavor is in use
+if ls --color > /dev/null 2>&1; then # GNU `ls`
+	colorflag="--color"
+	export LS_COLORS='no=00:fi=00:di=01;31:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35:*.wav=01;35:'
+else # macOS `ls`
+	colorflag="-G"
+	export LSCOLORS='BxBxhxDxfxhxhxhxhxcxcx'
+fi
+
+# Always use color output for `ls`
+alias ls="command ls ${colorflag}"
+alias ll='ls -all'
+alias l='ll'
+alias lr='ll -rt'
+
+##############################################################
+# Standard
+##############################################################
+alias ip='ifconfig en0'
+
+# Always enable colored `grep` output
+# Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias colour='grep --color=always'
+alias color='colour'
+alias vm='vi ${M3_HOME}/conf/settings.xml'
+alias grunt='/opt/nodes/0.12.0/lib/node_modules/grunt-cli/bin/grunt'
+alias st='stree'
+alias py='python'
+
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'
+
+# Enable aliases to be sudo’ed
+alias sudo='sudo '
+
+# Get week number
+alias week='date +%V'
+
+# Update locate database
+alias updatedb='sudo /usr/libexec/locate.updatedb'
+
+# Google Chrome
+alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+
+# Stopwatch
+alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
+
+# macOS has no `md5sum`, so use `md5` as a fallback
+command -v md5sum > /dev/null || alias md5sum="md5"
+
+# macOS has no `sha1sum`, so use `shasum` as a fallback
+command -v sha1sum > /dev/null || alias sha1sum="shasum"
+
+# Hide/show all desktop icons (useful when presenting)
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+
+##############################################################
+# Cleanup and update
+##############################################################
+# Brew update
+alias bu='brew update; brew upgrade;'
+
+# FIXME issue with bash to be able to do a cleanup...
+# Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
+alias up='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; mas upgrade; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup'
+
+# Recursively delete `.DS_Store` files
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+# Empty the Trash on all mounted volumes and the main HDD.
+# Also, clear Apple’s System Logs to improve shell startup speed.
+# Finally, clear download history from quarantine. https://mths.be/bum
+alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
+
+##############################################################
+# Edit and generate
+##############################################################
+alias vb='atom ${ANSIBLOSX_DIR}'
+alias sb='${ANSIBLOSX_DIR}/dotfiles/update_dotfiles.sh -f; source ~/.bashrc'
+alias sc='${ANSIBLOSX_DIR}/dotfiles/update_dotfiles.sh -f; source ~/.bashrc; cd ${CURRENT_PROJECT}'
+
+alias a='atom .'
+alias s='subl .'
+alias ad='asciidoctor-pdf Report.adoc ; open Report.pdf'
+alias html2pdf='wkhtmltopdf -B 25 -L 25 -R 25 -T 25 -s A4 --print-media-type'
+
+##############################################################
+# PDF
+##############################################################
+alias pdfmerge='gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=merged.pdf'
+alias pdfcompress='gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -dDetectDuplicateImages -dCompressFonts=true -r150 -sOutputFile=compressed.pdf '
+
+##############################################################
+# Diagnose
+##############################################################
+alias nstat='lsof -i -P'
+alias psj='ps -elf | grep java'
+alias psjb='ps -elf | grep java | grep jboss'
+# Show active network interfaces
+alias ifactive="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'"
+
+##############################################################
+# Brew
+##############################################################
+alias bcs='brew cask search '
+alias bci='brew cask install --force '
+alias bcu='brew cask uninstall --force '
+
+##############################################################
+# Docker
+##############################################################
+alias docker_env='eval "$(docker-machine env default)"'
+alias docker_clean='docker stop $(docker ps -a -q); docker rm $(docker ps -a -q)'
+alias drmstopped='docker rm $(docker ps -a -q)'
+alias drmuntagged='docker rmi $(docker images | grep "^<none>" | awk '"'"'{print $3}'"'"' )'
+alias dls='docker images -a'
+alias dps='watch docker ps -a'
+# SSH on the target docker instance
+alias b2d_ssh='boot2docker ssh -t sudo /var/lib/boot2docker/docker-enter'
+alias b2d_clean='boot2docker halt; boot2docker delete; boot2docker init; boot2docker start; boot2docker shellinit'
+alias b2d_update='docker version; boot2docker halt; boot2docker delete; boot2docker upgrade; boot2docker init; boot2docker start; boot2docker shellinit; docker version'
+
+##############################################################
+# Dropbox
+##############################################################
+alias dropbox_conflicts='find ${DROPBOX_HOME} -name \"*onflict*\"'
+alias dropbox_conflicts_remove='find ${DROPBOX_HOME} -name \"*onflict*\" -exec rm -f {} \\;'
+
+##############################################################
+# Java
+##############################################################
+alias pseap='psj | grep standalone'
+alias psj='ps | grep java | grep jdk'
+alias dump_threads='function _blah(){ eval "jstack -l $1 > thread_"$(date +%Y-%m-%d_%H_%M_%S)".dump"; };_blah;unset -f blah'
+
+##############################################################
+# Maven
+##############################################################
+alias mvnb='mvn -T 4 clean install '
+alias mvnc='mvn -T 4 clean eclipse:clean'
+alias mvna='mvn -T 4 clean eclipse:clean eclipse:eclipse install'
+alias mvnt='mvn -T 4 clean eclipse:clean eclipse:eclipse install -Dmaven.test.skip=true -DskipTests'
+alias mvn=color_maven
+
+##############################################################
+# Red Hat middleware
+##############################################################
+# Haproxy
+alias haproxy_start="sudo haproxy -f /opt/tools/jboss/haproxy.cfg"
+alias haproxy_stop="sudo killall haproxy"
+# Mod_cluster
+alias mod_cluster_start="sudo /opt/tools/jboss/httpd/sbin/apachectl -k start -d /opt/tools/jboss/httpd/httpd"
+alias mod_cluster_stop="sudo /opt/tools/jboss/httpd/sbin/apachectl -k stop -d /opt/tools/jboss/httpd/httpd"
+
+##############################################################
+# RHAMT
+##############################################################
+alias windup='${WINDUP_HOME}/bin/windup'
+alias wl='less ~/.windup/log/windup.log'
+alias win='cd ${WINDUP_SRC}'
+alias w='cd ${WINDUP_SRC}/../bin'
+
+##############################################################
+# Mega-command-alias
+##############################################################
+
+alias al="find . -iname '*.yml' -exec ansible-lint {} -r ~/git/private/ansible/ansible-lint-rules/rules \;"
+alias ansible_build='cd ~/vm/vagrant/ansible/ansible_eap_soe; ./init_DEV.sh ; cd ansible/ ; ansible-playbook site.yml -i hosts-dev'
+alias kali='cd ~/vm/vagrant/pentest-env; PENTESTRC=examples/tor-proxy.pentestrc vagrant up kali'
+alias install_fuse='cd /opt/tools/jboss/; rm -Rf ${FUSE_VERSION}; unzip ${FUSE_ZIP}; echo -e "\nadmin=admin,admin,manager,viewer,Operator, Maintainer, Deployer, Auditor, Administrator, SuperUser" >> ${FUSE_VERSION}/etc/users.properties'
