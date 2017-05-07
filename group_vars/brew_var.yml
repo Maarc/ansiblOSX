@@ -18,7 +18,7 @@ brew_taps:
 
 brew_apps:
   - ack
-  - aircrack-ng     # CTF tools
+  - aircrack-ng               # CTF tools
   - ansible
   - ansible-lint
   - ant
@@ -27,43 +27,45 @@ brew_apps:
   - bash
   - bash-completion
   - bazel
-  - bfg             # CTF tools
+  - bfg                       # CTF tools
   - brew-cask-completion
+  - cabal-install
   - camlp4
   - cask-repair
   - chromedriver
   - clasp
   - cmake
-  - coreutils   #GNU core utilities (those that come with macOS are outdated).
+  - coreutils                 # GNU core utilities (those that come with macOS are outdated).
   - dependency-check
+  - docker
   - docker-machine
   - docker-machine-driver-xhyve
-  - dockutil    # https://github.com/kcrawford/dockutil
+  - dockutil                  # https://github.com/kcrawford/dockutil
   - dos2unix
-  - findutils   # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
   - ffmpeg
+  - findutils                 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
   - fontconfig
   - freetype
   - gd
   - gdbm
   - gettext
+  - ghc
   - ghostscript
   - git
   - git-lfs
+  - git-ssh
   - glib
   - gmp
+  - gnu-sed                   # Install GNU `sed`, overwriting the built-in `sed`.
   - gnutls
-  - gnu-sed   # Install GNU `sed`, overwriting the built-in `sed`.
   - go
   - graphviz
+  - homebrew/dupes/grep       # more recent versions of some macOS tools
   - gringo
   - gs
-  - homebrew/dupes/grep       # more recent versions of some macOS tools
-  - homebrew/dupes/openssh    # more recent versions of some macOS tools
-  - homebrew/dupes/screen     # more recent versions of some macOS tools
   - hr
   - httpie
-  - hub       # Github extension
+  - hub                       # Github extension
   - icu4c
   - iftop
   - imagemagick
@@ -94,8 +96,9 @@ brew_apps:
   - makedepend
   - mas
   - maven
+  - maven-completion
   - mono
-  - moreutils   # Install some other useful utilities like `sponge`.
+  - moreutils                 # Install some other useful utilities like `sponge`.
   - net-snmp
   - nettle
   - ngrep
@@ -106,6 +109,7 @@ brew_apps:
   - ocamlbuild
   - oniguruma
   - opam
+  - homebrew/dupes/openssh    # more recent versions of some macOS tools
   - openssl
   - openssl@1.1
   - p11-kit
@@ -116,7 +120,7 @@ brew_apps:
   - pkg-config
   - popt
   - pstree
-  - pv                 # Monitor Progress of Data Sent Via a Pipe
+  - pv                        # Monitor Progress of Data Sent Via a Pipe
   - python
   - python3
   - qemu
@@ -125,20 +129,21 @@ brew_apps:
   - ruby
   - ruby-build
   - sane-backends
-  - sfnt2woff           # font tools
-  - sfnt2woff-zopfli    # font tools
-  - woff2               # font tools
+  - homebrew/dupes/screen     # more recent versions of some macOS tools
+  - sfnt2woff                 # font tools
+  - sfnt2woff-zopfli          # font tools
   - sqlite
   - ssh-copy-id
   - swig
   - testssl
   - tree
-  - umlet     # uml diagram editor
-  - vim       # More recent version of default macos tool
+  - umlet                     # UML diagram editor
+  - vim                       # More recent version of default macos tool
   - watch
   - webp
   - wget
   - wine
+  - woff2                     # font tools
   - x264
   - xvid
   - xz
@@ -224,7 +229,6 @@ brew_casks:
   - projectlibre
   - pycharm
   - reaper
-  - reflector
   - rocket-chat
   - sequel-pro
   - silverlight
@@ -244,7 +248,6 @@ brew_casks:
   - torbrowser
   - transmit
   - unetbootin
-  - utorrent
   - vagrant-manager
   - veracrypt
   - viscosity
@@ -265,6 +268,7 @@ brew_casks:
 # - capture-one
 
 ## Not used anymore ...
+# - reflector
 # - citrix-receiver
 # - camtasia
 # - reflector
@@ -274,3 +278,4 @@ brew_casks:
 # - tableau
 # - ControlAir -> control desktop with gestures
 # - minishift
+# - utorrent
