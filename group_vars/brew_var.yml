@@ -1,17 +1,20 @@
 ---
 
-# $ brew tap | sed 's/^/  - /'
+# $ brew tap | sort | sed 's/^/  - /'
 
 brew_taps:
+  - bramstein/webfonttools
   - caskroom/cask
   - caskroom/fonts
   - caskroom/versions
   - homebrew/completions
   - homebrew/core
+  - homebrew/dupes
   - homebrew/versions
+  - trinitronx/truecrypt
   - vitorgalvao/tiny-scripts
 
-# $ brew list | sed 's/^/  - /'
+# $ brew list | sort | sed 's/^/  - /'
 
 brew_apps:
   - ack
@@ -142,7 +145,7 @@ brew_apps:
   - youtube-dl
   - zopfli
 
-# $ brew cask list | sed 's/^/  - /'
+# $ brew cask list | sort | sed 's/^/  - /'
 
 brew_casks:
   - 1password

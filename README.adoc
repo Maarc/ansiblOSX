@@ -32,15 +32,15 @@ This section helps you to update the lists of software to install (group_vars/*_
 
 Dump all installed taps:
 
-    $ brew tap | sed 's/^/  - /'
+    $ brew tap | sort | sed 's/^/  - /'
 
 Dump all installed apps:
 
-    $ brew list | sed 's/^/  - /'
+    $ brew list | sort | sed 's/^/  - /'
 
 Dump all installed casks:
 
-    $ brew cask list | sed 's/^/  - /'
+    $ brew cask list | sort | sed 's/^/  - /'
 
 
 === Ruby gem
