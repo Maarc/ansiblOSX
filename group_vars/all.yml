@@ -1,7 +1,7 @@
 ---
 
 # Enables/disables installation tasks
-configure_brew: yes
+configure_brew: no
 configure_dock: no
-configure_gem: yes
-configure_mas: yes
+configure_gem: no
+configure_mas: no
