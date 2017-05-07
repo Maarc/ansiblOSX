@@ -176,7 +176,7 @@ brew_casks:
   - fantastical
   - fing            # scans and displays all active hosts in the current WLAN
   - firefox
-  - flash
+  - flash-npapi     # flash plugin, former brew cask named "flash"
   - flash-player
   - flip4mac
   - flux

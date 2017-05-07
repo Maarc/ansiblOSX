@@ -136,6 +136,7 @@ alias ifactive="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'
 # Brew
 ##############################################################
 alias bcs='brew cask search '
+alias bcl='brew cask list '
 alias bci='brew cask install --force '
 alias bcu='brew cask uninstall --force '
 
