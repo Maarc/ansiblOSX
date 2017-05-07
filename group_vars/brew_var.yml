@@ -165,7 +165,6 @@ brew_casks:
   - caffeine
   - calibre
   - capture-one
-  - citrix-receiver
   - cleanmymac
   - dbeaver-community
   - dia
@@ -266,6 +265,7 @@ brew_casks:
 # - capture-one
 
 ## Not used anymore ...
+# - citrix-receiver
 # - camtasia
 # - reflector
 # - vmware-horizon-client
