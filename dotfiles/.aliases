@@ -8,7 +8,8 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
-alias c='cd ${CURRENT_PROJECT}'
+alias c='cd ${ANSIBLOSX_DIR}'
+alias p='cd ${CURRENT_PROJECT}'
 alias jb='cd ${JBOSS_HOME}'
 alias d="cd ~/Downloads"
 alias i="cd ~/Work/Administration/Interviews"
@@ -20,7 +21,6 @@ alias gd="cd ~/Google\ Drive"
 alias g="git"
 alias h="history"
 alias j="jobs"
-alias p='pwd'
 alias qwd='printf "%q\n" "$(pwd)"'
 
 ##############################################################
