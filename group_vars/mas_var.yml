@@ -6,7 +6,7 @@
 mas_installed_apps:
   - { id: 808647808, name: "ActivityTimer" }
   - { id: 408981426, name: "Aperture" }
-  - { id: 1037126344, name: "Apple Configurator 2" } # only for latest macOS version
+  #- { id: 1037126344, name: "Apple Configurator 2" } # only for latest macOS version
   - { id: 425264550, name: "Blackmagic Disk Speed Test" }
   - { id: 523620159, name: "CleanMyDrive 2" }
   - { id: 525225808, name: "Cobook" }
