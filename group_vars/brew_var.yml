@@ -136,6 +136,7 @@ brew_apps:
   - ssh-copy-id
   - swig
   - testssl
+  - the_silver_searcher       # https://github.com/ggreer/the_silver_searcher
   - tree
   - umlet                     # UML diagram editor
   - vim                       # More recent version of default macos tool
@@ -255,6 +256,7 @@ brew_casks:
   - vmware-horizon-client
   - webstorm
   - wireshark
+  - wireshark-chmodbpf
   - xquartz
   - yed
 
