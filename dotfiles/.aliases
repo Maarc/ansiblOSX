@@ -133,6 +133,7 @@ alias psj='ps -elf | grep java'
 alias psjb='ps -elf | grep java | grep jboss'
 # Show active network interfaces
 alias ifactive="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'"
+alias watchpeople='sudo howmanypeoplearearound -o /opt/tools/$(date +%Y-%m-%d__%H_%M_%S)_wifi.json -a en0 --loop'
 
 ##############################################################
 # Brew
