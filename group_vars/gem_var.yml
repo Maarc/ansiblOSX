@@ -79,6 +79,7 @@ gems:
   - { name: test-unit }
   - { name: thor }
   - { name: thread_safe }
+  - { name: tilt }
   - { name: timers }
   - { name: treetop }
   - { name: ttfunk }

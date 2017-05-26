@@ -19,8 +19,10 @@ mas_installed_apps:
   - { id: 592704001, name: "Photos Duplicate Cleaner" }
   - { id: 846509360, name: "Plot2" }
   - { id: 439654198, name: "SimpleMind Free" }
+  - { id: 904280696, name: "Things3" }
   - { id: 485812721, name: "TweetDeck" }
   - { id: 447521961, name: "XChat Azure" }
+  - { id: 497799835, name: "Xcode" }
 
 mas_email: ""
 mas_password: ""

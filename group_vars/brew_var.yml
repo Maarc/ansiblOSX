@@ -188,6 +188,7 @@ brew_casks:
   - flux
   - flycut
   - font-liberation-sans
+  - free-ruler      # Ruler application to check layouts
   - freemind
   - gemini
   - gimp
@@ -243,7 +244,6 @@ brew_casks:
   - teamviewer
   - telegram
   - textexpander
-  - things
   - tinymediamanager
   - toggldesktop
   - torbrowser
