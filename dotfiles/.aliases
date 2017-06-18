@@ -145,6 +145,7 @@ alias bcu='brew cask uninstall --force '
 alias bco='brew cask outdated'
 # Updates updated excepted some specific casks (like 'capture-one' here)
 alias bcou='brew cask outdated |grep -v "capture-one" | awk '"'"'{print "brew cask install --force "$1"\0"}'"'"' | xargs -0 bash -c'
+# TODO: extend shortcuts to properly remove the outdated versions like in ... https://gist.github.com/jpickwell/afb7bfc8b166b58150b6c311f34ed271
 
 ##############################################################
 # Docker
