@@ -143,6 +143,8 @@ alias bcl='brew cask list '
 alias bci='brew cask install --force '
 alias bcu='brew cask uninstall --force '
 alias bco='brew cask outdated'
+# Updates updated excepted some specific casks (like 'capture-one' here)
+alias bcou='brew cask outdated |grep -v "capture-one" | awk '"'"'{print "brew cask install --force "$1"\0"}'"'"' | xargs -0 bash -c'
 
 ##############################################################
 # Docker
