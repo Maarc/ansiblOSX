@@ -142,6 +142,7 @@ alias bcs='brew cask search '
 alias bcl='brew cask list '
 alias bci='brew cask install --force '
 alias bcu='brew cask uninstall --force '
+alias bco='brew cask outdated'
 
 ##############################################################
 # Docker

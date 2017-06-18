@@ -31,7 +31,9 @@ export MAVEN_HOME="${M3}"
 export MAVEN_OPTS="-Xmx1024m -Dmaven.multiModuleProjectDirectory=${M3_HOME}"
 
 export BREW_PREFIX="$(brew --prefix)"
-export HOMEBREW_CASK_OPTS="--caskroom=/opt/homebrew-cask/Caskroom --appdir=/Applications"
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+# Previous additional argument in HOMEBREW_CASK_OPTS: --caskroom=/opt/homebrew-cask/Caskroom
+# Fix: sudo ln -s /opt/homebrew-cask/Caskroom /usr/local/Caskroom
 # Remove analytics
 export HOMEBREW_NO_ANALYTICS=1
 

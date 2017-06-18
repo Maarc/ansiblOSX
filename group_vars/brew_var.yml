@@ -2,6 +2,23 @@
 
 # $ brew tap | sort | sed 's/^/  - /'
 
+
+# ------ Minishift installation
+#$ brew install docker-machine-driver-xhyve
+## docker-machine-driver-xhyve need root owner and uid
+#$ sudo chown root:wheel $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
+#$ sudo chmod u+s $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
+
+#$ brew cask install minishift
+
+# Download binary from RH developer
+# chmod +x ...
+# ./cdk-3.0-minishift-darwin-amd64 setup-cdk
+# minishift config view
+# minishift config set cpus 2
+# minishift start
+
+
 brew_taps:
   - bramstein/webfonttools
   - caskroom/cask
