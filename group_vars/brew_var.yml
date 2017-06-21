@@ -191,7 +191,7 @@ brew_casks:
   - cleanmymac
   - dbeaver-community
   - dia
-  - docker-toolbox
+  - docker          # previously "docker-toolbox". I prefer docker as it directly integrates with teh OS X native hypervisor.
   - dropbox
   - duet
   - eclipse-jee
