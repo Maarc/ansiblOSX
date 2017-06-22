@@ -227,6 +227,7 @@ brew_casks:
   - jd-gui
   - jprofiler
   - kindle
+  - kitematic       # Docker visualisation 
   - libreoffice
   - licecap
   - limechat
