@@ -201,7 +201,7 @@ alias wl='less ~/.windup/log/windup.log'
 alias win='cd ${WINDUP_SRC}'
 alias w='cd ${WINDUP_SRC}/../bin'
 # Starts a local http server (0.0.0.0:8000)
-alias server='hostname;python -m SimpleHTTPServer'
+alias server='echo "http://$(hostname):8000";python -m SimpleHTTPServer'
 
 ##############################################################
 # Mega-command-alias
