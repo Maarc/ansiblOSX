@@ -19,6 +19,7 @@ alias o="cd ~/vm/vagrant/ocp"
 alias db="cd ~/Dropbox"
 alias dt="cd ~/Desktop"
 alias gd="cd ~/Google\ Drive"
+alias t="cd ~/Work/Projects/AMM/Code/tracking/opportunity-tracker"
 
 alias g="git"
 alias h="history"
@@ -48,6 +49,8 @@ alias lr='ll -rt'
 # Standard
 ##############################################################
 alias ip='ifconfig en0'
+
+#alias pip='python -m pip'
 
 # Always enable colored `grep` output
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
@@ -144,7 +147,8 @@ alias bci='brew cask install --force '
 alias bcu='brew cask uninstall --force '
 alias bco='brew cask outdated'
 # Updates updated excepted some specific casks (like 'capture-one' here)
-alias bcou='brew cask outdated |grep -v "capture-one" | awk '"'"'{print "brew cask install --force "$1"\0"}'"'"' | xargs -0 bash -c'
+#alias bcou='brew cask outdated |grep -v "capture-one" | awk '"'"'{print "brew cask install --force "$1"\0"}'"'"' | xargs -0 bash -c'
+alias bcou='brew cask outdated | awk '"'"'{print "brew cask install --force "$1"\0"}'"'"' | xargs -0 bash -c'
 # TODO: extend shortcuts to properly remove the outdated versions like in ... https://gist.github.com/jpickwell/afb7bfc8b166b58150b6c311f34ed271  (brew cask list --versions)
 
 ##############################################################
@@ -200,6 +204,8 @@ alias windup='${WINDUP_HOME}/bin/windup'
 alias wl='less ~/.windup/log/windup.log'
 alias win='cd ${WINDUP_SRC}'
 alias w='cd ${WINDUP_SRC}/../bin'
+alias ocp="echo \"https://\$(oc config get-contexts | grep "\\*" | awk '{print \$3}' | tr - .)\";echo \"http://\$(oc get route --no-headers -o=custom-columns=HOST:.spec.host rhamt-web-console)\""
+
 # Starts a local http server (0.0.0.0:8000)
 alias server='hostname;python -m SimpleHTTPServer'
 
