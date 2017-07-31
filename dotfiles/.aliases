@@ -100,7 +100,7 @@ alias bu='brew update; brew upgrade;'
 
 # FIXME issue with bash to be able to do a cleanup...
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias up='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; mas upgrade; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup'
+alias up='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; mas upgrade; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup; apm update --no-confirm'
 
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
