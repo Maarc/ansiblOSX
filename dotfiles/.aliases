@@ -42,8 +42,8 @@ fi
 # Always use color output for `ls`
 alias ls="command ls ${colorflag}"
 alias ll='ls -all'
-alias l='ll'
-alias lr='ll -rt'
+alias l='ls -all'
+alias lr='ls -allrt'
 
 ##############################################################
 # Standard
@@ -103,7 +103,7 @@ alias bu='brew update; brew upgrade;'
 alias up='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; mas upgrade; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup; apm update --no-confirm'
 
 # Recursively delete `.DS_Store` files
-alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete; find . -name "Icon*" -type f -size 0 -ls -delete"
 
 # Empty the Trash on all mounted volumes and the main HDD.
 # Also, clear Apple’s System Logs to improve shell startup speed.

@@ -141,6 +141,7 @@ brew_apps:
   - python
   - python3
   - qemu
+  - rename                    # File renaming
   - rbenv
   - readline
   - ruby
@@ -227,7 +228,7 @@ brew_casks:
   - jd-gui
   - jprofiler
   - kindle
-  - kitematic       # Docker visualisation 
+  - kitematic       # Docker visualisation
   - libreoffice
   - licecap
   - limechat

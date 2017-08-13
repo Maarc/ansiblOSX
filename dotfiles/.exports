@@ -3,6 +3,8 @@
 export ANSIBLOSX_DIR="${HOME}/git/private/OSX/ansiblOSX"
 
 export CURRENT_PROJECT="${HOME}/Work/Projects/AMM"
+#export CURRENT_PROJECT="/Users/Marc/Work/Projects/2017/DUO"
+#export CURRENT_PROJECT="/Users/Marc/Work/Projects/2017/CATS"
 #export CURRENT_PROJECT="${HOME}/vm/vagrant/ocp/cdk/components/rhel/rhel-ose"
 #export CURRENT_PROJECT="${HOME}/Work/Projects/2016/EAP7"
 #export CURRENT_PROJECT="${HOME}/Work/Projects/2016/Summit_2016__Ansible_SOE"
@@ -16,7 +18,7 @@ export JBOSS_HOME="/opt/tools/jboss/jboss-eap-7.0"
 export WINDUP_SRC="${HOME}/Work/Projects/AMM/Code/tooling/windup/dist_last"
 export WINDUP_HOME="/opt/tools/rhamt/rhamt-web-distribution-4.0.0-SNAPSHOT"
 export RHAMT_HOME="${WINDUP_HOME}"
-export RHAMT_ZIP="${HOME}/Work/Resources/install/distributions/RHAMT/2017_07_02_rhamt-web-distribution-4.0.0-SNAPSHOT-with-authentication.zip"
+export RHAMT_ZIP="${HOME}/Work/Resources/install/distributions/RHAMT/2017_07_07_rhamt-web-distribution-4.0.0-SNAPSHOT-with-authentication.zip"
 
 export FUSE_VERSION="jboss-fuse-pre-patched-6.2.0.redhat-143-p1"
 export FUSE_ZIP="${HOME}/Work/Resources/install/distributions/Fuse/6.2/${FUSE_VERSION}.zip"
@@ -65,7 +67,7 @@ export PYTHONIOENCODING='UTF-8';
 # History
 ##############################################################
 # Increase Bash history size. Allow 32³ entries; the default is 500.
-export HISTSIZE='500000';
+export HISTSIZE='1000000';
 export HISTFILESIZE="${HISTSIZE}";
 # Omit duplicates and commands that begin with a space from history.
 export HISTCONTROL='ignoreboth';
