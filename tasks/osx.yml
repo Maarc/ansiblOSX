@@ -1,0 +1,12 @@
+---
+
+# Disable Google Chrome swipe behaviour
+# http://osxdaily.com/2015/05/09/disable-swipe-navigation-google-chrome-mac/
+# defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool FALSE
+- name: <OSX> Disable chrome swipe navigation
+  osx_defaults:
+    domain: com.google.Chrome
+    key: AppleEnableSwipeNavigateWithScrolls
+    type: bool
+    value: false
+    state: present

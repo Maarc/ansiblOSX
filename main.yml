@@ -12,6 +12,9 @@
         - group_vars/mas_var.yml
 
   tasks:
+    - include: tasks/osx.yml
+      when: configure_osx
+
     - include: tasks/brew.yml
       when: configure_brew
 
