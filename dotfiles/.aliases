@@ -20,11 +20,13 @@ alias db="cd ~/Dropbox"
 alias dt="cd ~/Desktop"
 alias gd="cd ~/Google\ Drive"
 alias t="cd ~/Work/Projects/AMM/Code/tracking/opportunity-tracker"
+alias r="cd ~/Work/Projects/AMM/Code/tooling/rhamt/rhamt-helper"
 
 alias g="git"
 alias h="history"
 alias j="jobs"
 alias qwd='printf "%q\n" "$(pwd)"'
+alias cls='clear'
 
 ##############################################################
 # ls
