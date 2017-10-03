@@ -12,7 +12,9 @@ export CURRENT_PROJECT="${HOME}/Work/Projects/AMM"
 
 export ANDROID_SDK_ROOT=/usr/local/share/android-sdk
 #export JAVA_HOME="$(/usr/libexec/java_home -v 1.7)"
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+#export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+#JDK 1.9
+export JAVA_HOME=$(/usr/libexec/java_home)
 
 export JBOSS_HOME="/opt/tools/jboss/jboss-eap-7.0"
 
