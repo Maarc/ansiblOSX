@@ -271,6 +271,7 @@ brew_casks:
   - vagrant-manager
   - veracrypt
   - viscosity
+  - visual-studio-code  # Visual Studio Code (Microsoft)
   - vlc
   - vmware-horizon-client
   - webstorm
