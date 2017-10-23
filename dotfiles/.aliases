@@ -115,7 +115,7 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 ##############################################################
 # Edit and generate
 ##############################################################
-alias vb='atom ${ANSIBLOSX_DIR}'
+alias vb='subl ${ANSIBLOSX_DIR}'
 alias sb='${ANSIBLOSX_DIR}/dotfiles/update_dotfiles.sh -f; source ~/.bashrc'
 alias sc='${ANSIBLOSX_DIR}/dotfiles/update_dotfiles.sh -f; source ~/.bashrc; cd ${CURRENT_PROJECT}'
 

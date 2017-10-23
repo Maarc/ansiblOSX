@@ -12,16 +12,17 @@ export CURRENT_PROJECT="${HOME}/Work/Projects/AMM"
 
 export ANDROID_SDK_ROOT=/usr/local/share/android-sdk
 #export JAVA_HOME="$(/usr/libexec/java_home -v 1.7)"
-#export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 #JDK 1.9
-export JAVA_HOME=$(/usr/libexec/java_home)
+#export JAVA_HOME=$(/usr/libexec/java_home)
 
 export JBOSS_HOME="/opt/tools/jboss/jboss-eap-7.0"
 
 export WINDUP_SRC="${HOME}/Work/Projects/AMM/Code/tooling/windup/dist_last"
 export WINDUP_HOME="/opt/tools/rhamt/rhamt-web-distribution-4.0.0-SNAPSHOT"
 export RHAMT_HOME="${WINDUP_HOME}"
-export RHAMT_ZIP="${HOME}/Work/Projects/AMM/Code/tooling/rhamt/rhamt-helper/01__RHAMT_code/windup-web-distribution/target/rhamt-web-distribution-4.0.0-SNAPSHOT-with-authentication.zip"
+#export RHAMT_ZIP="${HOME}/Work/Projects/AMM/Code/tooling/rhamt/rhamt-helper/01__RHAMT_code/windup-web-distribution/target/rhamt-web-distribution-4.0.0-SNAPSHOT-with-authentication.zip"
+export RHAMT_ZIP="${HOME}/Work/Resources/install/distributions/RHAMT/2017_10_16_rhamt-web-distribution-4.0.0.Beta4-with-authentication.zip"
 
 export FUSE_VERSION="jboss-fuse-pre-patched-6.2.0.redhat-143-p1"
 export FUSE_ZIP="${HOME}/Work/Resources/install/distributions/Fuse/6.2/${FUSE_VERSION}.zip"
