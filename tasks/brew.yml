@@ -3,20 +3,10 @@
   homebrew_tap: name={{ item }} state=present
   with_items: '{{brew_taps}}'
 
-- name: <BREW> Install apps with homebrew
-  homebrew: name={{ item }} state=present
-  with_items: '{{brew_apps}}'
-
 - name: <BREW> Install casks with homebrew
   homebrew_cask: name={{ item }} state=present install_options=force
   with_items: '{{brew_casks}}'
 
-#- name: [BREW] Force application installation with brew-cask
-#  homebrew_cask: name={{ item }} state=present install_options=force
-#  with_items: '{{homebrew_cask_applications}}'
-
-# Need to wait for a better brew cask version for improving this
-#- name: [BREW] Force installation
-#  become: true
-#  shell: brew cask install --force {{ item }}
-#  with_items: '{{homebrew_cask_applications}}'
+- name: <BREW> Install apps with homebrew
+  homebrew: name={{ item }} state=present
+  with_items: '{{brew_apps}}'
