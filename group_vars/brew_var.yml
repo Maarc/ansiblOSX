@@ -222,7 +222,7 @@ brew_casks:
   - caffeine
   - calibre
   - cleanmymac
-#  - clover-configurator
+  - clover-configurator
   - docker          # previously "docker-toolbox". I prefer docker as it directly integrates with the OS X native hypervisor.
   - dropbox
   - duet
