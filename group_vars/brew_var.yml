@@ -9,12 +9,13 @@ brew_taps:
   - caskroom/eid
   - caskroom/fonts
   - caskroom/versions
-  - homebrew/completions
   - homebrew/core
-  - homebrew/dupes
-  - homebrew/versions
-#  - trinitronx/truecrypt
   - vitorgalvao/tiny-scripts
+#  - homebrew/completions -> moved to core
+#  - homebrew/dupes -> moved to core
+#  - homebrew/versions -> moved to core
+#  - trinitronx/truecrypt
+
 
 # $ brew list | sort | sed 's/^/  - /'
 
