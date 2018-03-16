@@ -246,7 +246,6 @@ brew_casks:
   - google-photos-backup-and-sync
   - grammarly
   - hands-off
-  - inkscape
   - intellij-idea
   - istat-menus
   - iterm2
@@ -257,12 +256,11 @@ brew_casks:
   - libreoffice
   - licecap
   - limechat
-  - mac-informer    # Similar to macupdate-desktop
-  - macupdate-desktop
+  - mac-informer    # Similar to macupdate
+  - macupdate       # Previously macupdate-desktop
   - mat
   - mediathekview
   - mono-mdk
-  - nmap
   - onyx
   - osxfuse
   - owasp-zap
@@ -297,7 +295,8 @@ brew_casks:
   - wireshark
   - wireshark-chmodbpf
   - xquartz
-  - dia   # Needs to be installed after xquartz
+  - dia               # Needs to be installed after xquartz
+  - inkscape          # Needs to be installed after xquartz
 
 ### Do not use the latest version
 # - capture-one -> 10
