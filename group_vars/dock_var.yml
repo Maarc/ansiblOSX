@@ -1,9 +1,10 @@
 ---
 
 dockitems_to_remove:
+  - Siri
   - Launchpad
-  - Mail
   - Safari
+  - Mail
   - Contacts
   - Notes
   - Reminders
@@ -25,85 +26,103 @@ dockitems_to_persist:
   - name: Firefox
     path: "/Applications/Firefox.app"
     pos: 3
-  - name: Things
-    path: /Applications/Things.app
+  - name: Safari
+    path: /Applications/Safari.app
     pos: 4
-  - name: 1Password 6
-    path: /Applications/1Password 6.app
-    pos: 5
   - name: Spotify
     path: /Applications/Spotify.app
+    pos: 5
+  - name: Things
+    path: /Applications/Things.app
     pos: 6
-  - name: iTerm
-    path: /Applications/iTerm.app
+  - name: 1Password 6
+    path: /Applications/1Password 6.app
     pos: 7
-  - name: Atom
-    path: /Applications/Atom.app
-    pos: 8
   - name: Sublime Text
     path: /Applications/Sublime Text.app
+    pos: 8
+  - name: Atom
+    path: /Applications/Atom.app
     pos: 9
-  - name: calibre
-    path: /Applications/calibre.app
+  - name: Grammarly
+    path: /Applications/Grammarly.app
     pos: 10
-  - name: Evernote
-    path: /Applications/Evernote.app
-    pos: 11
-  - name: SourceTree
-    path: /Applications/SourceTree.app
-    pos: 12
-  # Docfetcher
-  - name: Beyond Compare
-    path: /Applications/Beyond Compare.app
-    pos: 13
-  - name: Transmit
-    path: /Applications/Transmit.app
-    pos: 14
-  - name: Telegram
-    path: /Applications/Telegram.app
-    pos: 15
-  - name: Skype
-    path: /Applications/Skype.app
-    pos: 16
-  - name: LimeChat
-    path: /Applications/LimeChat.app
-    pos: 17
   - name: Eclipse
     path: /Applications/Eclipse.app
+    pos: 11
+  - name: Calibre
+    path: /Applications/calibre.app
+    pos: 12
+  - name: Capture One 10
+    path: /Applications/Capture One 10.app
+    pos: 13
+  - name: Pinta
+    path: /Applications/Pinta.app
+    pos: 14
+  - name: Messages
+    path: /Applications/Messages.app
+    pos: 15
+  - name: Telegram
+    path: /Applications/Telegram.app
+    pos: 16
+  - name: Slack
+    path: /Applications/Slack.app
+    pos: 17
+  - name: Rocket.Chat+
+    path: /Applications/Rocket.Chat+.app
     pos: 18
-  - name: PyCharm
-    path: /Applications/PyCharm.app
+  - name: LimeChat
+    path: /Applications/LimeChat.app
     pos: 19
-  - name: JD-GUI
-    path: /Applications/JD-GUI.app
+  - name: Skype
+    path: /Applications/Skype.app
     pos: 20
-  - name: Balsamiq Mockups 3
-    path: /Applications/Balsamiq Mockups 3.app
+  - name: Blue Jeans
+    path: /Applications/Blue Jeans.app
     pos: 21
+  - name: Beyond Compare
+    path: /Applications/Beyond Compare.app
+    pos: 22
+  - name: Transmit
+    path: /Applications/Transmit.app
+    pos: 23
   - name: VirtualBox
     path: /Applications/VirtualBox.app
-    pos: 22
-  - name: Wireshark
-    path: /Applications/Wireshark.app
-    pos: 23
-  - name: OWASP ZAP
-    path: /Applications/OWASP ZAP.app
     pos: 24
-  - name: CleanMyMac 3
-    path: /Applications/CleanMyMac 3.app
-    pos: 25
-  - name: Gemini 2
-    path: /Applications/Gemini 2.app
-    pos: 26
   - name: OnyX
     path: /Applications/OnyX.app
-    pos: 27
+    pos: 25
+  - name: CleanMyMac 3
+    path: /Applications/CleanMyMac 3.app
+    pos: 26
   - name: App Store
     path: /Applications/App Store.app
-    pos: 28
+    pos: 27
   - name: System Preferences
     path: /Applications/System Preferences.app
-    pos: 29
-    #  - name: Slack
-    #    path: /Applications/Slack.app
-    #    pos:
+    pos: 28
+
+#  - name: Evernote
+#    path: /Applications/Evernote.app
+#    pos:
+#  - name: SourceTree
+#    path: /Applications/SourceTree.app
+#    pos:
+#  - name: PyCharm
+#    path: /Applications/PyCharm.app
+#    pos:
+#  - name: JD-GUI
+#    path: /Applications/JD-GUI.app
+#    pos:
+#  - name: Balsamiq Mockups 3
+#    path: /Applications/Balsamiq Mockups 3.app
+#    pos:
+#  - name: Wireshark
+#    path: /Applications/Wireshark.app
+#    pos:
+#  - name: OWASP ZAP
+#    path: /Applications/OWASP ZAP.app
+#    pos:
+#  - name: Gemini 2
+#    path: /Applications/Gemini 2.app
+#    pos:
