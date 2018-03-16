@@ -249,6 +249,7 @@ brew_casks:
   - istat-menus
   - iterm2
   - java
+  - java8           # Required for older Java apps  
   - jd-gui
   - jprofiler
   - kindle
