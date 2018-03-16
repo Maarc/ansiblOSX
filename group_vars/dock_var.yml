@@ -33,7 +33,7 @@ dockitems_to_persist:
     path: /Applications/Spotify.app
     pos: 5
   - name: Things
-    path: /Applications/Things.app
+    path: /Applications/Things3.app
     pos: 6
   - name: 1Password 6
     path: /Applications/1Password 6.app
@@ -50,7 +50,7 @@ dockitems_to_persist:
   - name: Eclipse
     path: /Applications/Eclipse.app
     pos: 11
-  - name: Calibre
+  - name: calibre
     path: /Applications/calibre.app
     pos: 12
   - name: Capture One 10
