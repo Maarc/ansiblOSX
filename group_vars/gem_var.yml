@@ -23,7 +23,7 @@ gems:
   - { name: fiddle }
   - { name: fileutils }
   - { name: hashery }
-  - { name: howmanypeoplearearound }
+#  - { name: howmanypeoplearearound }
   - { name: io-console }
   - { name: ipaddr }
   - { name: json }
