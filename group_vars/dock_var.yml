@@ -32,7 +32,7 @@ dockitems_to_persist:
   - name: Spotify
     path: /Applications/Spotify.app
     pos: 5
-  - name: Things
+  - name: Things3
     path: /Applications/Things3.app
     pos: 6
   - name: 1Password 6
