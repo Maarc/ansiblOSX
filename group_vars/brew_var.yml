@@ -11,11 +11,10 @@ brew_taps:
   - caskroom/versions
   - homebrew/core
   - vitorgalvao/tiny-scripts
+  - trinitronx/homebrew-truecrypt
 #  - homebrew/completions -> moved to core
 #  - homebrew/dupes -> moved to core
 #  - homebrew/versions -> moved to core
-#  - trinitronx/truecrypt
-
 
 # $ brew list | sort | sed 's/^/  - /'
 
@@ -282,7 +281,7 @@ brew_casks:
   - steam
   - sublime-text
   - telegram
-  - toggldesktop
+  - toggl
   - torbrowser
   - transmit
   - truecrypt
@@ -293,7 +292,6 @@ brew_casks:
   - vlc
   - webstorm
   - wireshark
-  - wireshark-chmodbpf
   - xquartz
   - dia               # Needs to be installed after xquartz
   - inkscape          # Needs to be installed after xquartz
@@ -353,5 +351,5 @@ brew_casks:
 # - unetbootin -> creates bootable live USBdrives for linux distros
 # - utorrent
 # - vmware-horizon-client
-# - vmware-horizon-client
+# - wireshark-chmodbpf -> unpriviledged version of wireshark
 # - yed
