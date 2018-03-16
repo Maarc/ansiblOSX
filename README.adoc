@@ -17,12 +17,14 @@ git clone https://github.com/Maarc/ansiblOSX # <3>
 cd ansiblOSX
 # Edit the group_wars/*_vars.yml file to select the software you want to install
 ansible-playbook main.yml # <4>
+cd dotfiles/
+./update_dotfiles.sh <5>
 ----
 <1> Setup http://brew.sh/[Homebrew]
 <2> Install Ansible
 <3> Clone this project
 <4> Install the used software
-
+<5> Seed the dotfiles
 
 == Update software lists
 
