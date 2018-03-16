@@ -74,7 +74,7 @@ brew_apps:
   - go
   - goaccess
   - graphviz
-  - homebrew/dupes/grep       # more recent versions of some macOS tools
+  - grep       # more recent versions of some macOS tools
   - gringo
   - gs
   - hashpump
@@ -141,7 +141,7 @@ brew_apps:
   - ocamlbuild
   - oniguruma
   - opam
-  - homebrew/dupes/openssh    # more recent versions of some macOS tools
+  - openssh    # more recent versions of some macOS tools
   - openssl
   - openssl@1.1
   - opus
@@ -168,7 +168,7 @@ brew_apps:
   - ruby
   - ruby-build
   - sane-backends
-  - homebrew/dupes/screen     # more recent versions of some macOS tools
+  - screen     # more recent versions of some macOS tools
   - sdl2
   - sdl2_image
   - sfnt2woff                 # font tools
@@ -249,7 +249,7 @@ brew_casks:
   - istat-menus
   - iterm2
   - java
-  - java8           # Required for older Java apps  
+  - java8           # Required for older Java apps
   - jd-gui
   - jprofiler
   - kindle
