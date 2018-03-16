@@ -210,7 +210,7 @@ brew_apps:
 
 brew_casks:
   - 1password
-  - adobe-reader
+  - adobe-acrobat-reader
   - aerial
   - alfred
   - appcleaner
@@ -224,7 +224,6 @@ brew_casks:
   - calibre
   - cleanmymac
   - clover-configurator
-  - dia
   - docker          # previously "docker-toolbox". I prefer docker as it directly integrates with the OS X native hypervisor.
   - dropbox
   - duet
@@ -298,6 +297,7 @@ brew_casks:
   - wireshark
   - wireshark-chmodbpf
   - xquartz
+  - dia   # Needs to be installed after xquartz
 
 ### Do not use the latest version
 # - capture-one -> 10
