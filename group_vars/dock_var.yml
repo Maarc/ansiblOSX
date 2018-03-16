@@ -48,7 +48,7 @@ dockitems_to_persist:
     path: /Applications/Grammarly.app
     pos: 10
   - name: Eclipse
-    path: /Applications/Eclipse.app
+    path: /Applications/Eclipse JEE.app
     pos: 11
   - name: calibre
     path: /Applications/calibre.app
