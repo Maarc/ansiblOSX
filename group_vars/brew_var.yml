@@ -2,33 +2,18 @@
 
 # $ brew tap | sort | sed 's/^/  - /'
 
-
-# ------ Minishift installation
-#$ brew install docker-machine-driver-xhyve
-## docker-machine-driver-xhyve need root owner and uid
-#$ sudo chown root:wheel $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
-#$ sudo chmod u+s $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
-
-#$ brew cask install minishift
-
-# Download binary from RH developer
-# chmod +x ...
-# ./cdk-3.0-minishift-darwin-amd64 setup-cdk
-# minishift config view
-# minishift config set cpus 2
-# minishift start
-
-
 brew_taps:
   - bramstein/webfonttools
   - caskroom/cask
+  - caskroom/drivers
+  - caskroom/eid
   - caskroom/fonts
   - caskroom/versions
   - homebrew/completions
   - homebrew/core
   - homebrew/dupes
   - homebrew/versions
-  - trinitronx/truecrypt
+#  - trinitronx/truecrypt
   - vitorgalvao/tiny-scripts
 
 # $ brew list | sort | sed 's/^/  - /'
@@ -41,32 +26,43 @@ brew_apps:
   - ant
   - aspcud
   - autoconf
+  - automake
   - bash
   - bash-completion
   - bazel
   - bfg                       # CTF tools
+  - binutils
+  - binwalk
   - brew-cask-completion
-  - cabal-install
+  - brew-gem
   - camlp4
   - cask-repair
   - chromedriver
+  - cifer
   - clasp
+  - clingo
   - cmake
   - coreutils                 # GNU core utilities (those that come with macOS are outdated).
   - dependency-check
-  - docker
+  - dex2jar
+  - dns2tcp
   - docker-machine
   - docker-machine-driver-xhyve
   - dockutil                  # https://github.com/kcrawford/dockutil
   - dos2unix
+  - faac
+  - fcrackzip
+  - fdk-aac
   - ffmpeg
   - findutils                 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
   - fontconfig
+  - foremost
+  - fpc
   - freetype
+  - gcc
   - gd
   - gdbm
   - gettext
-  - ghc
   - ghostscript
   - git
   - git-lfs
@@ -76,47 +72,66 @@ brew_apps:
   - gnu-sed                   # Install GNU `sed`, overwriting the built-in `sed`.
   - gnutls
   - go
+  - goaccess
   - graphviz
   - homebrew/dupes/grep       # more recent versions of some macOS tools
   - gringo
   - gs
+  - hashpump
   - hr
   - httpie
   - hub                       # Github extension
+  - hydra
   - icu4c
   - iftop
   - imagemagick
-  - iperf
+  - iperf3
+  - isl
   - jasper
   - jbig2dec
   - jmeter
+  - john
   - jpeg
   - jq
+  - knock
   - lame
+  - libav
+  - libdnet
   - libev
   - libffi
   - libgcrypt
   - libgpg-error
   - libgphoto2
   - libicns
+  - libidn2
+  - libmpc
+  - libogg
   - libpng
   - librsync
+  - librtlsdr
   - libtasn1
   - libtiff
   - libtool
   - libunistring
   - libusb
   - libusb-compat
+  - libvorbis
+  - libvpx
   - libxmlsec1
   - libyaml
   - little-cms2
+  - lua
   - makedepend
   - mas
   - maven
   - maven-completion
   - mono
   - moreutils                 # Install some other useful utilities like `sponge`.
+  - mpfr
+  - nasm
+  - ncurses
   - net-snmp
+  - netpbm
   - nettle
   - ngrep
   - nmap
@@ -129,33 +144,52 @@ brew_apps:
   - homebrew/dupes/openssh    # more recent versions of some macOS tools
   - openssl
   - openssl@1.1
+  - opus
   - p11-kit
+  - p7zip
   - pandoc
   - pcre
   - perl
   - pixman
   - pkg-config
+  - pngcheck
   - popt
+  - portaudio
   - pstree
   - pv                        # Monitor Progress of Data Sent Via a Pipe
+  - pyqt
   - python
   - python3
   - qemu
-  - rename                    # File renaming
+  - qt
   - rbenv
   - readline
+  - rename                    # File renaming
   - ruby
   - ruby-build
   - sane-backends
   - homebrew/dupes/screen     # more recent versions of some macOS tools
+  - sdl2
+  - sdl2_image
   - sfnt2woff                 # font tools
   - sfnt2woff-zopfli          # font tools
+  - sip
+  - socat
+  - sphinx-doc
   - sqlite
+  - sqlmap
+  - ssdeep
   - ssh-copy-id
   - swig
+  - tcpflow
+  - tcpreplay
+  - tcptrace
   - testssl
+  - texi2html
   - the_silver_searcher       # https://github.com/ggreer/the_silver_searcher
+  - tokyo-cabinet
   - tree
+  - ucspi-tcp
   - umlet                     # UML diagram editor
   - vim                       # More recent version of default macos tool
   - watch
@@ -164,6 +198,8 @@ brew_apps:
   - wine
   - woff2                     # font tools
   - x264
+  - xhyve
+  - xpdf
   - xvid
   - xz
   - youtube-dl
@@ -173,26 +209,22 @@ brew_apps:
 
 brew_casks:
   - 1password
-  - adium
   - adobe-reader
   - aerial
-  - android-sdk
   - alfred
   - appcleaner
+  - apppolice
   - atom
   - balsamiq-mockups
   - bartender
-  - betterzip
   - beyond-compare
-  - blue-jeans-launcher
-  - burp-suite
+  - blue-jeans
   - caffeine
   - calibre
-  - capture-one
   - cleanmymac
-  - dbeaver-community
+  - clover-configurator
   - dia
-  - docker          # previously "docker-toolbox". I prefer docker as it directly integrates with teh OS X native hypervisor.
+  - docker          # previously "docker-toolbox". I prefer docker as it directly integrates with the OS X native hypervisor.
   - dropbox
   - duet
   - eclipse-jee
@@ -210,16 +242,10 @@ brew_casks:
   - freemind
   - gemini
   - gimp
-  - gitbook-editor
-  - github-desktop
-  - gog-galaxy
   - google-chrome
-  - google-drive
+  - google-photos-backup-and-sync
   - grammarly
-  - handbrake
   - hands-off
-  - hugin
-  - iexplorer
   - inkscape
   - intellij-idea
   - istat-menus
@@ -228,18 +254,15 @@ brew_casks:
   - jd-gui
   - jprofiler
   - kindle
-  - kitematic       # Docker visualisation
   - libreoffice
   - licecap
   - limechat
-  - mac-informer
+  - mac-informer    # Similar to macupdate-desktop
   - macupdate-desktop
-  - macx-video-converter-pro
   - mat
   - mediathekview
   - mono-mdk
-  - moom
-  - nvalt
+  - nmap
   - onyx
   - osxfuse
   - owasp-zap
@@ -247,57 +270,88 @@ brew_casks:
   - paragon-ntfs
   - pinta
   - plain-clip
-  - projectlibre
   - pycharm
+  - purevpn
   - reaper
   - rocket-chat
-  - sequel-pro
+  - screaming-frog-seo-spider
   - silverlight
   - skype
   - slack
   - sourcetree
   - spectacle
   - spotify
+  - steam
   - sublime-text
-  - synergy
-  - teamviewer
   - telegram
-  - textexpander
-  - tinymediamanager
   - toggldesktop
   - torbrowser
   - transmit
-  - unetbootin
+  - truecrypt
   - vagrant-manager
-  - veracrypt
+  - virtualbox
   - viscosity
   - visual-studio-code  # Visual Studio Code (Microsoft)
   - vlc
-  - vmware-horizon-client
   - webstorm
   - wireshark
   - wireshark-chmodbpf
   - xquartz
-  - yed
 
-## Optional
+### Do not use the latest version
+# - capture-one -> 10
+# - synergy -> version 1.8 and not 2
+# - vagrant -> 1.8.1
+
+### Optional
+## Gaming
 # - battle-net
-# - steam
+# - gog-galaxy
+# - origin
+# - teamspeak-client
+# - teamviewer
+# - vnc-viewer
+## Work
+# - projectlibre -> open source project management
+## Security
+# - burp-suite
+## Image
+# - adobe-photoshop-lightroom
+# - adobe-photoshop-lightroom600
+# - hugin
+## System / Other
+# - adium
+# - betterzip -> great but no license yet
+# - chameleon-ssd-optimizer
+# - dbeaver-community
+# - gitbook-editor
+# - github-desktop
+# - handbrake -> not used anymore
+# - sequel-pro
+# - sublime -> downloads subtitles
+# - veracrypt
 
-## Do not use the latest version
-# - vagrant
-# - virtualbox
-# - capture-one
-
-## Not used anymore ...
-# - reflector
-# - citrix-receiver
+### Not used anymore ...
+# - android-sdk
 # - camtasia
-# - reflector
-# - vmware-horizon-client
-# - paragon-ntfs
-# - iexplorer
-# - tableau
-# - ControlAir -> control desktop with gestures
+# - citrix-receiver -> no
+# - controlair -> control desktop with gestures
+# - crashplan -> no support for private users anymore
+# - google-drive -> replaced by google-photos-backup-and-sync
+# - iexplorer -> not used anymore
+# - kitematic -> Docker visualisation
+# - macx-video-converter-pro
 # - minishift
+# - moom -> not meeting expectations
+# - mylio -> not meeting expectations
+# - nvalt
+# - paragon-ntfs
+# - reflector
+# - tableau
+# - textexpander
+# - tinymediamanager
+# - unetbootin -> creates bootable live USBdrives for linux distros
 # - utorrent
+# - vmware-horizon-client
+# - vmware-horizon-client
+# - yed

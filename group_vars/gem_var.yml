@@ -2,61 +2,40 @@
 
 #  $ gem list | tail -n+1 | sed 's/^/  - { name: /' |sed 's/ (/, version: /' | sed 's/)/, pre: false }/' | sed 's/ default: / /'
 gems_with_version:
-  - { name: asciidoctor-pdf, version: 1.5.0.alpha.15 , pre: true }
+  - { name: asciidoctor-pdf, version: 1.5.0.alpha.16 , pre: true }
 
 #  $ gem list | tail -n+1 | sed 's/^/  - { name: /' |sed 's/ (.*/ }/'
 gems:
+  - { name: Ascii85 }
   - { name: addressable }
   - { name: afm }
-  - { name: Ascii85 }
-  - { name: berkshelf }
-  - { name: berkshelf-api-client }
+  - { name: asciidoctor }
+  - { name: ast }
   - { name: bigdecimal }
-  - { name: buff-config }
-  - { name: buff-extensions }
-  - { name: buff-ignore }
-  - { name: buff-ruby_engine }
-  - { name: buff-shell_out }
-  - { name: celluloid }
-  - { name: celluloid-essentials }
-  - { name: celluloid-extras }
-  - { name: celluloid-fsm }
-  - { name: celluloid-io }
-  - { name: celluloid-pool }
-  - { name: celluloid-supervision }
-  - { name: chef-config }
-  - { name: cleanroom }
+  - { name: bundler }
   - { name: coderay }
   - { name: css_parser }
+  - { name: csv }
+  - { name: date }
   - { name: did_you_mean }
-  - { name: erubis }
-  - { name: faraday }
-  - { name: fuzzyurl }
+  - { name: etc }
+  - { name: fcntl }
+  - { name: fiddle }
+  - { name: fileutils }
   - { name: hashery }
-  - { name: hashie }
-  - { name: hitimes }
   - { name: howmanypeoplearearound }
-  - { name: httpclient }
   - { name: io-console }
+  - { name: ipaddr }
   - { name: json }
-  - { name: minitar }
-  - { name: minitest }
-  - { name: mixlib-archive }
-  - { name: mixlib-authentication }
-  - { name: mixlib-config }
-  - { name: mixlib-log }
-  - { name: mixlib-shellout }
-  - { name: molinillo }
   - { name: multi_json }
-  - { name: multipart-post }
   - { name: net-telnet }
-  - { name: nio4r }
-  - { name: octokit }
-  - { name: openssl }
+  - { name: parallel }
+  - { name: parser }
   - { name: pdf-core }
   - { name: pdf-reader }
   - { name: polyglot }
   - { name: power_assert }
+  - { name: powerpack }
   - { name: prawn }
   - { name: prawn-icon }
   - { name: prawn-svg }
@@ -65,23 +44,74 @@ gems:
   - { name: psych }
   - { name: public_suffix }
   - { name: pygments.rb }
+  - { name: rainbow }
   - { name: rake }
   - { name: rdoc }
-  - { name: retryable }
-  - { name: ridley }
   - { name: rouge }
+  - { name: rubocop }
+  - { name: rubocop-cask }
+  - { name: ruby-progressbar }
   - { name: ruby-rc4 }
-  - { name: rubygems-update }
   - { name: safe_yaml }
-  - { name: sawyer }
-  - { name: semverse }
-  - { name: solve }
+  - { name: scanf }
+  - { name: sdbm }
+  - { name: stringio }
+  - { name: strscan }
   - { name: test-unit }
-  - { name: thor }
   - { name: thread_safe }
   - { name: tilt }
   - { name: timers }
   - { name: treetop }
   - { name: ttfunk }
-  - { name: varia_model }
+  - { name: unicode-display_width }
+  - { name: webrick }
   - { name: xmlrpc }
+  - { name: zlib }
+
+### Not used anymore
+#  - { name: berkshelf }
+#  - { name: berkshelf-api-client }
+#  - { name: buff-config }
+#  - { name: buff-extensions }
+#  - { name: buff-ignore }
+#  - { name: buff-ruby_engine }
+#  - { name: buff-shell_out }
+#  - { name: celluloid }
+#  - { name: celluloid-essentials }
+#  - { name: celluloid-extras }
+#  - { name: celluloid-fsm }
+#  - { name: celluloid-io }
+#  - { name: celluloid-pool }
+#  - { name: celluloid-supervision }
+#  - { name: chef-config }
+#  - { name: cleanroom }
+#  - { name: did_you_mean }
+#  - { name: erubis }
+#  - { name: faraday }
+#  - { name: fuzzyurl }
+#  - { name: hashie }
+#  - { name: hitimes }
+#  - { name: httpclient }
+#  - { name: io-console }
+#  - { name: minitar }
+#  - { name: minitest }
+#  - { name: mixlib-archive }
+#  - { name: mixlib-authentication }
+#  - { name: mixlib-config }
+#  - { name: mixlib-log }
+#  - { name: mixlib-shellout }
+#  - { name: molinillo }
+#  - { name: multipart-post }
+#  - { name: net-telnet }
+#  - { name: nio4r }
+#  - { name: octokit }
+#  - { name: openssl }
+#  - { name: retryable }
+#  - { name: ridley }
+#  - { name: rubygems-update }
+#  - { name: sawyer }
+#  - { name: semverse }
+#  - { name: solve }
+#  - { name: test-unit }
+#  - { name: thor }
+#  - { name: varia_model }
