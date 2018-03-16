@@ -222,7 +222,7 @@ brew_casks:
   - caffeine
   - calibre
   - cleanmymac
-  - clover-configurator
+#  - clover-configurator
   - docker          # previously "docker-toolbox". I prefer docker as it directly integrates with the OS X native hypervisor.
   - dropbox
   - duet
@@ -286,6 +286,7 @@ brew_casks:
   - torbrowser
   - transmit
   - truecrypt
+  - vagrant
   - vagrant-manager
   - virtualbox
   - viscosity
@@ -298,9 +299,10 @@ brew_casks:
   - inkscape          # Needs to be installed after xquartz
 
 ### Do not use the latest version
-# - capture-one -> 10
+# - capture-one -> 10.2.0 (RAW link from https://github.com/Maarc/homebrew-cask/blob/d0099abd0d02e4b15e2c8a70c9de847013e7e3b4/Casks/capture-one.rb)
+## brew cask install https://raw.githubusercontent.com/Maarc/homebrew-cask/d0099abd0d02e4b15e2c8a70c9de847013e7e3b4/Casks/capture-one.rb
 # - synergy -> version 1.8 and not 2
-# - vagrant -> 1.8.1
+## brew cask install https://raw.githubusercontent.com/404NetworkError/homebrew-cask/169a3548a3e7905e6283bcf2f017a59e79b1e987/Casks/synergy.rb
 
 ### Optional
 ## Gaming
