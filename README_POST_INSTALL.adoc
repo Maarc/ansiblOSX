@@ -1,0 +1,102 @@
+# Post installation instructions
+
+This section describes the steps to be performed for transforming a newly installed system into a fully operational machine.
+
+1) Reduce Spotlight indexing
+Open system preferences -> Spotlight
+-> Restrict search results to "Applications"
+-> Untick "Allow Spotlight Suggestions in Look up"
+-> Under "Privacy" add all other local disks to prevent them to be indexed
+
+
+2) Configure the application in the following order
+
+2.1) Dropbox
+-> to speed-up the first sync, quit the application after the first successful login and overwrite the created dir by a local copy of the DB folder
+-> configure "Notifications"
+
+2.2) 1password
+-> Used 1password before, sync over dropbox
+-> Answer all questions
+-> Search for "1password 6" and double-click on the license attachment to register
+-> Install the browser extensions (Safari + Chrome)
+
+2.3) Alfred
+-> Activate Powerpack using key in 1password
+-> "Advanced" -> "Set preference folder" -> set the dropbox folder
+-> launch at login
+
+2.3) Pathfinder
+-> Open pathfinder and enter license key
+
+2.4) Transmit
+-> Enter license key
+-> Activate Panic Sync to get the latest configuration
+
+2.5) Bartender
+-> Add license
+-> Configure manually and shift icons
+
+2.6) iStats
+-> Add license
+-> Import settings from dropbox
+
+2.7) Grammarly
+-> Enter license key
+
+2.8) Fantastical 2
+-> Disable all notifications
+-> "Appearance" -> "Menu bar icon shows" -> "Date & Month"
+-> "Appearance" -> "App icon badge shows" -> Nothing
+-> "Appearance" -> "Hide Fantastical in Dock"
+
+-> "Update" -> disable "include anonymous system profile"
+
+2.9) Source tree
+-> Login using the atlassian account
+
+2.10) Things
+-> activate Things cloud
+-> right click: open at login
+
+2.11) Telegram
+-> Connect account
+
+2.12) Spectacle
+-> open and finish install
+-> change shortcut for fullscreen (alt+command+-)
+-> launch at login
+
+2.13) Viscosity
+-> open and finish install
+
+2.14) PureVPN
+-> login
+
+2.15) Spotify
+-> login
+
+2.16) Clean my mac
+-> register
+-> Privacy -> disable all
+
+2.17) Path Finder
+-> Finder -> Hide Finder's desktop
+-> General -> set as default file browser
+-> General -> Set default file (Sublime) and Terminal (iTerm)
+-> General -> Remove menu bar icon
+
+2.18) Paragon NTFS
+-> run the installer manually in "/usr/local/Caskroom/parafon-ntfs/15/Install/..‚"
+-> login & restart
+
+3) Further configuration
+
+3.1) System preferences
+-> General -> Use dark menu bar and Dock
+-> Date & Time -> "Clock" -> don't show the day of the week, show the seconds, 24-hour clock
+-> Keyboard -> Key repeat: fastest & Delay until repeat: shortest
+
+3.2) iTerm2
+-> iTerm2 -> Make default terminal
+-> iTerm2 -> Install shell integration (curl -L https://iterm2.com/misc/install_shell_integration.sh | bash)
