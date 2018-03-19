@@ -60,6 +60,7 @@ Open system preferences -> Spotlight
 2.10) Things
 -> activate Things cloud
 -> right click: open at login
+-> Preferences -> Quick Entry -> Disable quick entry
 
 2.11) Telegram
 -> Connect account
@@ -97,10 +98,19 @@ Open system preferences -> Spotlight
 
 2.10) Install Capture One
 $ brew cask install https://raw.githubusercontent.com/Maarc/homebrew-cask/d0099abd0d02e4b15e2c8a70c9de847013e7e3b4/Casks/capture-one.rb
+-> register
 
 2.21) Install synergy 1.8
 $ brew cask install https://raw.githubusercontent.com/404NetworkError/homebrew-cask/169a3548a3e7905e6283bcf2f017a59e79b1e987/Casks/synergy.rb
+-> configure & register‚
 
+2.22) Instal Photo Mechanic
+http://www.camerabits.com/downloads/
+
+
+2.23) Toggl
+-> Login
+-> Preferences -> General -> untick "Show dock icon"
 
 3) Further configuration
 
@@ -112,6 +122,8 @@ $ brew cask install https://raw.githubusercontent.com/404NetworkError/homebrew-c
 3.2) iTerm2
 -> iTerm2 -> Make default terminal
 -> iTerm2 -> Install shell integration (curl -L https://iterm2.com/misc/install_shell_integration.sh | bash)
+-> Preferences -> General -> Load preferences from a custom folder or URL (select DropBox folder)
+
 
 3.3) Setup git (https://help.github.com/articles/caching-your-github-password-in-git/)
 $ git config --global credential.helper osxkeychain
