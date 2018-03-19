@@ -316,6 +316,7 @@ brew_casks:
 # - projectlibre -> open source project management
 ## Security
 # - burp-suite
+# - malwarebytes
 ## Image
 # - adobe-photoshop-lightroom
 # - adobe-photoshop-lightroom600
