@@ -60,6 +60,7 @@ Open system preferences -> Spotlight
 2.10) Things
 -> activate Things cloud
 -> right click: open at login
+-> Preferences -> Quick Entry -> Disable quick entry
 
 2.11) Telegram
 -> Connect account
