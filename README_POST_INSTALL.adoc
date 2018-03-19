@@ -129,4 +129,12 @@ http://www.camerabits.com/downloads/
 $ git config --global credential.helper osxkeychain
 
 
+4) Install additional software (currently missing)
+
+- Photo Mechanic (http://www.camerabits.com/downloads/)
+- Hauptwerk
+- Cakewalk
+- Docfetcher
+- Tinker Tool (not TT System) (https://www.bresink.com/osx/-TinkerTool.html)
+- GCViewer (https://github.com/chewiebug/GCViewer/wiki/Changelog)
 
