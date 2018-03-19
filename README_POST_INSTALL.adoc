@@ -108,6 +108,9 @@ $ brew cask install https://raw.githubusercontent.com/404NetworkError/homebrew-c
 http://www.camerabits.com/downloads/
 
 
+2.23) Toggl
+-> Login
+-> Preferences -> General -> untick "Show dock icon"
 
 3) Further configuration
 
