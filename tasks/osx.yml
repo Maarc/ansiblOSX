@@ -10,3 +10,18 @@
     type: bool
     value: false
     state: present
+
+- name: Disable the Screensaver
+  shell: defaults write com.apple.screensaver idleTime 0
+
+- name: Show File Extensions
+  shell: defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+- name: Show the Status Bar in Finder
+  shell: defaults write com.apple.finder ShowStatusBar -bool true
+
+- name: Show the Path Bar in Finder
+  shell: defaults write com.apple.finder ShowPathbar -bool true
+
+- name: Restart Finder
+  shell: killall Finder
