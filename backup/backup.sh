@@ -32,8 +32,8 @@ DIR_FONTS=${DIR_BACKUP}/FONTS
 # Backup of the ascidoctor template
 DIR_ASCIIDOC_TEMPLATE=${DIR_BACKUP}/ASCIIDOCTOR_PDF
 
-# Token workflow service
-DIR_TOKEN=${DIR_BACKUP}/TOKEN
+# MacOS services (e.g. Token)
+DIR_SERVICES=${DIR_BACKUP}/SERVICES
 
 # Atom configuration
 DIR_ATOM=${DIR_BACKUP}/ATOM
@@ -61,7 +61,7 @@ function save_info() {
 
 # Save various configurations to a new directory
 function save() {
-  mkdir -p ${DIR_ZAP} ${DIR_FONTS} ${DIR_ASCIIDOC_TEMPLATE} ${DIR_TOKEN} ${DIR_ATOM} ${DIR_CHROME}
+  mkdir -p ${DIR_ZAP} ${DIR_FONTS} ${DIR_ASCIIDOC_TEMPLATE} ${DIR_SERVICES} ${DIR_ATOM} ${DIR_CHROME}
 
   # Atom
   apm list --installed --bare > ${DIR_ATOM}/packages.list
@@ -77,7 +77,10 @@ function save() {
   cp -Rfp /opt/rubies/2.2.3/lib/ruby/gems/2.2.0/gems/asciidoctor-pdf-1.5.0.alpha.10/data/themes/default-theme.yml ${DIR_ASCIIDOC_TEMPLATE}
 
   # Token.workflow service
-  sudo cp -Rfp ~/Library/Services/Token.workflow ${DIR_TOKEN}/.
+  sudo cp -Rfp ~/Library/Services/Token.workflow ${DIR_SERVICES}/.
+  sudo cp -Rfp ~/Library/Services/Date.workflow ${DIR_SERVICES}/.
+  sudo cp -Rfp ~/Library/Services/Date_Slash.workflow ${DIR_SERVICES}/.
+  sudo cp -Rfp ~/Library/Services/Date_Underscore.workflow ${DIR_SERVICES}/.
 
   # Google Chrome bookmarks
   cp -Rfp ~/Library/Application\ Support/Google/Chrome/Default/Bookmarks.bak ${DIR_CHROME}/.
@@ -114,7 +117,7 @@ function restore() {
   echo cp -Rfp ${DIR_ASCIIDOC_TEMPLATE}/default-theme.yml /opt/rubies/2.2.3/lib/ruby/gems/2.2.0/gems/asciidoctor-pdf-1.5.0.alpha.10/data/themes/.
 
   # Token.workflow service
-  echo sudo cp -Rfp ${DIR_TOKEN} ~/Library/Services/.
+  echo sudo cp -Rfp ${DIR_SERVICES} ~/Library/Services/.
 
   echo cp -Rfp ${DIR_CHROME}/Bookmarks.bak ~/Library/Application\ Support/Google/Chrome/Default/.
 
