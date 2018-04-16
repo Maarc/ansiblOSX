@@ -34,3 +34,8 @@ fi;
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Safari iTunes SystemUIServer Terminal" killall;
+
+# Display timestamps on iterm
+if [ $TERM_PROGRAM = "iTerm.app" ]; then
+  osascript -e 'tell application "System Events" to keystroke "e" using {command down, shift down}'
+fi
