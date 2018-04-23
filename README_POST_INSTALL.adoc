@@ -112,6 +112,10 @@ http://www.camerabits.com/downloads/
 -> Login
 -> Preferences -> General -> untick "Show dock icon"
 
+2.24) Kindle Upload
+Install send to kindle: https://www.amazon.com/gp/sendtokindle/mac
+
+
 3) Further configuration
 
 3.1) System preferences
