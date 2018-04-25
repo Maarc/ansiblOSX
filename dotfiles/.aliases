@@ -22,6 +22,7 @@ alias gd="cd ~/Google\ Drive"
 alias t="cd ~/Work/Projects/AMM/Code/tracking/opportunity-tracker"
 alias r="cd ~/Work/Projects/AMM/Code/tooling/rhamt/rhamt-helper"
 alias n="cd ~/Work/Projects/AMM/Notes"
+alias e="cd ~/Dropbox/Documents/Factures/Work/Expenses"
 
 alias g="git"
 alias h="history"
