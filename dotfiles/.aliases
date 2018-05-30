@@ -212,7 +212,7 @@ alias w='cd ${WINDUP_SRC}/../bin'
 alias ocp="echo \"https://\$(oc config get-contexts | grep "\\*" | awk '{print \$3}' | tr - .)\";echo \"http://\$(oc get route --no-headers -o=custom-columns=HOST:.spec.host rhamt-web-console)\""
 
 # Starts a local http server (0.0.0.0:8000)
-alias server='echo "http://$(hostname):8000";python -m SimpleHTTPServer'
+alias server='echo "http://$(hostname):8000";python2 -m SimpleHTTPServer'
 
 ##############################################################
 # Mega-command-alias
