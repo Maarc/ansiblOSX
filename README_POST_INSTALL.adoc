@@ -27,6 +27,8 @@ Open system preferences -> Spotlight
 -> Activate Powerpack using key in 1password
 -> "Advanced" -> "Set preference folder" -> set the dropbox folder
 -> launch at login
+-> install mirror displays (https://www.npmjs.com/package/alfred-mirror-displays)
+	$npm install --global alfred-mirror-displays
 
 2.3) Pathfinder
 -> Open pathfinder and enter license key
