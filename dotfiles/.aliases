@@ -148,7 +148,8 @@ alias watchpeople='sudo howmanypeoplearearound -o /opt/tools/$(date +%Y-%m-%d__%
 ##############################################################
 # Brew
 ##############################################################
-alias bcs='brew cask search '
+alias bcs='brew search '
+alias bs='brew search '
 alias bcl='brew cask list '
 alias bci='brew cask install --force '
 alias bcu='brew cask uninstall --force '
