@@ -33,6 +33,8 @@ alias cls='clear'
 # Good morning!
 alias moin='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; mas upgrade; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup; apm update --no-confirm; brew update; brew upgrade; brew cask outdated |grep -v "capture-one"|grep -v "synergy"|grep -v "screaming-frog-seo-spider" | awk '"'"'{print "brew cask install --force "$1"\0"}'"'"' | xargs -0 bash -c; cd ~/Work/Projects/AMM/Code/tracking/opportunity-tracker; ./run.sh;'
 
+alias photo='mkdir -p Source/Archive Source/Selected CaptureOne Export/01_CaptureOne Export/02_PhotoLemur Export/03_Final; mysides insert ${PWD##*/} file://$(pwd); open -a Photo\ Mechanic\ 5 .'
+alias pm='open -a Photo\ Mechanic\ 5 .'
 ##############################################################
 # ls
 ##############################################################
