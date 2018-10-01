@@ -9,8 +9,6 @@ Open system preferences -> Spotlight
 -> Under "Privacy" add all other local disks to prevent them to be indexed
 
 
-
-
 2) Configure the application in the following order
 
 2.1) Dropbox
@@ -109,13 +107,15 @@ $ brew cask install https://raw.githubusercontent.com/404NetworkError/homebrew-c
 2.22) Instal Photo Mechanic
 http://www.camerabits.com/downloads/
 
-
 2.23) Toggl
 -> Login
 -> Preferences -> General -> untick "Show dock icon"
 
-2.24) Kindle Upload
+2.24) Install Kindle Upload
 Install send to kindle: https://www.amazon.com/gp/sendtokindle/mac
+
+2.25) Install MySides
+https://github.com/mosen/mysides
 
 
 3) Further configuration
@@ -129,7 +129,6 @@ Install send to kindle: https://www.amazon.com/gp/sendtokindle/mac
 -> iTerm2 -> Make default terminal
 -> iTerm2 -> Install shell integration (curl -L https://iterm2.com/misc/install_shell_integration.sh | bash)
 -> Preferences -> General -> Load preferences from a custom folder or URL (select DropBox folder)
-
 
 3.3) Setup git (https://help.github.com/articles/caching-your-github-password-in-git/)
 $ git config --global credential.helper osxkeychain
