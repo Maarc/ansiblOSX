@@ -293,6 +293,7 @@ brew_casks:
   - visual-studio-code  # Visual Studio Code (Microsoft)
   - vlc
   - webstorm
+  - whatsapp
   - wireshark
   - xquartz
   - dia               # Needs to be installed after xquartz
