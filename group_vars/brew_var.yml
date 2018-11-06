@@ -283,7 +283,7 @@ brew_casks:
   - sublime-text
   - telegram
   - toggl
-  - torbrowser
+  - tor-browser
   - transmit
   - truecrypt
   - vagrant
