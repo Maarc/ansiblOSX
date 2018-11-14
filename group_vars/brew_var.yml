@@ -315,6 +315,7 @@ brew_casks:
 # - vnc-viewer
 ## Work
 # - projectlibre -> open source project management
+# - karabiner       # Used to remap "play" key to Spotify
 ## Security
 # - burp-suite
 # - malwarebytes
