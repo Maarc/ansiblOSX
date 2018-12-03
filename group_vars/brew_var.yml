@@ -260,6 +260,7 @@ brew_casks:
   - macupdate       # Previously macupdate-desktop
   - mat
   - mediathekview
+  - microsoft-office
   - mono-mdk
   - onyx
   - osxfuse
