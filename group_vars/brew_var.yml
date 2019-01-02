@@ -36,6 +36,7 @@ brew_apps:
   - brew-cask-completion
   - brew-gem
   - camlp4
+  - caption                   # Findet Untertitel
   - cask-repair
   - chromedriver
   - cifer
