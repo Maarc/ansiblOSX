@@ -36,7 +36,6 @@ brew_apps:
   - brew-cask-completion
   - brew-gem
   - camlp4
-  - caption                   # Findet Untertitel
   - cask-repair
   - chromedriver
   - cifer
@@ -130,6 +129,7 @@ brew_apps:
   - moreutils                 # Install some other useful utilities like `sponge`.
   - mpfr
   - nasm
+  - nativefier                # https://www.aptgetupdate.de/2016/03/29/nativefier-native-apps-von-webseiten-erstellen/
   - ncurses
   - net-snmp
   - netpbm
@@ -222,6 +222,7 @@ brew_casks:
   - blue-jeans
   - caffeine
   - calibre
+  - caption                   # Findet Untertitel
   - cleanmymac
   - clover-configurator
   - docker          # previously "docker-toolbox". I prefer docker as it directly integrates with the OS X native hypervisor.
@@ -245,6 +246,7 @@ brew_casks:
   - google-chrome
   - google-photos-backup-and-sync
   - grammarly
+  - gutenprint                # Top quality Mac printer drivers (http://thebackpackr.com/borderless-pdf-printing-mac/)
   - hands-off
   - intellij-idea
   - istat-menus
