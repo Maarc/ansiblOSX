@@ -142,4 +142,16 @@ $ git config --global credential.helper osxkeychain
 - Docfetcher
 - Tinker Tool (not TT System) (https://www.bresink.com/osx/-TinkerTool.html)
 - GCViewer (https://github.com/chewiebug/GCViewer/wiki/Changelog)
+- Realtime Board (https://realtimeboard.com/apps/)
+
+
+5) Other
+
+Install Java8
+
+> brew tap caskroom/versions
+> brew cask install java8
+
+Install latest Ruby version
+https://gorails.com/setup/osx/10.14-mojave
 
