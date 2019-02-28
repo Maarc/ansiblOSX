@@ -2,10 +2,5 @@
 
 export PATH="/opt/local/bin:/opt/local/sbin:${PATH}"
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
-export PATH="~/.vagrant.d/data/service-manager/bin/openshift/1.2.1:${PATH}"
-export PATH="${M3}:${PATH}"
-export PATH="/opt/tools/ocp/oc-cluster-wrapper:${PATH}"
-export PATH="/opt/tools/ocp/oc-client:${PATH}"
-export PATH="/Applications/DevelopmentSuite/cdk/bin:${PATH}"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-export PATH="/opt/tools/ocp/minishift:${PATH}"
+export PATH="${TOOLS_DIR}/app-foundry/bin:$PATH"

@@ -12,29 +12,26 @@ alias .....="cd ../../../.."
 
 alias c='cd ${ANSIBLOSX_DIR}'
 alias p='cd ${CURRENT_PROJECT}'
-alias jb='cd ${JBOSS_HOME}'
 alias d="cd ~/Downloads"
-alias i="cd ~/Work/Administration/Job/Interviews"
-alias o="cd ~/vm/vagrant/ocp"
 alias db="cd ~/Sync/Dropbox"
-alias dt="cd ~/Desktop"
 alias gd="cd ~/Sync/Google\ Drive"
-alias t="cd ~/git/AMM/tracking/opportunity-tracker"
+alias dt="cd ~/Desktop"
+
+alias k='cd ${KNOWLEDGE_DIR}'
 alias r="cd ~/git/AMM/tooling/rhamt/rhamt-helper"
-alias n="cd ~/Work/Projects/AMM"
-alias e="cd ~/Sync/Dropbox/Documents/Factures/Work/Expenses"
+alias forge-vulcan='echo "Please open http://localhost:3001"; forge vulcan-ui --database-dir=.'
 
 alias g="git"
 alias h="history"
-alias j="jobs"
 alias qwd='printf "%q\n" "$(pwd)"'
 alias cls='clear'
 
 # Good morning!
-alias moin='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; mas upgrade; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup; apm update --no-confirm; brew update; brew upgrade; brew cask outdated |grep -v "capture-one"|grep -v "path-finder"|grep -v "synergy"|grep -v "screaming-frog-seo-spider" | awk '"'"'{print "brew cask install --force "$1"\0"}'"'"' | xargs -0 bash -c; cd ~/Work/Projects/AMM/Code/tracking/opportunity-tracker; ./run.sh;'
+alias moin='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; mas upgrade; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup; apm update --no-confirm; brew update; brew upgrade; brew cask outdated |grep -v "capture-one"|grep -v "path-finder"|grep -v "synergy"|grep -v "screaming-frog-seo-spider" | awk '"'"'{print "brew cask install --force "$1"\0"}'"'"' | xargs -0 bash -c;'
 
 alias photo='mkdir -p Source/Archive Source/Selected CaptureOne Export/01_CaptureOne Export/02_PhotoLemur Export/03_Final; mysides insert ${PWD##*/} file://$(pwd); open -a Photo\ Mechanic\ 5 .'
 alias photom='open -a Photo\ Mechanic\ 5 .'
+
 ##############################################################
 # ls
 ##############################################################
@@ -122,7 +119,7 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 ##############################################################
 # Edit and generate
 ##############################################################
-alias vb='subl ${ANSIBLOSX_DIR}'
+alias vb='code ${ANSIBLOSX_DIR}'
 alias sb='${ANSIBLOSX_DIR}/dotfiles/update_dotfiles.sh -f; source ~/.bashrc'
 alias sc='${ANSIBLOSX_DIR}/dotfiles/update_dotfiles.sh -f; source ~/.bashrc; cd ${CURRENT_PROJECT}'
 
@@ -161,26 +158,6 @@ alias bco='brew cask outdated'
 alias bcou='brew cask outdated |grep -v "capture-one" |grep -v "synergy" |grep -v "path-finder" |grep -v "screaming-frog-seo-spider" | awk '"'"'{print "brew cask install --force "$1"\0"}'"'"' | xargs -0 bash -c'
 
 ##############################################################
-# Docker
-##############################################################
-alias docker_env='eval "$(docker-machine env default)"'
-alias docker_clean='docker stop $(docker ps -a -q); docker rm $(docker ps -a -q)'
-alias drmstopped='docker rm $(docker ps -a -q)'
-alias drmuntagged='docker rmi $(docker images | grep "^<none>" | awk '"'"'{print $3}'"'"' )'
-alias dls='docker images -a'
-alias dps='watch docker ps -a'
-# SSH on the target docker instance
-alias b2d_ssh='boot2docker ssh -t sudo /var/lib/boot2docker/docker-enter'
-alias b2d_clean='boot2docker halt; boot2docker delete; boot2docker init; boot2docker start; boot2docker shellinit'
-alias b2d_update='docker version; boot2docker halt; boot2docker delete; boot2docker upgrade; boot2docker init; boot2docker start; boot2docker shellinit; docker version'
-
-##############################################################
-# Dropbox
-##############################################################
-alias dropbox_conflicts='find ${DROPBOX_HOME} -name \"*onflict*\"'
-alias dropbox_conflicts_remove='find ${DROPBOX_HOME} -name \"*onflict*\" -exec rm -f {} \\;'
-
-##############################################################
 # Java
 ##############################################################
 alias pseap='psj | grep standalone'
@@ -196,33 +173,55 @@ alias mvna='mvn -T 4 clean eclipse:clean eclipse:eclipse install'
 alias mvnt='mvn -T 4 clean eclipse:clean eclipse:eclipse install -Dmaven.test.skip=true -DskipTests'
 alias mvn=color_maven
 
-##############################################################
-# Red Hat middleware
-##############################################################
-# Haproxy
-alias haproxy_start="sudo haproxy -f /opt/tools/jboss/haproxy.cfg"
-alias haproxy_stop="sudo killall haproxy"
-# Mod_cluster
-alias mod_cluster_start="sudo /opt/tools/jboss/httpd/sbin/apachectl -k start -d /opt/tools/jboss/httpd/httpd"
-alias mod_cluster_stop="sudo /opt/tools/jboss/httpd/sbin/apachectl -k stop -d /opt/tools/jboss/httpd/httpd"
 
-##############################################################
-# RHAMT
-##############################################################
-alias windup='${WINDUP_HOME}/bin/windup'
-alias wl='less ~/.windup/log/windup.log'
-alias win='cd ${WINDUP_SRC}'
-alias w='cd ${WINDUP_SRC}/../bin'
-alias ocp="echo \"https://\$(oc config get-contexts | grep "\\*" | awk '{print \$3}' | tr - .)\";echo \"http://\$(oc get route --no-headers -o=custom-columns=HOST:.spec.host rhamt-web-console)\""
 
-# Starts a local http server (0.0.0.0:8000)
-alias server='echo "http://$(hostname):8000";python2 -m SimpleHTTPServer'
-
-##############################################################
-# Mega-command-alias
-##############################################################
-
-alias al="find . -iname '*.yml' -exec ansible-lint {} -r ~/git/private/ansible/ansible-lint-rules/rules \;"
-alias ansible_build='cd ~/vm/vagrant/ansible/ansible_eap_soe; ./init_DEV.sh ; cd ansible/ ; ansible-playbook site.yml -i hosts-dev'
-alias kali='cd ~/vm/vagrant/pentest-env; PENTESTRC=examples/tor-proxy.pentestrc vagrant up kali'
-alias install_fuse='cd /opt/tools/jboss/; rm -Rf ${FUSE_VERSION}; unzip ${FUSE_ZIP}; echo -e "\nadmin=admin,admin,manager,viewer,Operator, Maintainer, Deployer, Auditor, Administrator, SuperUser" >> ${FUSE_VERSION}/etc/users.properties'
+###############################################################
+## Docker
+###############################################################
+#alias docker_env='eval "$(docker-machine env default)"'
+#alias docker_clean='docker stop $(docker ps -a -q); docker rm $(docker ps -a -q)'
+#alias drmstopped='docker rm $(docker ps -a -q)'
+#alias drmuntagged='docker rmi $(docker images | grep "^<none>" | awk '"'"'{print $3}'"'"' )'
+#alias dls='docker images -a'
+#alias dps='watch docker ps -a'
+## SSH on the target docker instance
+#alias b2d_ssh='boot2docker ssh -t sudo /var/lib/boot2docker/docker-enter'
+#alias b2d_clean='boot2docker halt; boot2docker delete; boot2docker init; boot2docker start; boot2docker shellinit'
+#alias b2d_update='docker version; boot2docker halt; boot2docker delete; boot2docker upgrade; boot2docker init; boot2docker start; boot2docker shellinit; docker version'
+#
+###############################################################
+## Dropbox
+###############################################################
+#alias dropbox_conflicts='find ${DROPBOX_HOME} -name \"*onflict*\"'
+#alias dropbox_conflicts_remove='find ${DROPBOX_HOME} -name \"*onflict*\" -exec rm -f {} \\;'
+#
+###############################################################
+## Red Hat middleware
+###############################################################
+## Haproxy
+#alias haproxy_start="sudo haproxy -f /opt/tools/jboss/haproxy.cfg"
+#alias haproxy_stop="sudo killall haproxy"
+## Mod_cluster
+#alias mod_cluster_start="sudo /opt/tools/jboss/httpd/sbin/apachectl -k start -d /opt/tools/jboss/httpd/httpd"
+#alias mod_cluster_stop="sudo /opt/tools/jboss/httpd/sbin/apachectl -k stop -d /opt/tools/jboss/httpd/httpd"
+#
+###############################################################
+## RHAMT
+###############################################################
+#alias windup='${WINDUP_HOME}/bin/windup'
+#alias wl='less ~/.windup/log/windup.log'
+#alias win='cd ${WINDUP_SRC}'
+#alias w='cd ${WINDUP_SRC}/../bin'
+#alias ocp="echo \"https://\$(oc config get-contexts | grep "\\*" | awk '{print \$3}' | tr - .)\";echo \"http://\$(oc get route --no-headers -o=custom-columns=HOST:.spec.host rhamt-web-console)\""
+#
+## Starts a local http server (0.0.0.0:8000)
+#alias server='echo "http://$(hostname):8000";python2 -m SimpleHTTPServer'
+#
+###############################################################
+## Mega-command-alias
+###############################################################
+#
+#alias al="find . -iname '*.yml' -exec ansible-lint {} -r ~/git/private/ansible/ansible-lint-rules/rules \;"
+#alias ansible_build='cd ~/vm/vagrant/ansible/ansible_eap_soe; ./init_DEV.sh ; cd ansible/ ; ansible-playbook site.yml -i hosts-dev'
+#alias kali='cd ~/vm/vagrant/pentest-env; PENTESTRC=examples/tor-proxy.pentestrc vagrant up kali'
+#alias install_fuse='cd /opt/tools/jboss/; rm -Rf ${FUSE_VERSION}; unzip ${FUSE_ZIP}; echo -e "\nadmin=admin,admin,manager,viewer,Operator, Maintainer, Deployer, Auditor, Administrator, SuperUser" >> ${FUSE_VERSION}/etc/users.properties'
