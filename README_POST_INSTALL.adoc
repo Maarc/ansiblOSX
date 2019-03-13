@@ -117,6 +117,26 @@ Install send to kindle: https://www.amazon.com/gp/sendtokindle/mac
 2.25) Install MySides
 https://github.com/mosen/mysides
 
+2.26 Install SDKMAN (https://hackernoon.com/macbook-dev-setup-5890e61a8f0a  )
+$ curl -s "https://get.sdkman.io" | bash
+$ source "${HOME}/.sdkman/bin/sdkman-init.sh"
+
+# Java SDK
+$ sdk install java
+$ sdk install java 8.0.201-oracle
+
+# Spring boot (https://www.baeldung.com/spring-boot-cli)
+$ sdk install springboot
+
+(( # gradle
+$ sdk install gradle
+# mysql
+$ brew install mysql
+# mongodb
+$ brew install mongodb
+elasticsearch
+$ brew install elasticsearch ))
+
 
 3) Further configuration
 
@@ -147,11 +167,14 @@ $ git config --global credential.helper osxkeychain
 
 5) Other
 
-Install Java8
-
-> brew tap caskroom/versions
-> brew cask install java8
-
 Install latest Ruby version
 https://gorails.com/setup/osx/10.14-mojave
 
+Load testing: install ad / JMeter / Locust / The Grinder
+
+
+6) Deprecated 
+
+Install Java8 (done using sdkman)
+> brew tap caskroom/versions
+> brew cask install java8

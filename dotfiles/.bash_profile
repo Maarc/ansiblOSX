@@ -42,3 +42,6 @@ fi
 
 # Ruby - Add rbenv to bash so that it loads every time you open a terminal
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# SDKMAN - MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+[[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"

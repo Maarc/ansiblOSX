@@ -9,7 +9,7 @@ export CURRENT_PROJECT="${TOOLS_DIR}/rhamt/rhamt-helper"
 export KNOWLEDGE_DIR="${WORK_DIR}/Knowledge"
 
 #export JAVA_HOME="$(/usr/libexec/java_home -v 1.7)"
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+#export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 #JDK 1.9
 #export JAVA_HOME=$(/usr/libexec/java_home)
 
