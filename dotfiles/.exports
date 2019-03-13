@@ -5,7 +5,8 @@ export ANSIBLOSX_DIR="${HOME}/git/private/OSX/ansiblOSX"
 export WORK_DIR="${HOME}/Work"
 export TOOLS_DIR="${WORK_DIR}/Tools"
 
-export CURRENT_PROJECT="${TOOLS_DIR}/rhamt/rhamt-helper"
+#export CURRENT_PROJECT="${TOOLS_DIR}/rhamt/rhamt-helper"
+export CURRENT_PROJECT="${TOOLS_DIR}/app-report"
 export KNOWLEDGE_DIR="${WORK_DIR}/Knowledge"
 
 #export JAVA_HOME="$(/usr/libexec/java_home -v 1.7)"

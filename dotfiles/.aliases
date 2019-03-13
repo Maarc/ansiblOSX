@@ -18,6 +18,8 @@ alias gd="cd ~/Sync/Google\ Drive"
 alias dt="cd ~/Desktop"
 
 alias k='cd ${KNOWLEDGE_DIR}'
+alias t='cd ${TOOLS_DIR}'
+
 alias r="cd ~/git/AMM/tooling/rhamt/rhamt-helper"
 alias forge-vulcan='echo "Please open http://localhost:3001"; forge vulcan-ui --database-dir=.'
 
