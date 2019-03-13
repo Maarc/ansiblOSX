@@ -153,6 +153,10 @@ $ brew install elasticsearch ))
 
 -> Terminal -> Preferences -> General -> Set "/usr/local/Cellar/bash/5.0.2/bin/bash" as "Shell open with -> Command (complete path)"
 
+# Change the used bash (https://stackoverflow.com/questions/23059662/how-can-i-get-iterm-to-use-the-newer-version-of-bash-that-brew-shows-change-a-u)
+$ sudo bash -c 'echo /usr/local/Cellar/bash/5.0.2/bin/bash >> /etc/shells'
+$ chsh -s /usr/local/Cellar/bash/5.0.2/bin/bash
+
 3.3) Setup git (https://help.github.com/articles/caching-your-github-password-in-git/)
 $ git config --global credential.helper osxkeychain
 
