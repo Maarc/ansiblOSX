@@ -227,3 +227,8 @@ alias mvn=color_maven
 #alias ansible_build='cd ~/vm/vagrant/ansible/ansible_eap_soe; ./init_DEV.sh ; cd ansible/ ; ansible-playbook site.yml -i hosts-dev'
 #alias kali='cd ~/vm/vagrant/pentest-env; PENTESTRC=examples/tor-proxy.pentestrc vagrant up kali'
 #alias install_fuse='cd /opt/tools/jboss/; rm -Rf ${FUSE_VERSION}; unzip ${FUSE_ZIP}; echo -e "\nadmin=admin,admin,manager,viewer,Operator, Maintainer, Deployer, Auditor, Administrator, SuperUser" >> ${FUSE_VERSION}/etc/users.properties'
+
+
+## Extended aliases
+
+fpdf() { find . -iname "*.pdf" -exec pdfgrep $1 {} +; }
