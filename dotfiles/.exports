@@ -19,11 +19,13 @@ export RHAMT_HOME="${TOOLS_DIR}/rhamt/rhamt-helper/01__RHAMT"
 
 export DROPBOX_HOME="${HOME}/Dropbox"
 
-#export M3_HOME="/usr/local/Cellar/maven/3.5.0/libexec"
+export M3_HOME="/usr/local/Cellar/maven/3.6.0/libexec"
+export M2_HOME="${M3_HOME}"
 #export M3="${M3_HOME}/bin"
-#export MAVEN_HOME="${M3}"
 #MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=128M -Dmaven.multiModuleProjectDirectory=${M2_HOME}"
 #export MAVEN_OPTS="-Xmx1024m -Dmaven.multiModuleProjectDirectory=${M3_HOME}"
+#export MAVEN_HOME="${HOME}/.m2"
+export GRADLE_USER_HOME="${HOME}/.gradle"
 
 export BREW_PREFIX="$(brew --prefix)"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
