@@ -137,6 +137,9 @@ $ brew install mongodb
 elasticsearch
 $ brew install elasticsearch ))
 
+2.27) Install CheatSheet
+https://www.mediaatelier.com/CheatSheet/
+
 
 3) Further configuration
 
