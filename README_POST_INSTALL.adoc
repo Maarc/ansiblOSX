@@ -173,6 +173,7 @@ $ git config --global credential.helper osxkeychain
 - Tinker Tool (not TT System) (https://www.bresink.com/osx/-TinkerTool.html)
 - GCViewer (https://github.com/chewiebug/GCViewer/wiki/Changelog)
 - Realtime Board (https://realtimeboard.com/apps/)
+- Foobar2000 (https://www.foobar2000.org/mac)
 
 
 5) Other
