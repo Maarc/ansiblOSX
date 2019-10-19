@@ -154,11 +154,11 @@ https://www.mediaatelier.com/CheatSheet/
 -> iTerm2 -> Install shell integration (curl -L https://iterm2.com/misc/install_shell_integration.sh | bash)
 -> iTerm2 -> Preferences -> General -> Load preferences from a custom folder or URL (select DropBox folder)
 
--> Terminal -> Preferences -> General -> Set "/usr/local/Cellar/bash/5.0.7/bin/bash" as "Shell open with -> Command (complete path)"
+-> Terminal -> Preferences -> General -> Set "/usr/local/Cellar/bash/5.0.11/bin/bash" as "Shell open with -> Command (complete path)"
 
 # Change the used bash (https://stackoverflow.com/questions/23059662/how-can-i-get-iterm-to-use-the-newer-version-of-bash-that-brew-shows-change-a-u)
-$ sudo bash -c 'echo /usr/local/Cellar/bash/5.0.7/bin/bash >> /etc/shells'
-$ chsh -s /usr/local/Cellar/bash/5.0.7/bin/bash
+$ sudo bash -c 'echo /usr/local/Cellar/bash/5.0.11/bin/bash >> /etc/shells'
+$ chsh -s /usr/local/Cellar/bash/5.0.11/bin/bash
 
 3.3) Setup git (https://help.github.com/articles/caching-your-github-password-in-git/)
 $ git config --global credential.helper osxkeychain
