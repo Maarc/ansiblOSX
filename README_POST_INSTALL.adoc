@@ -128,11 +128,6 @@ Install send to kindle: https://www.amazon.com/gp/sendtokindle/mac
 2.25) (optional) Steam
 -> Login
 
-2.28) (optional) Install music software
--> Hauptwerk
--> Organs
--> Midi interface
-
 2.26) (optional) Install Paragon NTFS
 -> run the installer manually in "/usr/local/Caskroom/parafon-ntfs/15/Install/..‚"
 -> login & restart
@@ -140,6 +135,15 @@ Install send to kindle: https://www.amazon.com/gp/sendtokindle/mac
 2.27) (optional) Install Grammaly
 -> Enter license key
 
+2.28) (optional) Install music software
+-> Foobar2000 (https://www.foobar2000.org/mac)
+-> Hauptwerk + organs
+-> Midi interface
+-> Cakewalk
+
+2.28) (optional) Install photo software
+-> Photo Mechanic (http://www.camerabits.com/downloads/)
+-> Photo Lemur (https://photolemur.com/rd/s_Mac)
 
 3) Further configuration
 
@@ -165,18 +169,10 @@ $ git config --global credential.helper osxkeychain
 
 
 4) Install additional software (currently missing)
-
-- Photo Mechanic (http://www.camerabits.com/downloads/)
-- Hauptwerk
-- Cakewalk
 - Docfetcher
 - Tinker Tool (not TT System) (https://www.bresink.com/osx/-TinkerTool.html)
 - GCViewer (https://github.com/chewiebug/GCViewer/wiki/Changelog)
 - Realtime Board (https://realtimeboard.com/apps/)
-- Foobar2000 (https://www.foobar2000.org/mac)
-
-
-5) Other
 
 Install latest Ruby version
 https://gorails.com/setup/osx/10.14-mojave
@@ -186,17 +182,14 @@ Load testing: install ad / JMeter / Locust / The Grinder
 Install Sony Imaging Edge
 https://imagingedge.sony.net/de-de/ie-desktop.html
 
-
-6) To be verified and added
-
-(( # gradle
+# gradle
 $ sdk install gradle
 # mysql
 $ brew install mysql
 # mongodb
 $ brew install mongodb
 elasticsearch
-$ brew install elasticsearch ))
+$ brew install elasticsearch
 
 # AWS CLI
 brew install awscli
