@@ -7,7 +7,7 @@ Open system preferences -> Spotlight
 -> Restrict search results to "Applications" and "System Preferences"
 -> Untick "Allow Spotlight Suggestions in Look up"
 -> Under "Privacy" add all other local disks to prevent them to be indexed
-
+-> Keyboard Shortcuts -> remove both shortcuts
 
 2) Configure the application in the following order
 
@@ -26,15 +26,17 @@ Open system preferences -> Sharing
 2.2) 1password
 -> Used 1password before, sync over dropbox
 -> Answer all questions
--> Search for "1password 6" and double-click on the license attachment to register
+-> Search for "1password 7" and double-click on the license attachment to register
 -> Install the browser extensions (Safari + Chrome)
 
 2.3) Alfred
 -> Activate Powerpack using key in 1password
 -> "Advanced" -> "Set preference folder" -> set the dropbox folder
 -> launch at login
+-> Preference -> General -> change Alfred Hotkey
 -> install mirror displays (https://www.npmjs.com/package/alfred-mirror-displays)
 	$npm install --global alfred-mirror-displays
+-> Register Spotify extension (http://alfred-spotify-mini-player.com/setup/)
 
 2.3) Pathfinder
 -> Open pathfinder and enter license key
