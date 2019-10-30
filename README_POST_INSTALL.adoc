@@ -4,16 +4,24 @@ This section describes the steps to be performed for transforming a newly instal
 
 1) Reduce Spotlight indexing
 Open system preferences -> Spotlight
--> Restrict search results to "Applications"
+-> Restrict search results to "Applications" and "System Preferences"
 -> Untick "Allow Spotlight Suggestions in Look up"
 -> Under "Privacy" add all other local disks to prevent them to be indexed
 
 
 2) Configure the application in the following order
 
+2.0) (optional) Copy files from another Mac
+Open system preferences -> Sharing
+-> Allow "Remote Login" (access only for Administrators)
+-> Open transmit and add the new installation
+-> Copy Dropbox directory / .extra file
+
 2.1) Dropbox
 -> to speed-up the first sync, quit the application after the first successful login and overwrite the created dir by a local copy of the DB folder
 -> configure "Notifications"
+-> enable selective sync
+-> change dropbox location to "~/Sync" (will create a "Dropbox" directory)
 
 2.2) 1password
 -> Used 1password before, sync over dropbox
