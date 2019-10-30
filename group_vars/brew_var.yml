@@ -20,6 +20,7 @@ brew_apps:
   - ansible
   - ansible-lint
   #- ant
+  - asciinema
   #- aspcud
   #- atk
   #- autoconf
