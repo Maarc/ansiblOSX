@@ -5,9 +5,9 @@
 brew_taps:
 #  - bramstein/webfonttools
   - cloudfoundry/tap
-#  - homebrew/cask
-#  - homebrew/cask-fonts
-#  - homebrew/core
+#  - homebrew/cask -> default
+  - homebrew/cask-fonts
+#  - homebrew/core -> default
 #  - homebrew/services
 #  - vitorgalvao/tiny-scripts
 #  - trinitronx/homebrew-truecrypt
@@ -282,8 +282,8 @@ brew_casks:
   - flycut
   - font-awesome-terminal-fonts
   - font-liberation-sans
-  - font-hack-nerd-font
-  - free-ruler      # Ruler application to check layouts
+  - font-hack-nerd-font       # Cask Fonts from NerdFonts (https://nerdfonts.com/#cheat-sheet)
+  - free-ruler                # Ruler application to check layouts
   ##- freemind
   - gemini
   - gimp
