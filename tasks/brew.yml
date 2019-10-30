@@ -4,12 +4,11 @@
   with_items: '{{brew_taps}}'
 
 - name: <BREW> Install casks with homebrew
-  homebrew_cask: name={{ item }} state=present
-  with_items: '{{brew_casks}}'
+  homebrew_cask: name={{ brew_apps }} state=present
 
 # NOTE: Change to the following to force the install
 #  homebrew_cask: name={{ item }} state=present install_options=force
 
 - name: <BREW> Install apps with homebrew
-  homebrew: name={{ item }} state=present
-  with_items: '{{brew_apps}}'
+  homebrew: name={{ brew_apps }} state=present
+#  with_items: '{{brew_apps}}'
