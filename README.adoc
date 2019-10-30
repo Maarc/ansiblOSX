@@ -13,20 +13,22 @@ Open a "Terminal" of a fresh macOS installation and execute the following comman
 ----
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" # <1>
 brew install ansible # <2>
-mkdir -p ~/git/private/OSX
+mkdir -p ~/git/private/OSX ~/Sync
 cd ~/git/private/OSX
 git clone https://github.com/Maarc/ansiblOSX # <3>
 cd ansiblOSX
 # Edit the group_wars/*_vars.yml file to select the software you want to install
-ansible-playbook -K main.yml # <4>
+ansible-galaxy install -r roles/requirements.yml -p roles --force # <4>
+ansible-playbook -K main.yml # <5>
 cd dotfiles/
-./update_dotfiles.sh <5>
+./update_dotfiles.sh <6>
 ----
 <1> Setup http://brew.sh/[Homebrew]
 <2> Install Ansible
 <3> Clone this project
-<4> Install the used software
-<5> Seed the dotfiles
+<4> Import the used roles
+<5> Install the used software
+<6> Seed the dotfiles
 
 == Update software lists
 
