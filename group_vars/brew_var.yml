@@ -355,7 +355,7 @@ brew_casks:
   - zoomus
   - xquartz
   - dia               # Needs to be installed after xquartz
-  - inkscape          # Needs to be installed after xquartz
+  #- inkscape          # Needs to be installed after xquartz (does not work anymore)
 
 ### Do not use the latest version
 # - synergy -> version 1.8 and not 2
