@@ -6,3 +6,5 @@ configure_brew: yes
 configure_dock: no
 configure_gem: yes
 configure_mas: yes
+
+computername: Peach
