@@ -1,38 +1,39 @@
 #!/usr/bin/env bash
 
-export ANSIBLOSX_DIR="${HOME}/git/private/OSX/ansiblOSX"
+## Self-defined
 
 export WORK_DIR="${HOME}/Work"
 export TOOLS_DIR="${WORK_DIR}/Tools"
-
-#export CURRENT_PROJECT="${TOOLS_DIR}/rhamt/rhamt-helper"
-export CURRENT_PROJECT="${TOOLS_DIR}/app-report"
+export CURRENT_PROJECT="${TOOLS_DIR}/app/app-report-gen"
 export KNOWLEDGE_DIR="${WORK_DIR}/Knowledge"
-
-#export JAVA_HOME="$(/usr/libexec/java_home -v 1.7)"
-#export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-#JDK 1.9
-#export JAVA_HOME=$(/usr/libexec/java_home)
-
-export RHAMT_HOME="${TOOLS_DIR}/rhamt/rhamt-helper/01__RHAMT"
-#export ANT_HOME="/usr/local/Cellar/ant/1.9.7/libexec"
-
+export ANSIBLOSX_DIR="${HOME}/git/private/OSX/ansiblOSX"
 export DROPBOX_HOME="${HOME}/Dropbox"
 
-export M3_HOME="/usr/local/Cellar/maven/3.6.0/libexec"
-export M2_HOME="${M3_HOME}"
-#export M3="${M3_HOME}/bin"
-#MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=128M -Dmaven.multiModuleProjectDirectory=${M2_HOME}"
-#export MAVEN_OPTS="-Xmx1024m -Dmaven.multiModuleProjectDirectory=${M3_HOME}"
-#export MAVEN_HOME="${HOME}/.m2"
+## 3rd party software
+
+##############################################################
+# Gradle
+##############################################################
 export GRADLE_USER_HOME="${HOME}/.gradle"
 
+##############################################################
+# Homebrew
+##############################################################
 export BREW_PREFIX="$(brew --prefix)"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 # Previous additional argument in HOMEBREW_CASK_OPTS: --caskroom=/opt/homebrew-cask/Caskroom
 # Fix: sudo ln -s /opt/homebrew-cask/Caskroom /usr/local/Caskroom
 # Remove analytics
 export HOMEBREW_NO_ANALYTICS=1
+
+##############################################################
+# Maven
+##############################################################
+export M3_HOME="/usr/local/Cellar/maven/3.6.0/libexec"
+export M2_HOME="${M3_HOME}"
+#MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=128M -Dmaven.multiModuleProjectDirectory=${M2_HOME}"
+#export MAVEN_OPTS="-Xmx1024m -Dmaven.multiModuleProjectDirectory=${M3_HOME}"
+#export MAVEN_HOME="${HOME}/.m2"
 
 ##############################################################
 # Editor
@@ -91,3 +92,15 @@ export LESS_TERMCAP_md="${yellow}";
 
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
+
+##############################################################
+# Deprecated
+##############################################################
+
+#export RHAMT_HOME="${TOOLS_DIR}/app/rhamt/rhamt-helper/01__RHAMT"
+#export ANT_HOME="/usr/local/Cellar/ant/1.9.7/libexec"
+
+# Managed by SDKman
+#export JAVA_HOME="$(/usr/libexec/java_home -v 1.7)"
+#export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+#export JAVA_HOME=$(/usr/libexec/java_home)
