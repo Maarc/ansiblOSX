@@ -109,34 +109,36 @@ https://www.mediaatelier.com/CheatSheet/
 2.20) Install MySides
 https://github.com/mosen/mysides
 
-2.21) Install synergy 1.8
-$ brew cask install https://raw.githubusercontent.com/404NetworkError/homebrew-cask/169a3548a3e7905e6283bcf2f017a59e79b1e987/Casks/synergy.rb
--> configure & register‚
-
-2.22) Instal Photo Mechanic
+2.21) Instal Photo Mechanic
 http://www.camerabits.com/downloads/
 
-2.23) Toggl
+2.21) (optional) Install synergy 1 Pro
+-> Downalod, configure & register from the web page
+
+2.23) (optional) Toggl
 -> Login
 -> Preferences -> General -> untick "Show dock icon"
 
-2.24) Install Kindle Upload
+2.24) (optional) Install Kindle Upload
 Install send to kindle: https://www.amazon.com/gp/sendtokindle/mac
 
-2.25) Steam
+2.25) (optional) Steam
 -> Login
 
-2.26) (optional) Paragon NTFS
--> run the installer manually in "/usr/local/Caskroom/parafon-ntfs/15/Install/..‚"
--> login & restart
-
-2.27) (optional) Grammaly
--> Enter license key
-
-2.28) Install music software
+2.28) (optional) Install music software
 -> Hauptwerk
 -> Organs
 -> Midi interface
+
+2.26) (optional) Install Paragon NTFS
+-> run the installer manually in "/usr/local/Caskroom/parafon-ntfs/15/Install/..‚"
+-> login & restart
+
+2.27) (optional) Install Grammaly
+-> Enter license key
+
+2.28) Git congiguration with SSH key
+Generate and add an SSH key checkout / push changes from GitHub (https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
 
 
 3) Further configuration
