@@ -11,6 +11,15 @@
         - group_vars/gem_var.yml
         - group_vars/mas_var.yml
 
+  roles:
+    - role: Comcast.sdkman
+      sdkman_update: true
+      sdkman_install_packages:
+        - { candidate: java, version: 11.0.5.hs-adpt }
+      sdkman_defaults:
+        java: 11.0.5.hs-adpt
+      when: configure_sdkman
+  
   tasks:
     - import_tasks: tasks/osx.yml
       when: configure_osx
