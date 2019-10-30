@@ -18,7 +18,7 @@ cd ~/git/private/OSX
 git clone https://github.com/Maarc/ansiblOSX # <3>
 cd ansiblOSX
 # Edit the group_wars/*_vars.yml file to select the software you want to install
-ansible-playbook main.yml # <4>
+ansible-playbook -K main.yml # <4>
 cd dotfiles/
 ./update_dotfiles.sh <5>
 ----
