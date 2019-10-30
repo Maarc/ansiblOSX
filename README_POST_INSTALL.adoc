@@ -47,16 +47,14 @@ Open system preferences -> Sharing
 
 2.5) Bartender
 -> Add license
+-> Open at login
 -> Configure manually and shift icons
 
 2.6) iStats
 -> Add license
--> Import settings from dropbox
+-> File -> Import settings from dropbox
 
-2.7) Grammarly
--> Enter license key
-
-2.8) Fantastical 2
+2.7) Fantastical 2
 -> Disable all notifications
 -> "Appearance" -> "Menu bar icon shows" -> "Date & Month"
 -> "Appearance" -> "App icon badge shows" -> Nothing
@@ -64,51 +62,52 @@ Open system preferences -> Sharing
 
 -> "Update" -> disable "include anonymous system profile"
 
-2.9) Source tree
+2.8) Source tree
 -> Login using the atlassian account
 
-2.10) Things
+2.9) Things
 -> activate Things cloud
 -> right click: open at login
 -> Preferences -> Quick Entry -> Disable quick entry
 
-2.11) Telegram
+2.10) Telegram
 -> Connect account
 
-2.12) Spectacle
+2.11) Spectacle
 -> open and finish install
 -> change shortcut for fullscreen (alt+command+-)
 -> launch at login
 
-2.13) Viscosity
+2.12) Viscosity
 -> open and finish install
 
-2.14) PureVPN
+2.13) PureVPN
 -> login
 
-2.15) Spotify
+2.14) Spotify
 -> login
 
-2.16) Clean my mac
+2.15) Clean my mac
 -> register
 -> Privacy -> disable all
 
-2.17) Path Finder
+2.16) Path Finder
 -> Finder -> Hide Finder's desktop
 -> General -> set as default file browser
 -> General -> Set default file (Sublime) and Terminal (iTerm)
 -> General -> Remove menu bar icon
 
-2.18) Paragon NTFS
--> run the installer manually in "/usr/local/Caskroom/parafon-ntfs/15/Install/..‚"
--> login & restart
+2.17) Install CheatSheet
+https://www.mediaatelier.com/CheatSheet/
 
-2.19) Sublime Text
+2.18) Sublime Text
 -> enter license
 
-2.10) Install Capture One
-$ brew cask install https://raw.githubusercontent.com/Maarc/homebrew-cask/d0099abd0d02e4b15e2c8a70c9de847013e7e3b4/Casks/capture-one.rb
+2.19) Capture One
 -> register
+
+2.20) Install MySides
+https://github.com/mosen/mysides
 
 2.21) Install synergy 1.8
 $ brew cask install https://raw.githubusercontent.com/404NetworkError/homebrew-cask/169a3548a3e7905e6283bcf2f017a59e79b1e987/Casks/synergy.rb
@@ -124,31 +123,20 @@ http://www.camerabits.com/downloads/
 2.24) Install Kindle Upload
 Install send to kindle: https://www.amazon.com/gp/sendtokindle/mac
 
-2.25) Install MySides
-https://github.com/mosen/mysides
+2.25) Steam
+-> Login
 
-2.26 Install SDKMAN (https://hackernoon.com/macbook-dev-setup-5890e61a8f0a  )
-$ curl -s "https://get.sdkman.io" | bash
-$ source "${HOME}/.sdkman/bin/sdkman-init.sh"
+2.26) (optional) Paragon NTFS
+-> run the installer manually in "/usr/local/Caskroom/parafon-ntfs/15/Install/..‚"
+-> login & restart
 
-# Java SDK
-$ sdk install java
-$ sdk install java 8.0.201-oracle
+2.27) (optional) Grammaly
+-> Enter license key
 
-# Spring boot (https://www.baeldung.com/spring-boot-cli)
-$ sdk install springboot
-
-(( # gradle
-$ sdk install gradle
-# mysql
-$ brew install mysql
-# mongodb
-$ brew install mongodb
-elasticsearch
-$ brew install elasticsearch ))
-
-2.27) Install CheatSheet
-https://www.mediaatelier.com/CheatSheet/
+2.28) Install music software
+-> Hauptwerk
+-> Organs
+-> Midi interface
 
 
 3) Further configuration
@@ -159,11 +147,9 @@ https://www.mediaatelier.com/CheatSheet/
 -> Keyboard -> Key repeat: fastest & Delay until repeat: shortest
 
 3.2) iTerm2 & Terminal
-
 -> iTerm2 -> Make default terminal
 -> iTerm2 -> Install shell integration (curl -L https://iterm2.com/misc/install_shell_integration.sh | bash)
 -> iTerm2 -> Preferences -> General -> Load preferences from a custom folder or URL (select DropBox folder)
-
 -> Terminal -> Preferences -> General -> Set "/usr/local/Cellar/bash/5.0.11/bin/bash" as "Shell open with -> Command (complete path)"
 
 # Change the used bash (https://stackoverflow.com/questions/23059662/how-can-i-get-iterm-to-use-the-newer-version-of-bash-that-brew-shows-change-a-u)
@@ -199,6 +185,19 @@ https://imagingedge.sony.net/de-de/ie-desktop.html
 
 
 6) To be verified and added
+
+
+
+
+(( # gradle
+$ sdk install gradle
+# mysql
+$ brew install mysql
+# mongodb
+$ brew install mongodb
+elasticsearch
+$ brew install elasticsearch ))
+
 
 # CLIs
 
