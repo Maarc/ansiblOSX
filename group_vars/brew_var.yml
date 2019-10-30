@@ -3,18 +3,14 @@
 # $ brew tap | sort | sed 's/^/  - /'
 
 brew_taps:
-  - bramstein/webfonttools
-  - caskroom/cask
-  - caskroom/drivers
-  - caskroom/eid
-  - caskroom/fonts
-  - caskroom/versions
-  - homebrew/core
-  - vitorgalvao/tiny-scripts
-  - trinitronx/homebrew-truecrypt
-#  - homebrew/completions -> moved to core
-#  - homebrew/dupes -> moved to core
-#  - homebrew/versions -> moved to core
+#  - bramstein/webfonttools
+  - cloudfoundry/tap
+#  - homebrew/cask
+#  - homebrew/cask-fonts
+#  - homebrew/core
+#  - homebrew/services
+#  - vitorgalvao/tiny-scripts
+#  - trinitronx/homebrew-truecrypt
 
 # $ brew list | sort | sed 's/^/  - /'
 
