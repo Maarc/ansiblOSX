@@ -7,6 +7,7 @@ mas_installed_apps:
   #- { id: 808647808, name: "ActivityTimer" }
   #- { id: 408981426, name: "Aperture" }
   #- { id: 1037126344, name: "Apple Configurator 2" }
+  #- { id: 973134470, name: "Be Focused" }
   - { id: 1091189122, name: "Bear" }
   #- { id: 425264550, name: "Blackmagic Disk Speed Test" } -> not used often
   #- { id: 523620159, name: "CleanMyDrive 2" }
@@ -14,6 +15,7 @@ mas_installed_apps:
   #- { id: 950009491, name: "ControlAir" } -> gesture OS control
   #- { id: 1055511498, name: "Day One" }
   - { id: 838744420, name: "FreeDiskSpace" }
+  #- { id: 1232508288, name: "HiSuite" }
   #- { id: 408981434, name: "iMovie" }
   - { id: 409183694, name: "Keynote" }
   #- { id: 1258189976, name: "Mail Designer 365" }
@@ -22,9 +24,10 @@ mas_installed_apps:
   #- { id: 882812218, name: "Owly" }
   - { id: 409201541, name: "Pages" }
   #- { id: 592704001, name: "Photos Duplicate Cleaner" }
+  #- { id: 929507092, name: "PhotoScape X" }
   #- { id: 846509360, name: "Plot2" }
   #- { id: 439654198, name: "SimpleMind Lite" }
-  - { id: 904280696, name: "Things3" }
+  - { id: 904280696, name: "Things" }
   #- { id: 485812721, name: "TweetDeck" }
   #- { id: 447521961, name: "XChat Azure" }
   - { id: 497799835, name: "Xcode" }
