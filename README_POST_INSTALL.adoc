@@ -39,6 +39,7 @@ Open system preferences -> Sharing
 -> Register Spotify extension (http://alfred-spotify-mini-player.com/setup/)
 
 2.3) Pathfinder
+-> Install from https://get.cocoatech.com/PF7.zip
 -> Open pathfinder and enter license key
 
 2.4) Transmit
@@ -94,11 +95,13 @@ Open system preferences -> Sharing
 2.16) Path Finder
 -> Finder -> Hide Finder's desktop
 -> General -> set as default file browser
--> General -> Set default file (Sublime) and Terminal (iTerm)
+-> General -> Set default file (Visual Studio Code) and Terminal (iTerm)
 -> General -> Remove menu bar icon
+-> Hide drop stack
+-> Hide section "RECENT DOCUMENTS" / "SEARCH FOR"
 
 2.17) Install CheatSheet
-https://www.mediaatelier.com/CheatSheet/
+-> Open the app
 
 2.18) Sublime Text
 -> enter license
