@@ -16,8 +16,10 @@
       sdkman_update: true
       sdkman_install_packages:
         - { candidate: java, version: 11.0.5.hs-adpt }
+        - { candidate: springboot, version: 2.2.0.RELEASE}
       sdkman_defaults:
         java: 11.0.5.hs-adpt
+        springboot: 2.2.0.RELEASE
       when: configure_sdkman
   
   tasks:
