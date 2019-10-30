@@ -2,9 +2,7 @@
 
 - name: <GEM> Ensure RUBY is installed
   homebrew: name={{item}} state=present
-  with_items:
-    - ruby
-    - ruby-build
+  with_items: ['ruby', 'ruby-build']
 
 - name: <GEM> Install ruby gems with version
   gem: name={{item.name}} pre_release={{item.pre}} state=present
