@@ -193,9 +193,6 @@ Install Java8 (done using sdkman)
 
 7) To be verified and added
 
-?? Hazel
-?? flycut
-
 brew install exiftool
 ==> Downloading https://homebrew.bintray.com/bottles/exiftool-11.30.mojave.bottl
 
