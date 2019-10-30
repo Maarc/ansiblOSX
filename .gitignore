@@ -7,3 +7,6 @@ save_*
 
 # Dotfiles
 .extra
+
+# Roles
+roles/Comcast.sdkman
