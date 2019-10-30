@@ -15,216 +15,262 @@ brew_taps:
 # $ brew list | sort | sed 's/^/  - /'
 
 brew_apps:
-  - ack
-  - aircrack-ng               # CTF tools
+  - ack                        # Search tool like grep, but optimized for programmers
+  #- aircrack-ng               # CTF tools
   - ansible
   - ansible-lint
-  - ant
-  - aspcud
-  - autoconf
-  - automake
+  #- ant
+  #- aspcud
+  #- atk
+  #- autoconf
+  ##- automake
   - bash
   - bash-completion
-  - bazel
-  - bfg                       # CTF tools
-  - binutils
-  - binwalk
+  ##- bazel
+  #- berkeley-db
+  #- bfg                       # CTF tools
+  ##- binutils
+  ##- binwalk
   - brew-cask-completion
   - brew-gem
-  - camlp4
-  - cask-repair
-  - chromedriver
-  - cifer
-  - clasp
-  - clingo
+  #- cairo
+  #- camlp4
+  ##- cask-repair
+  ##- chromedriver
+  #- cf-cli                   # CloudFoundry CLI
+  #- cifer
+  #- clasp
+  #- clingo
+  #- cloc                     # Counts LoC
   - cmake
   - coreutils                 # GNU core utilities (those that come with macOS are outdated).
-  - dependency-check
-  - dex2jar
-  - dns2tcp
-  - docker-machine
-  - docker-machine-driver-xhyve
-  - dockutil                  # https://github.com/kcrawford/dockutil
+  #- dep
+  #- dependency-check
+  #- dex2jar
+  - dnscrypt-proxy            # DNSCrypt usage
+  #- dns2tcp
+  - docker
   - dos2unix
-  - faac
-  - fcrackzip
-  - fdk-aac
-  - ffmpeg
+  - erlang
+  - exiftool
+  - expat
+  #- faac
+  #- fcrackzip
+  #- fdk-aac
+  #- ffmpeg
   - findutils                 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
   - fontconfig
-  - foremost
-  - fpc
+  #- foremost
+  #- fpc
   - freetype
-  - gcc
-  - gd
-  - gdbm
-  - gettext
-  - ghostscript
+  #- fribidi
+  #- gcc
+  #- gd
+  #- gdk-pixbuf
+  #- gdbm
+  #- gettext
+  #- ghostscript
   - git
   - git-lfs
   - git-ssh
   - glib
-  - gmp
+  #- gmp
   - gnu-sed                   # Install GNU `sed`, overwriting the built-in `sed`.
-  - gnutls
+  ##- gnutls
   - go
-  - goaccess
+  #- gobject-introspection
+  #- gpatch
+  ##- goaccess
+  - gradle
+  - gradle-completion
+  #- graphite2
   - graphviz
-  - grep       # more recent versions of some macOS tools
-  - gringo
-  - gs
-  - hashpump
-  - hr
-  - httpie
+  - grep                       # more recent versions of some macOS tools
+  #- gringo
+  #- gs
+  #- gsettings-desktop-schemas
+  #- gtk+
+  #- gtk+3
+  #- gtk-mac-integration
+  #- gtksourceview
+  #- gts
+  ##- hashpump
+  ##- hr
+  ##- httpie
+  #- harfbuzz
+  #- hicolor-icon-theme
   - hub                       # Github extension
-  - hydra
-  - icu4c
+  #- hugo
+  #- hydra
+  #- icu4c
   - iftop
-  - imagemagick
-  - iperf3
-  - isl
-  - jasper
-  - jbig2dec
-  - jmeter
-  - john
-  - jpeg
-  - jq
-  - knock
-  - lame
-  - libav
-  - libdnet
-  - libev
-  - libffi
-  - libgcrypt
-  - libgpg-error
-  - libgphoto2
-  - libicns
-  - libidn2
-  - libmpc
-  - libogg
-  - libpng
-  - librsync
-  - librtlsdr
-  - libtasn1
-  - libtiff
-  - libtool
-  - libunistring
-  - libusb
-  - libusb-compat
-  - libvorbis
-  - libvpx
-  - libxmlsec1
-  - libyaml
-  - little-cms2
-  - lua
-  - makedepend
+  ##- imagemagick
+  ##- iperf3
+  #- isl
+  #- jasper
+  ##- jbig2dec
+  ##- jmeter
+  ##- john
+  #- jpeg
+  - jq                        # Lightweight and flexible command-line JSON processor
+  ##- knock
+  - kubernetes-cli
+  - kubernetes-helm
+  #- lablgtk
+  ##- lame
+  #- ldns                       # DNS library written in C
+  #- libarchive
+  #- libcroco
+  #- libepoxy
+  #- libffi
+  #- libgcrypt
+  #- libgpg-error
+  #- libidn2
+  #- libmpc
+  #- libpng
+  #- librsvg
+  #- libtiff
+  #- libtool
+  #- libunistring
+  #- libxml2
+  #- libyaml
+  #- little-cms2
+  - lua                        # Powerful, lightweight programming language
+  #- makedepend
   - mas
   - maven
   - maven-completion
-  - mono
-  - moreutils                 # Install some other useful utilities like `sponge`.
-  - mpfr
-  - nasm
-  - nativefier                # https://www.aptgetupdate.de/2016/03/29/nativefier-native-apps-von-webseiten-erstellen/
-  - ncurses
-  - net-snmp
-  - netpbm
-  - nettle
-  - ngrep
-  - nmap
-  - node
-  - oath-toolkit
-  - ocaml
-  - ocamlbuild
-  - oniguruma
-  - opam
+  - md5sha1sum
+  #- mingw-w64
+  #- mpfr
+  #- mono
+  #- moreutils                 # Install some other useful utilities like `sponge`.
+  #- mpfr
+  #- nasm
+  #- nativefier                # https://www.aptgetupdate.de/2016/03/29/nativefier-native-apps-von-webseiten-erstellen/
+  #- ncurses
+  #- net-snmp
+  #- netpbm
+  #- nettle
+  #- ngrep
+  #- nmap
+  #- node
+  #- node@10
+  #- nspr
+  #- nss
+  #- oath-toolkit
+  #- ocaml
+  #- ocamlbuild
+  #- oniguruma
+  #- opam
+  #- openjpeg
   - openssh    # more recent versions of some macOS tools
   - openssl
   - openssl@1.1
-  - opus
-  - p11-kit
+  #- opus
+  #- ossp-uuid
   - p7zip
-  - pandoc
-  - pcre
+  #- pango
+  #- parallel
+  - pdfgrep
+  #- pandoc
+  #- pcre
+  #- pcre2
+  - pdfgrep
   - perl
-  - pixman
-  - pkg-config
-  - pngcheck
-  - popt
-  - portaudio
+  #- pixman
+  #- pkg-config
+  #- pngcheck
+  #- poppler
+  #- popt
+  #- portaudio
   - pstree
-  - pv                        # Monitor Progress of Data Sent Via a Pipe
-  - pyqt
+  #- pv                        # Monitor Progress of Data Sent Via a Pipe
+  #- py2cairo
+  #- pygobject
+  #- pygtk  
+  ##- pyqt
   - python
-  - python3
-  - qemu
+  - python@2
+  #- qemu
   - qt
-  - rbenv
+  #- rabbitmq
+  #- rbenv
   - readline
-  - rename                    # File renaming
+  #- rename                    # File renaming
   - ruby
   - ruby-build
-  - sane-backends
-  - screen     # more recent versions of some macOS tools
-  - sdl2
-  - sdl2_image
-  - sfnt2woff                 # font tools
-  - sfnt2woff-zopfli          # font tools
-  - sip
-  - socat
-  - sphinx-doc
-  - sqlite
-  - sqlmap
-  - ssdeep
-  - ssh-copy-id
-  - swig
-  - tcpflow
-  - tcpreplay
-  - tcptrace
-  - testssl
-  - texi2html
-  - the_silver_searcher       # https://github.com/ggreer/the_silver_searcher
-  - tokyo-cabinet
+  ##- sane-backends
+  ##- screen     # more recent versions of some macOS tools
+  ##- sdl2
+  ##- sdl2_image
+  ##- sfnt2woff                 # font tools
+  ##- sfnt2woff-zopfli         # Font tools
+  ##- sip
+  #- sloccount
+  ##- socat
+  ##- sphinx-doc
+  #- sqlite
+  #- sqlmap
+  ##- ssdeep
+  ##- ssh-copy-id
+  ##- swig
+  ##- tcpflow
+  ##- tcpreplay
+  ##- tcptrace
+  ##- testssl
+  ##- texi2html
+  ##- the_silver_searcher     # https://github.com/ggreer/the_silver_searcher
+  ##- tokyo-cabinet
   - tree
-  - ucspi-tcp
-  - umlet                     # UML diagram editor
+  ##- ucspi-tcp
+  ##- umlet                   # UML diagram editor
+  #- unixodbc
   - vim                       # More recent version of default macos tool
   - watch
-  - webp
+  #- webp
   - wget
-  - wine
-  - woff2                     # font tools
-  - x264
-  - xhyve
-  - xpdf
-  - xvid
-  - xz
+  #- wine
+  #- wxmac
+  #- woff2                    # Font tools
+  #- x264
+  #- xhyve
+  #- xpdf
+  #- xvid
+  - xz                        # General-purpose data compression with high compression ratio
+  - yarn                      # JavaScript package manager
+  - yarn-completion
   - youtube-dl
-  - zopfli
+  #- zopfli
+  - zlib                      # General-purpose lossless data-compression library
 
 # $ brew cask list | sort | sed 's/^/  - /'
 
 brew_casks:
   - 1password
   - adobe-acrobat-reader
-  - aerial
+  #- adobe-creative-cloud
+  #- aerial
   - alfred
   - appcleaner
   - apppolice
   - atom
-  - balsamiq-mockups
+  #- balsamiq-mockups
   - bartender
   - beyond-compare
-  - blue-jeans
+  ##- blue-jeans
   - caffeine
   - calibre
-  - caption                   # Findet Untertitel
+  #- caption                   # Findet Untertitel
+  - capture-one
   - cleanmymac
-  - clover-configurator
+  ##- clover-configurator
+  #- discord
   - docker          # previously "docker-toolbox". I prefer docker as it directly integrates with the OS X native hypervisor.
   - dropbox
-  - duet
+  ##- duet
   - eclipse-jee
+  ##- energybar
   - evernote
   - fantastical
   - fing            # scans and displays all active hosts in the current WLAN
@@ -232,76 +278,86 @@ brew_casks:
   - flash-npapi     # flash plugin, former brew cask named "flash"
   - flash-player
   - flip4mac
-  - flux
+  #- flux
   - flycut
+  - font-awesome-terminal-fonts
   - font-liberation-sans
+  - font-hack-nerd-font
   - free-ruler      # Ruler application to check layouts
-  - freemind
+  ##- freemind
   - gemini
   - gimp
   - google-chrome
-  - google-photos-backup-and-sync
+  - google-cloud-sdk
+  ##- google-photos-backup-and-sync
   - grammarly
-  - gutenprint                # Top quality Mac printer drivers (http://thebackpackr.com/borderless-pdf-printing-mac/)
-  - hands-off
-  - intellij-idea
+  ##- gutenprint            # Top quality Mac printer drivers (http://thebackpackr.com/borderless-pdf-printing-mac/)
+  #- hands-off
+  - hazel
+  #- intellij-idea
   - istat-menus
   - iterm2
-  - java
-  - java8           # Required for older Java apps
   - jd-gui
-  - jprofiler
+  ##- jprofiler
   - kindle
-  - libreoffice
-  - licecap
-  - limechat
-  - mac-informer    # Similar to macupdate
-  - macupdate       # Previously macupdate-desktop
-  - mat
+  #- krisp                  # Removes environment noise
+  ##- libreoffice
+  ##- licecap
+  ##- limechat
+  ##- mac-informer          # Similar to macupdate
+  - macupdate               # Previously macupdate-desktop
+  #- mat
   - mediathekview
-  - microsoft-office
-  - mono-mdk
+  ##- microsoft-office-2011
+  ##- mono-mdk
+  ##- mysqlworkbench
+  - namechanger
+  #- onedrive
   - onyx
-  - osxfuse
+  ##- osxfuse
   - owasp-zap
-  - path-finder
-  - paragon-ntfs
-  - pinta
+  #- path-finder
+  ##- paragon-ntfs
+  ##- pinta
   - plain-clip
-  - pycharm
-  - purevpn
-  - reaper
-  - rocket-chat
-  - screaming-frog-seo-spider
-  - silverlight
-  - skype
-  - slack
+  - postman
+  ##- pycharm
+  ##- purevpn
+  ##- reaper
+  #- reflector
+  ##- rocket-chat
+  ##- screaming-frog-seo-spider
+  #- send-to-kindle
+  #- sequel-pro
+  ##- silverlight
+  #- skype
+  #- slack
   - sourcetree
   - spectacle
   - spotify
   - steam
   - sublime-text
   - telegram
-  - toggl
+  - the-unarchiver
+  #- toggl
   - tor-browser
   - transmit
-  - truecrypt
-  - vagrant
-  - vagrant-manager
+  ##- truecrypt
+  #- vagrant
+  #- vagrant-manager
   - virtualbox
   - viscosity
   - visual-studio-code  # Visual Studio Code (Microsoft)
   - vlc
-  - webstorm
+  #- webstorm
   - whatsapp
-  - wireshark
+  #- wireshark
+  - zoomus
   - xquartz
   - dia               # Needs to be installed after xquartz
   - inkscape          # Needs to be installed after xquartz
 
 ### Do not use the latest version
-# - capture-one -> 10.2.0 (RAW link from https://github.com/Maarc/homebrew-cask/blob/d0099abd0d02e4b15e2c8a70c9de847013e7e3b4/Casks/capture-one.rb)
-## brew cask install https://raw.githubusercontent.com/Maarc/homebrew-cask/d0099abd0d02e4b15e2c8a70c9de847013e7e3b4/Casks/capture-one.rb
 # - synergy -> version 1.8 and not 2
 ## brew cask install https://raw.githubusercontent.com/404NetworkError/homebrew-cask/169a3548a3e7905e6283bcf2f017a59e79b1e987/Casks/synergy.rb
 
@@ -331,8 +387,6 @@ brew_casks:
 # - gitbook-editor
 # - github-desktop
 # - handbrake -> not used anymore
-# - sequel-pro
-# - sublime -> downloads subtitles
 # - veracrypt
 
 ### Not used anymore ...
