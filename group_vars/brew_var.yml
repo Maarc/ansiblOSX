@@ -15,8 +15,8 @@ brew_taps:
 # $ brew list | sort | sed 's/^/  - /'
 
 brew_apps:
-  - ack                        # Search tool like grep, but optimized for programmers
-  #- aircrack-ng               # CTF tools
+  - ack                           # Search tool like grep, but optimized for programmers
+  #- aircrack-ng                  # CTF tools
   - ansible
   - ansible-lint
   #- ant
@@ -29,7 +29,7 @@ brew_apps:
   - bash-completion
   ##- bazel
   #- berkeley-db
-  #- bfg                       # CTF tools
+  #- bfg                          # CTF tools
   ##- binutils
   ##- binwalk
   - brew-cask-completion
@@ -38,17 +38,17 @@ brew_apps:
   #- camlp4
   ##- cask-repair
   ##- chromedriver
-  #- cf-cli                   # CloudFoundry CLI
+  #- cf-cli                       # CloudFoundry CLI
   #- cifer
   #- clasp
   #- clingo
-  #- cloc                     # Counts LoC
+  #- cloc                         # Counts LoC
   - cmake
-  - coreutils                 # GNU core utilities (those that come with macOS are outdated).
+  - coreutils                     # GNU core utilities (those that come with macOS are outdated).
   #- dep
   #- dependency-check
   #- dex2jar
-  - dnscrypt-proxy            # DNSCrypt usage
+  - dnscrypt-proxy                # DNSCrypt usage
   #- dns2tcp
   - docker
   - dos2unix
@@ -59,7 +59,7 @@ brew_apps:
   #- fcrackzip
   #- fdk-aac
   #- ffmpeg
-  - findutils                 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
+  - findutils                     # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
   - fontconfig
   #- foremost
   #- fpc
@@ -76,7 +76,7 @@ brew_apps:
   - git-ssh
   - glib
   #- gmp
-  - gnu-sed                   # Install GNU `sed`, overwriting the built-in `sed`.
+  - gnu-sed                       # Install GNU `sed`, overwriting the built-in `sed`.
   ##- gnutls
   - go
   #- gobject-introspection
@@ -86,7 +86,7 @@ brew_apps:
   - gradle-completion
   #- graphite2
   - graphviz
-  - grep                       # more recent versions of some macOS tools
+  - grep                          # more recent versions of some macOS tools
   #- gringo
   #- gs
   #- gsettings-desktop-schemas
@@ -100,7 +100,7 @@ brew_apps:
   ##- httpie
   #- harfbuzz
   #- hicolor-icon-theme
-  - hub                       # Github extension
+  - hub                           # Github extension
   #- hugo
   #- hydra
   #- icu4c
@@ -113,13 +113,13 @@ brew_apps:
   ##- jmeter
   ##- john
   #- jpeg
-  - jq                        # Lightweight and flexible command-line JSON processor
+  - jq                            # Lightweight and flexible command-line JSON processor
   ##- knock
   - kubernetes-cli
   - kubernetes-helm
   #- lablgtk
   ##- lame
-  #- ldns                       # DNS library written in C
+  #- ldns                         # DNS library written in C
   #- libarchive
   #- libcroco
   #- libepoxy
@@ -136,7 +136,7 @@ brew_apps:
   #- libxml2
   #- libyaml
   #- little-cms2
-  - lua                        # Powerful, lightweight programming language
+  - lua                           # Powerful, lightweight programming language
   #- makedepend
   - mas
   - maven
@@ -145,10 +145,10 @@ brew_apps:
   #- mingw-w64
   #- mpfr
   #- mono
-  #- moreutils                 # Install some other useful utilities like `sponge`.
+  #- moreutils                    # Install some other useful utilities like `sponge`.
   #- mpfr
   #- nasm
-  #- nativefier                # https://www.aptgetupdate.de/2016/03/29/nativefier-native-apps-von-webseiten-erstellen/
+  #- nativefier                   # https://www.aptgetupdate.de/2016/03/29/nativefier-native-apps-von-webseiten-erstellen/
   #- ncurses
   #- net-snmp
   #- netpbm
@@ -165,7 +165,7 @@ brew_apps:
   #- oniguruma
   #- opam
   #- openjpeg
-  - openssh    # more recent versions of some macOS tools
+  - openssh                       # more recent versions of some macOS tools
   - openssl
   - openssl@1.1
   #- opus
@@ -186,7 +186,7 @@ brew_apps:
   #- popt
   #- portaudio
   - pstree
-  #- pv                        # Monitor Progress of Data Sent Via a Pipe
+  #- pv                           # Monitor Progress of Data Sent Via a Pipe
   #- py2cairo
   #- pygobject
   #- pygtk  
@@ -198,15 +198,15 @@ brew_apps:
   #- rabbitmq
   #- rbenv
   - readline
-  #- rename                    # File renaming
+  #- rename                       # File renaming
   - ruby
   - ruby-build
   ##- sane-backends
   ##- screen     # more recent versions of some macOS tools
   ##- sdl2
   ##- sdl2_image
-  ##- sfnt2woff                 # font tools
-  ##- sfnt2woff-zopfli         # Font tools
+  ##- sfnt2woff                   # Font tools
+  ##- sfnt2woff-zopfli            # Font tools
   ##- sip
   #- sloccount
   ##- socat
@@ -221,29 +221,29 @@ brew_apps:
   ##- tcptrace
   ##- testssl
   ##- texi2html
-  ##- the_silver_searcher     # https://github.com/ggreer/the_silver_searcher
+  ##- the_silver_searcher         # https://github.com/ggreer/the_silver_searcher
   ##- tokyo-cabinet
   - tree
   ##- ucspi-tcp
-  ##- umlet                   # UML diagram editor
+  ##- umlet                       # UML diagram editor
   #- unixodbc
-  - vim                       # More recent version of default macos tool
+  - vim                           # More recent version of default macos tool
   - watch
   #- webp
   - wget
   #- wine
   #- wxmac
-  #- woff2                    # Font tools
+  #- woff2                        # Font tools
   #- x264
   #- xhyve
   #- xpdf
   #- xvid
-  - xz                        # General-purpose data compression with high compression ratio
-  - yarn                      # JavaScript package manager
+  - xz                            # General-purpose data compression with high compression ratio
+  - yarn                          # JavaScript package manager
   - yarn-completion
   - youtube-dl
   #- zopfli
-  - zlib                      # General-purpose lossless data-compression library
+  - zlib                          # General-purpose lossless data-compression library
 
 # $ brew cask list | sort | sed 's/^/  - /'
 
@@ -262,29 +262,30 @@ brew_casks:
   ##- blue-jeans
   - caffeine
   - calibre
-  #- caption                   # Findet Untertitel
+  #- caption                      # Findet Untertitel
   - capture-one
+  - cheatsheet                    # https://www.mediaatelier.com/CheatSheet/
   - cleanmymac
   ##- clover-configurator
   #- discord
-  - docker          # previously "docker-toolbox". I prefer docker as it directly integrates with the OS X native hypervisor.
+  - docker                        # previously "docker-toolbox". I prefer docker as it directly integrates with the OS X native hypervisor.
   - dropbox
   ##- duet
   - eclipse-jee
   ##- energybar
   - evernote
   - fantastical
-  - fing            # scans and displays all active hosts in the current WLAN
+  - fing                          # scans and displays all active hosts in the current WLAN
   - firefox
-  - flash-npapi     # flash plugin, former brew cask named "flash"
+  - flash-npapi                   # flash plugin, former brew cask named "flash"
   - flash-player
   - flip4mac
   #- flux
   - flycut
   - font-awesome-terminal-fonts
   - font-liberation-sans
-  - font-hack-nerd-font       # Cask Fonts from NerdFonts (https://nerdfonts.com/#cheat-sheet)
-  - free-ruler                # Ruler application to check layouts
+  - font-hack-nerd-font           # Cask Fonts from NerdFonts (https://nerdfonts.com/#cheat-sheet)
+  - free-ruler                    # Ruler application to check layouts
   ##- freemind
   - gemini
   - gimp
@@ -292,7 +293,7 @@ brew_casks:
   - google-cloud-sdk
   ##- google-photos-backup-and-sync
   - grammarly
-  ##- gutenprint            # Top quality Mac printer drivers (http://thebackpackr.com/borderless-pdf-printing-mac/)
+  ##- gutenprint                  # Top quality Mac printer drivers (http://thebackpackr.com/borderless-pdf-printing-mac/)
   #- hands-off
   - hazel
   #- intellij-idea
@@ -301,12 +302,12 @@ brew_casks:
   - jd-gui
   ##- jprofiler
   - kindle
-  #- krisp                  # Removes environment noise
+  #- krisp                        # Removes environment noise
   ##- libreoffice
   ##- licecap
   ##- limechat
-  ##- mac-informer          # Similar to macupdate
-  - macupdate               # Previously macupdate-desktop
+  ##- mac-informer                # Similar to macupdate
+  - macupdate                     # Previously macupdate-desktop
   #- mat
   - mediathekview
   ##- microsoft-office-2011
@@ -348,15 +349,15 @@ brew_casks:
   #- vagrant-manager
   - virtualbox
   - viscosity
-  - visual-studio-code  # Visual Studio Code (Microsoft)
+  - visual-studio-code            # Visual Studio Code (Microsoft)
   - vlc
   #- webstorm
   - whatsapp
   #- wireshark
   - zoomus
   - xquartz
-  - dia               # Needs to be installed after xquartz
-  #- inkscape          # Needs to be installed after xquartz (does not work anymore)
+  - dia                           # Needs to be installed after xquartz
+  #- inkscape                     # Needs to be installed after xquartz (does not work anymore)
 
 ### Do not use the latest version
 # - synergy -> version 1.8 and not 2
