@@ -189,3 +189,52 @@ Load testing: install ad / JMeter / Locust / The Grinder
 Install Java8 (done using sdkman)
 > brew tap caskroom/versions
 > brew cask install java8
+
+
+7) To be verified and added
+
+?? Hazel
+?? flycut
+
+brew install exiftool
+==> Downloading https://homebrew.bintray.com/bottles/exiftool-11.30.mojave.bottl
+
+Install Sony Imaging Edge
+https://imagingedge.sony.net/de-de/ie-desktop.html
+
+Cask Fonts from NerdFonts (https://nerdfonts.com/#cheat-sheet)
+brew tap homebrew/cask-fonts
+brew cask install font-hack-nerd-font
+brew cask install font-awesome-terminal-fonts
+
+# CLIs
+
+## AWS 
+brew install awscli
+
+## Azure
+brew install azure-cli
+
+## GCP
+brew cask install google-cloud-sdk
+
+## CloudFoundry CLI
+brew tap cloudfoundry/tap
+brew install bosh-cli
+brew install cf-cli
+brew install credhub-cli
+brew install bbl
+brew install bbr
+
+## Pivotal CLI
+brew tap nevenc/tap
+brew install pivnet-cli
+brew install om-cli
+brew install pace-cli
+
+## Kubernetes CLI
+brew install kubernetes-cli
+
+
+# Asciinema
+brew install asciinema
