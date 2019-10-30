@@ -1,11 +1,11 @@
 ---
 
 # Enables/disables installation tasks
-configure_osx: no
-configure_sdkman: no
-configure_brew: no
-configure_dock: no
+configure_osx: yes
+configure_sdkman: yes
+configure_brew: yes
+configure_mas: no
 configure_gem: no
-configure_mas: yes
+configure_dock: no
 
-computername: Apricot
+computername: Peach
