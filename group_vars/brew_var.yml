@@ -301,6 +301,7 @@ brew_casks:
   - iterm2
   - jd-gui
   ##- jprofiler
+  - karabiner-elements            # Used to remap the shift lock key to launch alfred
   - kindle
   #- krisp                        # Removes environment noise
   ##- libreoffice
@@ -314,6 +315,7 @@ brew_casks:
   ##- mono-mdk
   ##- mysqlworkbench
   - namechanger
+  #- netspot                      # Builds a Wifi heat map
   #- onedrive
   - onyx
   ##- osxfuse
