@@ -147,8 +147,9 @@ Install send to kindle: https://www.amazon.com/gp/sendtokindle/mac
 -> Topaz Denoise
 
 2.30) Configure Karabiner-Elements
--> simple modification: assign "F19" to num lock ... and configure alfred to be launched by F19
-
+-> simple modification: assign "F19" to num lock to all keyboards and configure alfred to be launched by F19
+-> for external mac keyboard switch assignements: https://github.com/pqrs-org/Karabiner-Elements/issues/1426
+-> make sure that the "German" (not "German - Standard" keyboard is in use)
 
 3) Further configuration
 
