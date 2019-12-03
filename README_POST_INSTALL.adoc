@@ -223,3 +223,12 @@ brew install pace-cli
 
 # Kubernetes CLI
 brew install kubernetes-cli
+
+
+## Todo
+
+* Checkout content of: https://github.com/tiiiecherle/osx_install_config
+
+Import / export dock icons - add separators
+$ defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="small-spacer-tile";}'
+$ killall Dock
