@@ -273,7 +273,7 @@ brew_casks:
   ##- duet
   - eclipse-jee
   ##- energybar
-  - evernote
+  ##- evernote
   - fantastical
   - fing                          # scans and displays all active hosts in the current WLAN
   - firefox

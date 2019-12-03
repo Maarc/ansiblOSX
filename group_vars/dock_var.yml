@@ -41,55 +41,51 @@ dockitems_to_persist:
   - name: Bear
     path: /Applications/Bear.app
     pos: 8
-  - name: Evernote
-    path: /Applications/Evernote.app
-    pos: 9
   - name: calibre
     path: /Applications/calibre.app
-    pos: 10
+    pos: 9
   - name: Telegram
     path: /Applications/Telegram.app
-    pos: 11
+    pos: 10
   - name: WhatsApp
     path: /Applications/WhatsApp.app
-    pos: 12
+    pos: 11
   - name: Photo Mechanic 6
     path: "/Applications/Photo Mechanic 6.app"
-    pos: 13
+    pos: 12
   - name: Capture One 12
     path: "/Applications/Capture One 12.app"
-    pos: 14
+    pos: 13
   - name: Photolemur 3
     path: "/Applications/Photolemur 3.app"
-    pos: 15
+    pos: 14
   - name: Transmit
     path: /Applications/Transmit.app
-    pos: 16
+    pos: 15
   - name: Beyond Compare
     path: "/Applications/Beyond Compare.app"
-    pos: 17
+    pos: 16
   - name: VirtualBox
     path: /Applications/VirtualBox.app
-    pos: 18
+    pos: 17
   - name: System Preferences
     path: "/Applications/System Preferences.app"
-    pos: 19
+    pos: 18
   - name: OnyX
     path: /Applications/OnyX.app
-    pos: 20
+    pos: 19
   - name: CleanMyMac X
     path: "/Applications/CleanMyMac X.app"
-    pos: 21
+    pos: 20
   - name: Gemini 2
     path: "/Applications/Gemini 2.app"
-    pos: 22
+    pos: 21
   - name: App Store
     path: "/Applications/App Store.app"
-    pos: 23
+    pos: 22
   - name: Steam
     path: "/Applications/Steam.app"
-    pos: 24
+    pos: 23
   - name: iTerm
     path: "/Applications/iTerm.app"
-    pos: 25
-
+    pos: 24
