@@ -315,6 +315,7 @@ brew_casks:
   - mediathekview
   ##- microsoft-office-2011
   ##- mono-mdk
+  - mysides                       # CLI to add Finder favorites
   ##- mysqlworkbench
   - namechanger
   #- netspot                      # Builds a Wifi heat map
