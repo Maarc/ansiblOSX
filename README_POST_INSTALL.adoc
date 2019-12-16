@@ -175,6 +175,8 @@ $ git config --global credential.helper osxkeychain
 
 3.4) Install cask-repair (cf. instructions on Bear)
 
+3.5) Install and configure Little Snitch
+According to the instructions, run the installer (e.g. '/usr/local/Caskroom/little-snitch/4.4.3/LittleSnitch-4.4.3.dmg')
 
 4) Install additional software (currently missing)
 - Docfetcher
