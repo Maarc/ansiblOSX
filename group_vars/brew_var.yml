@@ -267,6 +267,7 @@ brew_casks:
   - cheatsheet                    # https://www.mediaatelier.com/CheatSheet/
   - cleanmymac
   ##- clover-configurator
+  - db-browser-for-sqlite         # Used to open sqlite files
   #- discord
   - docker                        # previously "docker-toolbox". I prefer docker as it directly integrates with the OS X native hypervisor.
   - dropbox
