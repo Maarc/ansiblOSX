@@ -207,6 +207,7 @@ brew_apps:
   ##- sdl2_image
   ##- sfnt2woff                   # Font tools
   ##- sfnt2woff-zopfli            # Font tools
+  - shellcheck                    # Validates the syntax of shell scripts
   ##- sip
   #- sloccount
   ##- socat
