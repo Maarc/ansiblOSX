@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
 export PATH="/opt/local/bin:/opt/local/sbin:${PATH}"
+export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
