@@ -34,7 +34,7 @@
 	ba = branch -a
 	bd = branch -d
 	bD = branch -D
-	dc = diff --cached
+	d = diff --cached --staged
 	# Checking the status of your git commit
 	st = status
 	s = status -sb
