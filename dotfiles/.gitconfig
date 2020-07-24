@@ -36,6 +36,8 @@
 	bD = branch -D
 	d = diff
 	dc = diff --cached --staged
+	## To discard changes to a local file
+	di = checkout --
 	# Checking the status of your git commit
 	st = status
 	s = status -sb
