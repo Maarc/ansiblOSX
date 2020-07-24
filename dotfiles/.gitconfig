@@ -1,0 +1,58 @@
+[core]
+	excludesfile = /Users/mzottner/.gitignore_global
+	hooksPath = /Users/mzottner/git/pivotal/git-hooks-core
+
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+
+[user]
+	name = Marc Zottner
+	email = marc@zottner.com
+
+[filesystem "Oracle Corporation|1.8.0_201|/dev/disk1s5"]
+	timestampResolution = 1001 milliseconds
+	minRacyThreshold = 0 nanoseconds
+
+[commit]
+	template = /Users/mzottner/.stCommitMsg
+
+# https://www.atlassian.com/git/tutorials/git-alias
+[alias]
+	co = checkout
+	cob = checkout -b
+	f = fetch -p
+	c = commit
+	p = push
+	pl = pull
+	b = branch
+	ba = branch -a
+	bd = branch -d
+	bD = branch -D
+	dc = diff --cached
+	# Checking the status of your git commit
+	st = status
+	s = status -sb
+	# To unstage one added file
+	u = reset HEAD --
+	unstage = reset HEAD --
+	# https://codersopinion.com/blog/16-awesome-git-aliases-that-you-will-love/
+	# Stage your git changes in patches
+	a = add
+	aa = add -p
+	# More helpfull git logs
+	plog = log --graph --pretty='format:%C(red)%d%C(reset) %C(yellow)%h%C(reset) %ar %C(green)%aN%C(reset) %s'
+	tlog = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	# Contributors ordered by number of merges
+	rank = shortlog -sn --no-merges
+	# Remove all merged branches
+	#bdm = "!git branch --merged | grep -v '*' | xargs -n 1 git branch -d"
+
+# https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-config
+[color]
+	ui = true

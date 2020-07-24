@@ -276,7 +276,7 @@ brew_casks:
   - eclipse-jee
   ##- energybar
   ##- evernote
-  - fantastical
+  ##- fantastical                 # replaced by istical
   - fing                          # scans and displays all active hosts in the current WLAN
   - firefox
   - flash-npapi                   # flash plugin, former brew cask named "flash"
@@ -299,6 +299,7 @@ brew_casks:
   #- hands-off
   - hazel
   #- intellij-idea
+  - itsycal                       # Replacement for fantastical
   - istat-menus
   - iterm2
   - jd-gui
