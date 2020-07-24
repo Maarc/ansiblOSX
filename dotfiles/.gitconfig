@@ -27,8 +27,9 @@
 	cob = checkout -b
 	f = fetch -p
 	c = commit
+	cm = commit -m
 	p = push
-	pl = pull
+	pl = pull --ff-only
 	b = branch
 	ba = branch -a
 	bd = branch -d
