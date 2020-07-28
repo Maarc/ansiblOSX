@@ -57,6 +57,10 @@
 	# Remove all merged branches
 	#bdm = "!git branch --merged | grep -v '*' | xargs -n 1 git branch -d"
 
+	# https://githowto.com/aliases
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
 # https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-config
 [color]
 	ui = true
