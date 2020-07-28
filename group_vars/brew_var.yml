@@ -316,6 +316,7 @@ brew_casks:
   #- mat
   - mediathekview
   ##- microsoft-office-2011
+  - miro                          # Previously realtimeboard
   ##- mono-mdk
   - mysides                       # CLI to add Finder favorites
   ##- mysqlworkbench
