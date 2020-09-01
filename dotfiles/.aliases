@@ -26,10 +26,16 @@ alias i='cd ~/Work/Tools/app/cookbooks/modernization-cookbook-master-internal'
 alias rd="cd ~/Sync/Dropbox/Documents/ReadList"
 #alias forge-vulcan='echo "Please open http://localhost:3001"; forge vulcan-ui --database-dir=.'
 
-alias g="git"
+alias g='git'
+alias got='git '
+alias get='git '
+alias g-alias='git config --get-regexp alias'
+alias git-alias='git config --get-regexp alias'
+
 alias h="history"
 alias qwd='printf "%q\n" "$(pwd)"'
 alias cls='clear'
+alias dns_clear_cache='sudo killall -HUP mDNSResponder'
 
 alias photo="mkdir -p 00__Source/Archive 00__Source/Selected 00__Source/Selected__JPG__Archive 01__Processed 02__Sorted_out 03__Final CaptureOne; mysides add \"${PWD##*/}\" file://$(pwd|sed -e 's/ /%20/g'); open -a Photo\ Mechanic\ 6 ."
 alias photom='open -a Photo\ Mechanic\ 6 .'
