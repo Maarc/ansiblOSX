@@ -158,7 +158,9 @@ Install send to kindle: https://www.amazon.com/gp/sendtokindle/mac
 
 - download and install nuance pdf for man: http://scansnap.com/r/nuance3/ -> redirect to "kofax"
 
+2.32) Install Pictogram App
 
+https://pictogramapp.com/
 
 3) Further configuration
 
