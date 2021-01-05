@@ -173,11 +173,11 @@ https://pictogramapp.com/
 -> iTerm2 -> Make default terminal
 -> iTerm2 -> Install shell integration (curl -L https://iterm2.com/misc/install_shell_integration.sh | bash)
 -> iTerm2 -> Preferences -> General -> Load preferences from a custom folder or URL (select DropBox folder)
--> Terminal -> Preferences -> General -> Set "/usr/local/Cellar/bash/5.1/bin/bash" as "Shell open with -> Command (complete path)"
+-> Terminal -> Preferences -> General -> Set "/usr/local/Cellar/bash/5.1.4/bin/bash" as "Shell open with -> Command (complete path)"
 
 # Change the used bash (https://stackoverflow.com/questions/23059662/how-can-i-get-iterm-to-use-the-newer-version-of-bash-that-brew-shows-change-a-u)
-$ sudo bash -c 'echo /usr/local/Cellar/bash/5.1/bin/bash >> /etc/shells'
-$ chsh -s /usr/local/Cellar/bash/5.1/bin/bash
+$ sudo bash -c 'echo /usr/local/Cellar/bash/5.1.4/bin/bash >> /etc/shells'
+$ chsh -s /usr/local/Cellar/bash/5.1.4/bin/bash
 
 3.3) Git configuration with SSH key 
 Generate and add an SSH key checkout / push changes from GitHub (https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
@@ -188,6 +188,21 @@ $ git config --global credential.helper osxkeychain
 
 3.5) Install and configure Little Snitch
 According to the instructions, run the installer (e.g. '/usr/local/Caskroom/little-snitch/4.4.3/LittleSnitch-4.4.3.dmg')
+
+3.6) Configure ZSH
+
+According to  https://github.com/romkatv/powerlevel10k#homebrew
+
+```
+echo 'source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+```
+
+Then lauch zsh once to get it configured.
+
+```
+zsh
+```
+
 
 4) Install additional software (currently missing)
 - Docfetcher
