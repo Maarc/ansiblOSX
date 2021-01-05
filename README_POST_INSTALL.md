@@ -191,17 +191,14 @@ According to the instructions, run the installer (e.g. '/usr/local/Caskroom/litt
 
 3.6) Configure ZSH
 
-According to  https://github.com/romkatv/powerlevel10k#homebrew
+## Install Oh My Zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-```
-echo 'source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
-```
+## Install and configure Power10k according to https://github.com/romkatv/powerlevel10k#homebrew
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
-Then lauch zsh once to get it configured.
-
-```
+## Execute and configure zsh (install font, set font as defautl in iTerm2 ...)
 zsh
-```
 
 
 4) Install additional software (currently missing)
