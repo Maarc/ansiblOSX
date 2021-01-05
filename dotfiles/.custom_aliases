@@ -243,4 +243,4 @@ alias mvn=color_maven
 
 ## Extended aliases
 
-fpdf() { find . -iname "*.pdf" -exec pdfgrep $1 {} +; }
+fpdf() { find . -iname "*.pdf" -exec pdfgrep -e $1 {} +; }
