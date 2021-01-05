@@ -123,7 +123,7 @@ alias bu='brew update; brew upgrade;'
 alias up='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; mas upgrade; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup; apm update --no-confirm; sdk update; sdk upgrade'
 
 # Recursively delete `.DS_Store` files
-alias cleanup="find . -type f -name '*.DS_Store' -ls -delete; find . -name "Icon*" -type f -size 0 -ls -delete"
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete; find . -name \"Icon*\" -type f -size 0 -ls -delete"
 
 # Empty the Trash on all mounted volumes and the main HDD.
 # Also, clear Apple’s System Logs to improve shell startup speed.
@@ -134,8 +134,8 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 # Edit and generate
 ##############################################################
 alias vb='code ${ANSIBLOSX_DIR}'
-alias sb='${ANSIBLOSX_DIR}/dotfiles/update_dotfiles.sh -f; source ~/.bashrc'
-alias sc='${ANSIBLOSX_DIR}/dotfiles/update_dotfiles.sh -f; source ~/.bashrc; cd ${CURRENT_PROJECT}'
+alias sb='${ANSIBLOSX_DIR}/dotfiles/update_dotfiles.sh -f; source ~/.zshrc'
+#alias sc='${ANSIBLOSX_DIR}/dotfiles/update_dotfiles.sh -f; source ~/.bashrc; cd ${CURRENT_PROJECT}'
 
 alias a='atom .'
 alias s='subl .'
