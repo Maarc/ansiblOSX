@@ -246,7 +246,6 @@ brew_apps:
   #- zopfli
   - zlib                          # General-purpose lossless data-compression library
   - zsh
-  - romkatv/powerlevel10k/powerlevel10k  # https://github.com/romkatv/powerlevel10k#homebrew
 
 # $ brew cask list | sort | sed 's/^/  - /'
 
