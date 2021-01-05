@@ -159,7 +159,6 @@ alias watchpeople='sudo howmanypeoplearearound -o /opt/tools/$(date +%Y-%m-%d__%
 ##############################################################
 # Brew
 ##############################################################
-alias bci='brew cask install --force '
 alias bcl='brew cask list '
 alias bco='brew cask outdated'
 # Updates updated excepted some specific casks (like 'capture-one' and 'synergy' here)
