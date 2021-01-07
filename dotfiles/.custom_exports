@@ -4,7 +4,6 @@
 
 export WORK_DIR="${HOME}/Work"
 export TOOLS_DIR="${WORK_DIR}/Tools"
-export KNOWLEDGE_DIR="${WORK_DIR}/Knowledge"
 export ANSIBLOSX_DIR="${HOME}/git/private/OSX/ansiblOSX"
 export CURRENT_PROJECT="${TOOLS_DIR}/appmod/app-report-gen"
 export DROPBOX_HOME="${HOME}/Dropbox"

@@ -20,7 +20,6 @@ alias db="cd ~/Sync/Dropbox"
 alias gd="cd ~/Sync/Google\ Drive"
 alias dt="cd ~/Desktop"
 
-#alias k='cd ${KNOWLEDGE_DIR}'
 alias k='kubectl'
 alias m='minikube'
 alias t='cd ~/Work/Tools/appmod/cookbooks/transformation-recipes-aggregator'
