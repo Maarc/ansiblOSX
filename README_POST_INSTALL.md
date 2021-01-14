@@ -201,6 +201,10 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 zsh
 
 
+### Add cf completion following instructions here:
+https://github.com/norman-abramovitz/cf-zsh-autocomplete-plugin
+
+
 4) Install additional software (currently missing)
 - Docfetcher
 - Tinker Tool (not TT System) (https://www.bresink.com/osx/-TinkerTool.html)
