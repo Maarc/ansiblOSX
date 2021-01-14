@@ -66,7 +66,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git dotenv osx rake rbenv ruby brew sdk vagrant)
+plugins=(git dotenv osx rake rbenv ruby brew sdk vagrant cf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -126,6 +126,10 @@ setopt share_history
 
 # Ruby - Add rbenv to bash so that it loads every time you open a terminal
 #if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# Autojump
+#autoload -U compinit; compinit -y 
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 # SDKMAN - MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 [[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"
