@@ -35,7 +35,7 @@ alias g-alias='git config --get-regexp alias'
 alias git-alias='git config --get-regexp alias'
 
 alias h="history"
-alias qwd='printf "%q\n" "$(pwd)"'
+alias qwd='printf "%q" "$(pwd)"|pbcopy; printf "%q\n" "$(pwd)"'
 alias cls='clear'
 alias dns_clear_cache='sudo killall -HUP mDNSResponder'
 
