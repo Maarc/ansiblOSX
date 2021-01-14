@@ -24,6 +24,7 @@ brew_apps:
   #- aspcud
   #- atk
   #- autoconf
+  - autojump                      # autojump - a faster way to navigate your filesystem
   ##- automake
   - bash
   - bash-completion
