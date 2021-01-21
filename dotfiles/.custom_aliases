@@ -42,6 +42,8 @@ alias dns_clear_cache='sudo killall -HUP mDNSResponder'
 alias photo="mkdir -p 00__Source/Archive 00__Source/Selected 00__Source/Selected__JPG__Archive 01__Processed 02__Sorted_out 03__Final CaptureOne; mysides add \"${PWD##*/}\" file://$(pwd|sed -e 's/ /%20/g'); open -a Photo\ Mechanic\ 6 ."
 alias photom='open -a Photo\ Mechanic\ 6 .'
 
+alias drive='/Users/mzottner/go/bin/drive'
+
 ##############################################################
 # ls
 ##############################################################
