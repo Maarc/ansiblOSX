@@ -11,7 +11,7 @@ Open a "Terminal" of a fresh macOS installation and execute the following comman
 
 [source,bash]
 ----
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" # <1>
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"  # <1>
 brew install ansible # <2>
 mkdir -p ~/git/private/OSX ~/Sync
 cd ~/git/private/OSX
