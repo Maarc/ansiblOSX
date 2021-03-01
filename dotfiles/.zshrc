@@ -124,8 +124,11 @@ setopt hist_ignore_space
 setopt inc_append_history
 setopt share_history
 
+#To link Rubies to Homebrew's OpenSSL 1.1 (which is upgraded) add the following
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+
 # Ruby - Add rbenv to bash so that it loads every time you open a terminal
-#if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Autojump
 #autoload -U compinit; compinit -y 
