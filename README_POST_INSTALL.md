@@ -215,7 +215,7 @@ https://github.com/norman-abramovitz/cf-zsh-autocomplete-plugin
 - GCViewer (https://github.com/chewiebug/GCViewer/wiki/Changelog)
 - Snap Camera https://snapcamera.snapchat.com/download/
 Install latest Ruby version
-https://gorails.com/setup/osx/10.15-catalina
+https://gorails.com/setup/osx/11.0-big-sur
 
 Load testing: install ad / JMeter / Locust / The Grinder
 
