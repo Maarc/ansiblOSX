@@ -148,18 +148,15 @@ Install send to kindle: https://www.amazon.com/gp/sendtokindle/mac
 
 2.30) Configure Karabiner-Elements
 -> simple modification: assign "F19" to num lock to all keyboards and configure alfred to be launched by F19
--> for external mac keyboard switch assignements: https://github.com/pqrs-org/Karabiner-Elements/issues/1426
+-> for external mac keyboard switch assignments: https://github.com/pqrs-org/Karabiner-Elements/issues/1426
 -> make sure that the "German" (not "German - Standard" keyboard is in use)
 
 
 2.31) Install software for scanner:
-
 - open http://scansnap.com/d/, download the installer and follow the instructions to add the WLAN scanner
-
 - download and install nuance pdf for man: http://scansnap.com/r/nuance3/ -> redirect to "kofax"
 
 2.32) Install Pictogram App
-
 https://pictogramapp.com/
 
 3) Further configuration
@@ -208,8 +205,6 @@ https://github.com/norman-abramovitz/cf-zsh-autocomplete-plugin
 4) Install additional software (currently missing)
 
 - WebCam Driver: https://support.logi.com/hc/en-us/articles/360024699934--Downloads-C922-Pro-Stream-Webcam
-
-
 - Docfetcher
 - Tinker Tool (not TT System) (https://www.bresink.com/osx/-TinkerTool.html)
 - GCViewer (https://github.com/chewiebug/GCViewer/wiki/Changelog)
@@ -222,13 +217,16 @@ Load testing: install ad / JMeter / Locust / The Grinder
 Install Sony Imaging Edge
 https://imagingedge.sony.net/de-de/ie-desktop.html
 
+
+
+
 # gradle
 $ sdk install gradle
 # mysql
 $ brew install mysql
 # mongodb
 $ brew install mongodb
-elasticsearch
+# elasticsearch
 $ brew install elasticsearch
 
 # AWS CLI
