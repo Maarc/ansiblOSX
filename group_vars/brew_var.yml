@@ -328,6 +328,7 @@ brew_casks:
   - onyx
   ##- osxfuse
   - owasp-zap
+  - paintbrush                    # Simple and efficient image editor
   #- path-finder
   ##- paragon-ntfs
   ##- pinta
