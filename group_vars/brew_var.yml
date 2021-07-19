@@ -324,6 +324,7 @@ brew_casks:
   ##- mysqlworkbench
   - namechanger
   #- netspot                      # Builds a Wifi heat map
+  - obs                           # Open Broadcaster Software (https://obsproject.com/welcome)
   #- onedrive
   - onyx
   ##- osxfuse
