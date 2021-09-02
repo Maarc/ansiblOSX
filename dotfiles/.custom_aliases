@@ -17,13 +17,15 @@ alias b='cd ~/Work/Tools/appmod/app-report-gen-tmp/backup'
 
 alias d="cd ~/Downloads"
 alias db="cd ~/Sync/Dropbox"
+alias 1d="cd ~/Sync/OneDrive\ -\ VMware,\ Inc"
 alias gd="cd ~/Sync/Google\ Drive"
 alias dt="cd ~/Desktop"
 
 alias k='kubectl'
 alias m='minikube'
-alias t='cd ~/Work/Tools/appmod/cookbooks/transformation-recipes-aggregator'
-alias i='cd ~/Work/Tools/appmod/cookbooks/modernization-cookbook-master-internal'
+#alias t='cd ~/Work/Tools/appmod/content/cookbooks/transformation-recipes-aggregator'
+alias t='cd ~/Work/Tools/appmod/content/tmp/tanzu-dev-portal'
+alias i='cd ~/Work/Tools/appmod/content/cookbooks/modernization-cookbook-master-internal'
 
 alias rd="cd ~/Sync/Dropbox/Documents/ReadList"
 #alias forge-vulcan='echo "Please open http://localhost:3001"; forge vulcan-ui --database-dir=.'
@@ -33,6 +35,8 @@ alias got='git '
 alias get='git '
 alias g-alias='git config --get-regexp alias'
 alias git-alias='git config --get-regexp alias'
+## Show all history of one file
+alias gh='git log --follow -p -- '
 
 alias h="history"
 alias qwd='printf "%q" "$(pwd)"|pbcopy; printf "%q\n" "$(pwd)"'
@@ -43,6 +47,9 @@ alias photo="mkdir -p 00__Source/Archive 00__Source/Selected 00__Source/Selected
 alias photom='open -a Photo\ Mechanic\ 6 .'
 
 alias drive='/Users/mzottner/go/bin/drive'
+
+alias copy_to_onedrive="${ANSIBLOSX_DIR}/scripts/copy_to_ondedrive.sh"
+alias download_as_pdf="${ANSIBLOSX_DIR}/scripts/download_as_pdf.sh"
 
 ##############################################################
 # ls
