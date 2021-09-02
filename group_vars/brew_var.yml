@@ -33,6 +33,7 @@ brew_apps:
   #- bfg                          # CTF tools
   ##- binutils
   ##- binwalk
+  - bluetoothconnector            # Prerequisite for the alfred-airpods-connector plugin
   - brew-cask-completion
   - brew-gem
   #- cairo
