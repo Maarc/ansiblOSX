@@ -28,6 +28,9 @@ function color_maven() {
     return $PIPESTATUS
 }
 
+function lsport() {
+	lsof -P -i:${1}
+}
 
 # pip bash completion start
 _pip_completion()

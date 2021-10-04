@@ -138,6 +138,7 @@ brew_apps:
   #- libxml2
   #- libyaml
   #- little-cms2
+  - lsof                          # Linux list open files utility
   - lua                           # Powerful, lightweight programming language
   #- makedepend
   - mas
