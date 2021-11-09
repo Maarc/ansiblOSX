@@ -159,10 +159,15 @@ Install send to kindle: https://www.amazon.com/gp/sendtokindle/mac
 2.32) Install Pictogram App
 https://pictogramapp.com/
 
+
+2.33) Install Itermocil
+https://github.com/TomAnthony/itermocil/
+
+
 3) Further configuration
 
 3.1) System preferences
--> General -> Use dark menu bar and Dock
+-> General -> Use dark menu bar and Dockbash
 -> Date & Time -> "Clock" -> don't show the day of the week, show the seconds, 24-hour clock
 -> Keyboard -> Key repeat: fastest & Delay until repeat: shortest
 
@@ -170,11 +175,15 @@ https://pictogramapp.com/
 -> iTerm2 -> Make default terminal
 -> iTerm2 -> Install shell integration (curl -L https://iterm2.com/misc/install_shell_integration.sh | bash)
 -> iTerm2 -> Preferences -> General -> Load preferences from a custom folder or URL (select DropBox folder)
--> Terminal -> Preferences -> General -> Set "/usr/local/Cellar/bash/5.1.4/bin/bash" as "Shell open with -> Command (complete path)"
+-> Terminal -> Preferences -> General -> Set "/usr/local/Cellar/bash/5.1.8/bin/bash" as "Shell open with -> Command (complete path)"
 
 # Change the used bash (https://stackoverflow.com/questions/23059662/how-can-i-get-iterm-to-use-the-newer-version-of-bash-that-brew-shows-change-a-u)
-$ sudo bash -c 'echo /usr/local/Cellar/bash/5.1.4/bin/bash >> /etc/shells'
-$ chsh -s /usr/local/Cellar/bash/5.1.4/bin/bash
+$ sudo bash -c 'echo /usr/local/Cellar/bash/5.1.8/bin/bash >> /etc/shells'
+
+# Keep zsh as default for iterm
+$ chsh -s /bin/zsh
+# This would change the default shell
+## chsh -s /usr/local/Cellar/bash/5.1.8/bin/bash
 
 3.3) Git configuration with SSH key 
 Generate and add an SSH key checkout / push changes from GitHub (https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
@@ -200,6 +209,12 @@ zsh
 
 ### Add cf completion following instructions here:
 https://github.com/norman-abramovitz/cf-zsh-autocomplete-plugin
+
+
+### Fix terminal in visual studio code following those instructions:
+https://gist.github.com/480/3b41f449686a089f34edb45d00672f28
+"terminal.integrated.fontFamily": "Hack Nerd Font",
+"terminal.integrated.shell.osx": "/bin/zsh"
 
 
 4) Install additional software (currently missing)
