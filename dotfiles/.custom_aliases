@@ -25,7 +25,9 @@ alias k='kubectl'
 alias m='minikube'
 #alias t='cd ~/Work/Tools/appmod/content/cookbooks/transformation-recipes-aggregator'
 alias t='cd ~/Work/Tools/appmod/content/tmp/tanzu-dev-portal'
-alias i='cd ~/Work/Tools/appmod/content/cookbooks/modernization-cookbook-master-internal'
+alias ic='cd ~/Work/Tools/appmod/content/cookbooks/modernization-cookbook-master-internal'
+
+alias i='itermocil --here '
 
 alias rd="cd ~/Sync/Dropbox/Documents/ReadList"
 #alias forge-vulcan='echo "Please open http://localhost:3001"; forge vulcan-ui --database-dir=.'
