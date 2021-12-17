@@ -21,7 +21,10 @@ alias 1d="cd ~/Sync/OneDrive\ -\ VMware,\ Inc"
 alias gd="cd ~/Sync/Google\ Drive"
 alias dt="cd ~/Desktop"
 
-alias dclean='docker rm -vf $(docker ps -a -q); docker rmi -f $(docker images -a -q); kubectl delete "$(kubectl api-resources --namespaced=true --verbs=delete -o name | tr "\n" "," | sed -e '"'"'s/,$//'"'"')" --all'
+# Possible additional argument: docker system prune;
+alias dclean='docker kill $(docker ps -a -q);docker rm -vf $(docker ps -a -q);docker rmi -f $(docker images -aq);'
+alias kclean='kubectl delete "$(kubectl api-resources --namespaced=true --verbs=delete -o name | tr "\n" "," | sed -e '"'"'s/,$//'"'"')" --all'
+
 alias k='kubectl'
 alias m='minikube'
 #alias t='cd ~/Work/Tools/appmod/content/cookbooks/transformation-recipes-aggregator'
