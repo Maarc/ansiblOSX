@@ -1,0 +1,17 @@
+windows:
+  - name: pal
+    root: /Users/mzottner/Work/Tools/appmod/content/github_tanzu-dev-portal_CNLP_update
+    layout: even-vertical
+    panes:
+      - commands:
+        - export DISABLE_AUTO_TITLE='true'
+        - echo -ne '\\e]1;PAL\\a'
+        - cd /Users/mzottner/workspace/pal-tracker
+        - open http://localhost:1313/developer/learningpaths/cloud-native-development-in-practice/
+        - clear
+        focus: true
+      - v .; clear; 
+      - commands:
+        - git pull
+        - ./preview.sh
+

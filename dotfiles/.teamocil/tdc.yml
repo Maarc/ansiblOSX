@@ -1,0 +1,15 @@
+windows:
+  - name: tdc
+    root: /Users/mzottner/Work/Tools/appmod/content/github_tanzu-dev-portal
+    layout: even-vertical
+    panes:
+      - commands:
+        - export DISABLE_AUTO_TITLE='true'
+        - echo -ne '\\e]1;Tanzu Dev Center\\a'
+        - v .
+        - clear
+        focus: true
+      - commands:
+        - git pull
+        - ./preview.sh
+

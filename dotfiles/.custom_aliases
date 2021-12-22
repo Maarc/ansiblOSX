@@ -13,7 +13,7 @@ alias .....="cd ../../../.."
 alias c='cd ${ANSIBLOSX_DIR}'
 alias p='cd ${CURRENT_PROJECT}'
 alias r='cd ${CURRENT_PROJECT}/reports'
-alias b='cd ~/Work/Tools/appmod/app-report-gen-tmp/backup'
+alias b='cd ~/Work/Tools/appmod/tools/github_app-report-gen-tmp/backup'
 
 alias d="cd ~/Downloads"
 alias db="cd ~/Sync/Dropbox"
@@ -28,8 +28,8 @@ alias kclean='kubectl delete "$(kubectl api-resources --namespaced=true --verbs=
 alias k='kubectl'
 alias m='minikube'
 #alias t='cd ~/Work/Tools/appmod/content/cookbooks/transformation-recipes-aggregator'
-alias t='cd ~/Work/Tools/appmod/content/tmp/tanzu-dev-portal'
-alias ic='cd ~/Work/Tools/appmod/content/cookbooks/modernization-cookbook-master-internal'
+alias t='cd ~/Work/Tools/appmod/content/github_tanzu-dev-portal_CNLP_update'
+alias ic='cd ~/Work/Tools/appmod/content/github_cookbooks/modernization-cookbook-master-internal'
 
 alias i='itermocil --here '
 

@@ -1,0 +1,14 @@
+windows:
+  - name: arg
+    root: /Users/mzottner/Work/Tools/appmod/tools/github_app-report-gen
+    layout: even-vertical
+    panes:
+      - commands:
+        - export DISABLE_AUTO_TITLE='true'
+        - echo -ne '\\e]1;App Report Generator\\a'
+        - clear
+        - ./util/02__update/check_tools_versions.sh
+        focus: true
+      - commands:
+        - v .
+        - clear

@@ -1,0 +1,11 @@
+windows:
+  - name: cookbook
+    root: /Users/mzottner/Work/Tools/appmod/content/github_cookbooks/modernization-cookbook-master-internal
+    layout: even-vertical
+    panes:
+      - commands:
+        - export DISABLE_AUTO_TITLE='true'
+        - echo -ne '\\e]1;Modernization Cookbook\\a'
+        - clear
+        focus: true
+      - v .
