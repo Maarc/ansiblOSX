@@ -355,6 +355,7 @@ brew_casks:
   - sublime-text
   - switchaudio-osx               # Switching audio outputs on MacOS
   - telegram
+  - tesseract                     # Required for Alfred OCR workflow
   - the-unarchiver
   #- toggl
   - tor-browser
