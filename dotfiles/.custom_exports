@@ -5,7 +5,7 @@
 export WORK_DIR="${HOME}/Work"
 export TOOLS_DIR="${WORK_DIR}/Tools"
 export ANSIBLOSX_DIR="${HOME}/git/private/OSX/ansiblOSX"
-export CURRENT_PROJECT="${HOME}/Work/Tools/appmod/tools/github_app-report-gen"
+export CURRENT_PROJECT="${HOME}/Work/Tools/appmod/tools/gitlab_app-report-gen"
 export DROPBOX_HOME="${HOME}/Dropbox"
 
 ## 3rd party software
