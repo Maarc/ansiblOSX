@@ -26,6 +26,7 @@ alias dclean='docker kill $(docker ps -a -q);docker rm -vf $(docker ps -a -q);do
 alias kclean='kubectl delete "$(kubectl api-resources --namespaced=true --verbs=delete -o name | tr "\n" "," | sed -e '"'"'s/,$//'"'"')" --all'
 
 alias k='kubectl'
+alias kc="source ${ANSIBLOSX_DIR}/scripts/select_kubeconfig.sh"
 alias m='minikube'
 #alias t='cd ~/Work/Tools/appmod/content/cookbooks/transformation-recipes-aggregator'
 alias t='cd ~/Work/Tools/appmod/content/github_tanzu-dev-portal_CNLP_update'
