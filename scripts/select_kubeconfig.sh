@@ -32,7 +32,7 @@ function select_config ()
         ALTERNATE_CONFIG_FILE="ara-appmod.yaml"
         VALID=TRUE
         ;;
-        5)
+        0 | 5)
         export KUBECONFIG=""
         echo "KUBECONFIG reset"
         VALID=TRUE
