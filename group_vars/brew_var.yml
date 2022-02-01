@@ -117,6 +117,7 @@ brew_apps:
   #- jpeg
   - jq                            # Lightweight and flexible command-line JSON processor
   ##- knock
+  - krew                          # A tool for installing kubernetes plugins (https://krew.sigs.k8s.io)   
   - kubernetes-cli
   - kubernetes-helm
   #- lablgtk
