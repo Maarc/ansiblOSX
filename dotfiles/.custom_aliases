@@ -58,6 +58,8 @@ alias drive='/Users/mzottner/go/bin/drive'
 alias copy_to_onedrive="${ANSIBLOSX_DIR}/scripts/copy_to_ondedrive.sh"
 alias download_as_pdf="${ANSIBLOSX_DIR}/scripts/download_as_pdf.sh"
 
+alias wordle="${ANSIBLOSX_DIR}/scripts/wordle.sh"
+
 ##############################################################
 # ls
 ##############################################################
