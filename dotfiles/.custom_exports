@@ -20,8 +20,6 @@ export GRADLE_USER_HOME="${HOME}/.gradle"
 ##############################################################
 export BREW_PREFIX="$(brew --prefix)"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-# Previous additional argument in HOMEBREW_CASK_OPTS: --caskroom=/opt/homebrew-cask/Caskroom
-# Fix: sudo ln -s /opt/homebrew-cask/Caskroom /usr/local/Caskroom
 # Remove analytics
 export HOMEBREW_NO_ANALYTICS=1
 
@@ -30,9 +28,6 @@ export HOMEBREW_NO_ANALYTICS=1
 ##############################################################
 export M3_HOME="/usr/local/Cellar/maven/3.6.0/libexec"
 export M2_HOME="${M3_HOME}"
-#MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=128M -Dmaven.multiModuleProjectDirectory=${M2_HOME}"
-#export MAVEN_OPTS="-Xmx1024m -Dmaven.multiModuleProjectDirectory=${M3_HOME}"
-#export MAVEN_HOME="${HOME}/.m2"
 
 ##############################################################
 # Editor
@@ -49,13 +44,6 @@ export NODE_REPL_HISTORY=${HOME}/.node_history;
 export NODE_REPL_HISTORY_SIZE='32768';
 # Use sloppy mode by default, matching web browsers.
 export NODE_REPL_MODE='sloppy';
-
-##############################################################
-# Ruby
-##############################################################
-#export RBENV_ROOT="$(brew --prefix rbenv)"
-#export GEM_HOME="$(brew --prefix)/opt/gems"
-#export GEM_PATH="$(brew --prefix)/opt/gems"
 
 ##############################################################
 # Python
@@ -91,15 +79,3 @@ export LESS_TERMCAP_md="${yellow}";
 
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
-
-##############################################################
-# Deprecated
-##############################################################
-
-#export RHAMT_HOME="${TOOLS_DIR}/app/rhamt/rhamt-helper/01__RHAMT"
-#export ANT_HOME="/usr/local/Cellar/ant/1.9.7/libexec"
-
-# Managed by SDKman
-#export JAVA_HOME="$(/usr/libexec/java_home -v 1.7)"
-#export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-#export JAVA_HOME=$(/usr/libexec/java_home)
