@@ -6,8 +6,8 @@ OS X environment provisioning using Ansible.
 
 Open a "Terminal" of a fresh macOS installation and execute the following commands:
 
-[source,bash]
-----
+
+```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"  # <1>
 brew install ansible # <2>
 mkdir -p ~/git/private/OSX ~/Sync
@@ -19,13 +19,14 @@ ansible-galaxy install -r roles/requirements.yml -p roles --force # <4>
 ansible-playbook -K main.yml # <5>
 cd dotfiles/
 ./update_dotfiles.sh <6>
-----
-<1> Setup [Homebrew](http://brew.sh/)
-<2> Install Ansible
-<3> Clone this project
-<4> Import the used roles
-<5> Install the used software
-<6> Seed the dotfiles
+```
+
+* <1> Setup [Homebrew](http://brew.sh/)
+* <2> Install Ansible
+* <3> Clone this project
+* <4> Import the used roles
+* <5> Install the used software
+* <6> Seed the dotfiles
 
 ## Update software lists
 
