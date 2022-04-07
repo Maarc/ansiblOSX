@@ -22,7 +22,7 @@ alias gd="cd ~/Sync/Google\ Drive"
 alias dt="cd ~/Desktop"
 
 # Possible additional argument: docker system prune;
-alias dclean='docker kill $(docker ps -a -q);docker rm -vf $(docker ps -a -q);docker rmi -f $(docker images -aq);'
+alias dclean='docker kill $(docker ps -a -q);docker rm -vf $(docker ps -a -q);docker rmi -f $(docker images -aq);docker system prune -f'
 alias kclean='kubectl delete "$(kubectl api-resources --namespaced=true --verbs=delete -o name | tr "\n" "," | sed -e '"'"'s/,$//'"'"')" --all'
 
 alias k='kubectl'
@@ -184,7 +184,7 @@ alias bco='brew outdated --cask'
 # Updates updated excepted some specific casks (like 'capture-one' and 'synergy' here)
 alias bcou='brew cask outdated |grep -v "capture-one" |grep -v "synergy" |grep -v "path-finder" |grep -v "screaming-frog-seo-spider" | awk '"'"'{print "brew cask install --force "$1"\0"}'"'"' | xargs -0 bash -c'
 alias bcs='brew search '
-alias bcu='brew uninstall --force --cask '
+alias bcu='brew uninstall --force '
 alias bi='brew info '
 alias bs='brew search '
 
