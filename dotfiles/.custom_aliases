@@ -181,8 +181,8 @@ alias watchpeople='sudo howmanypeoplearearound -o /opt/tools/$(date +%Y-%m-%d__%
 alias bci='brew install --force --cask '
 alias bcl='brew list --cask '
 alias bco='brew outdated --cask'
-# Updates updated excepted some specific casks (like 'capture-one' and 'synergy' here)
-alias bcou='brew cask outdated |grep -v "capture-one" |grep -v "synergy" |grep -v "path-finder" |grep -v "screaming-frog-seo-spider" | awk '"'"'{print "brew cask install --force "$1"\0"}'"'"' | xargs -0 bash -c'
+# Updates updated excepted some specific casks (like 'synergy' here)
+alias bcou='brew cask outdated |grep -v "synergy" |grep -v "screaming-frog-seo-spider" | awk '"'"'{print "brew cask install --force "$1"\0"}'"'"' | xargs -0 bash -c'
 alias bcs='brew search '
 alias bcu='brew uninstall --force '
 alias bi='brew info '

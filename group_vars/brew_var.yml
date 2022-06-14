@@ -107,7 +107,7 @@ brew_apps:
   #- hydra
   #- icu4c
   - iftop
-  ##- imagemagick
+  - imagemagick                   # Converts images to various formats
   ##- iperf3
   #- isl
   #- jasper
@@ -145,7 +145,6 @@ brew_apps:
   - mas
   - maven
   - maven-completion
-  - md5sha1sum
   #- mingw-w64
   #- mpfr
   #- mono
@@ -163,6 +162,7 @@ brew_apps:
   #- node@10
   #- nspr
   #- nss
+  - nvm
   #- oath-toolkit
   #- ocaml
   #- ocamlbuild
@@ -196,7 +196,6 @@ brew_apps:
   #- pygtk  
   ##- pyqt
   - python
-  - python@2
   #- qemu
   - qt
   #- rabbitmq
@@ -224,11 +223,13 @@ brew_apps:
   ##- tcpflow
   ##- tcpreplay
   ##- tcptrace
+  - tesseract                     # Required for Alfred OCR workflow
   ##- testssl
   ##- texi2html
   ##- the_silver_searcher         # https://github.com/ggreer/the_silver_searcher
   ##- tokyo-cabinet
   - tree
+  - TomAnthony/brews/itermocil
   ##- ucspi-tcp
   ##- umlet                       # UML diagram editor
   #- unixodbc
@@ -254,127 +255,103 @@ brew_apps:
 # $ brew cask list | sort | sed 's/^/  - /'
 
 brew_casks:
-  - 1password
   - adobe-acrobat-reader
   #- adobe-creative-cloud
   #- aerial
   - alfred
   - appcleaner
   - apppolice
-  - atom
   #- balsamiq-mockups
   - bartender
   - beyond-compare
-  ##- blue-jeans
+  - bluejeans
   - caffeine
   - calibre
-  #- caption                      # Findet Untertitel
-  - capture-one
-  - cheatsheet                    # https://www.mediaatelier.com/CheatSheet/
+  #- caption                       # Findet Untertitel
+  #- cheatsheet                    # https://www.mediaatelier.com/CheatSheet/
   - cleanmymac
-  ##- clover-configurator
-  - db-browser-for-sqlite         # Used to open sqlite files
+  #- db-browser-for-sqlite         # Used to open sqlite files
   #- discord
-  - docker                        # previously "docker-toolbox". I prefer docker as it directly integrates with the OS X native hypervisor.
+  - docker                         # previously "docker-toolbox". I prefer docker as it directly integrates with the OS X native hypervisor.
   - dropbox
-  ##- duet
-  - eclipse-jee
-  ##- energybar
-  ##- evernote
-  ##- fantastical                 # replaced by istical
-  - fing                          # scans and displays all active hosts in the current WLAN
+  #- duet
+  #- eclipse-jee
+  - fing                           # scans and displays all active hosts in the current WLAN
   - firefox
-  - flash-npapi                   # flash plugin, former brew cask named "flash"
-  - flash-player
-  - flip4mac
   #- flux
   - flycut
   - font-awesome-terminal-fonts
-  - font-liberation-sans
-  - font-hack-nerd-font           # Cask Fonts from NerdFonts (https://nerdfonts.com/#cheat-sheet)
-  - free-ruler                    # Ruler application to check layouts
+  - font-liberation
+  - font-hack-nerd-font            # Cask Fonts from NerdFonts (https://nerdfonts.com/#cheat-sheet)
+  - free-ruler                     # Ruler application to check layouts
   ##- freemind
   - gemini
   - gimp
   - google-chrome
   - google-cloud-sdk
-  ##- google-photos-backup-and-sync
   - grammarly
-  ##- gutenprint                  # Top quality Mac printer drivers (http://thebackpackr.com/borderless-pdf-printing-mac/)
+  ##- gutenprint                   # Top quality Mac printer drivers (http://thebackpackr.com/borderless-pdf-printing-mac/)
   #- hands-off
   - hazel
   #- intellij-idea
-  - itsycal                       # Replacement for fantastical
+  - itsycal                        # Replacement for fantastical
   - istat-menus
   - iterm2
   - jd-gui
   ##- jprofiler
-  - karabiner-elements            # Used to remap the shift lock key to launch alfred
+  - karabiner-elements             # Used to remap the shift lock key to launch alfred
   - kindle
-  #- krisp                        # Removes environment noise
+  #- krisp                         # Removes environment noise
   ##- libreoffice
   ##- licecap
   ##- limechat
-  - little-snitch                 # Firewall
-  ##- mac-informer                # Similar to macupdate
-  - macupdate                     # Previously macupdate-desktop
+  #- little-snitch                 # Firewall
+  ###- mac-informer                # Similar to macupdate
+  ##- macupdate                    # Previously macupdate-desktop
   #- mat
   - mediathekview
   ##- microsoft-office-2011
-  - miro                          # Previously realtimeboard
+  - miro                           # Previously realtimeboard
   ##- mono-mdk
-  - mysides                       # CLI to add Finder favorites
+  #- mysides                       # CLI to add Finder favorites
   ##- mysqlworkbench
   - namechanger
-  #- netspot                      # Builds a Wifi heat map
-  - obs                           # Open Broadcaster Software (https://obsproject.com/welcome)
+  #- netspot                       # Builds a Wifi heat map
+  #- obs                           # Open Broadcaster Software (https://obsproject.com/welcome)
   #- onedrive
   - onyx
   ##- osxfuse
   - owasp-zap
-  - paintbrush                    # Simple and efficient image editor
-  #- path-finder
+  - paintbrush                     # Simple and efficient image editor
   ##- paragon-ntfs
   ##- pinta
   - plain-clip
-  - postman
+  #- postman
   ##- pycharm
-  ##- purevpn
   ##- reaper
   #- reflector
   ##- rocket-chat
   ##- screaming-frog-seo-spider
   #- send-to-kindle
   #- sequel-pro
-  ##- silverlight
-  #- skype
+  - skype
   #- slack
   - sourcetree
   - spectacle
   - spotify
-  - steam
   - sublime-text
-  - switchaudio-osx               # Switching audio outputs on MacOS
   - telegram
-  - tesseract                     # Required for Alfred OCR workflow
   - the-unarchiver
-  #- toggl
-  - tor-browser
   - transmit
-  ##- truecrypt
-  #- vagrant
+  - vagrant
   #- vagrant-manager
-  - virtualbox
-  - viscosity
+  #- viscosity
   - visual-studio-code            # Visual Studio Code (Microsoft)
   - vlc
-  #- webstorm
-  - whatsapp
-  #- wireshark
-  - zoomus
+  - wireshark
   - xquartz
   - dia                           # Needs to be installed after xquartz
-  #- inkscape                     # Needs to be installed after xquartz (does not work anymore)
+  - inkscape                     # Needs to be installed after xquartz (does not work anymore)
 
 ### Do not use the latest version
 # - synergy -> version 1.8 and not 2
@@ -385,15 +362,18 @@ brew_casks:
 # - battle-net
 # - gog-galaxy
 # - origin
+# - steam
 # - teamspeak-client
 # - teamviewer
 # - vnc-viewer
 ## Work
 # - projectlibre -> open source project management
-# - karabiner       # Used to remap "play" key to Spotify
+# - toggl
 ## Security
 # - burp-suite
 # - malwarebytes
+# - tor-browser
+# - truecrypt
 ## Image
 # - adobe-photoshop-lightroom
 # - adobe-photoshop-lightroom600
@@ -409,26 +389,46 @@ brew_casks:
 # - veracrypt
 
 ### Not used anymore ...
+#- 1password                    # Should use version 7 from https://1password.com/de/downloads/mac/
 # - android-sdk
 # - camtasia
 # - citrix-receiver -> no
 # - controlair -> control desktop with gestures
 # - crashplan -> no support for private users anymore
+# - energybar
+# - fantastical                 # replaced by istical
+# - flash-npapi -> removed                  # flash plugin, former brew cask named "flash"
+# - flash-player -> removed
+# - flip4mac -> removed
 # - google-drive -> replaced by google-photos-backup-and-sync
+# - google-photos-backup-and-sync
 # - iexplorer -> not used anymore
 # - kitematic -> Docker visualisation
 # - macx-video-converter-pro
+# - md5sha1sum                   # Conflict with default "md5"
 # - minishift
 # - moom -> not meeting expectations
 # - mylio -> not meeting expectations
 # - nvalt
 # - paragon-ntfs
+# - path-finder
+# - purevpn
+# - python@2
 # - reflector
+# - silverlight
+# - switchaudio-osx               # Switching audio outputs on MacOS
 # - tableau
 # - textexpander
 # - tinymediamanager
 # - unetbootin -> creates bootable live USBdrives for linux distros
 # - utorrent
+# - webstorm
 # - vmware-horizon-client
 # - wireshark-chmodbpf -> unpriviledged version of wireshark
 # - yed
+
+### Does not work on M1
+#  - virtualbox
+
+### Installation restricted by administrator
+# - zoom
