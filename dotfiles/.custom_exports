@@ -7,6 +7,7 @@ export TOOLS_DIR="${WORK_DIR}/Tools"
 export ANSIBLOSX_DIR="${HOME}/git/private/OSX/ansiblOSX"
 export CURRENT_PROJECT="${HOME}/Work/Tools/appmod/tools/gitlab_app-report-gen"
 export DROPBOX_HOME="${HOME}/Dropbox"
+export CSA_DIR="${TOOLS_DIR}/appmod/tools/gitlab_app-report-gen/bin/cloud-suitability-analyzer"
 
 ## 3rd party software
 
@@ -50,6 +51,7 @@ export NODE_REPL_MODE='sloppy';
 ##############################################################
 # Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
 export PYTHONIOENCODING='UTF-8';
+export GEM_HOME="${HOME}/.gem"
 
 ##############################################################
 # History
