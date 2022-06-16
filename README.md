@@ -12,7 +12,7 @@ Open a "Terminal" of a fresh macOS installation and execute the following comman
 brew install ansible # <2>
 mkdir -p ~/git/private/OSX ~/Sync
 cd ~/git/private/OSX
-git clone https://github.com/Maarc/ansiblOSX # <3>
+git clone git@github.com:Maarc/ansiblOSX.git # <3>
 cd ansiblOSX
 # Edit the group_wars/*_vars.yml file to select the software you want to install
 ansible-galaxy install -r roles/requirements.yml -p roles --force # <4>
@@ -23,7 +23,7 @@ cd dotfiles/
 
 * <1> Setup [Homebrew](http://brew.sh/)
 * <2> Install Ansible
-* <3> Clone this project
+* <3> Clone this project, making sure you have the GitHub SSH key configured properly  
 * <4> Import the used roles
 * <5> Install the used software
 * <6> Seed the dotfiles

@@ -196,7 +196,6 @@ brew_apps:
   #- pygtk  
   ##- pyqt
   - python
-  #- qemu
   - qt
   #- rabbitmq
   #- rbenv
@@ -273,6 +272,7 @@ brew_casks:
   #- db-browser-for-sqlite         # Used to open sqlite files
   #- discord
   - docker                         # previously "docker-toolbox". I prefer docker as it directly integrates with the OS X native hypervisor.
+  - dotnet
   - dropbox
   #- duet
   #- eclipse-jee
@@ -324,6 +324,7 @@ brew_casks:
   - owasp-zap
   - paintbrush                     # Simple and efficient image editor
   ##- paragon-ntfs
+  - php                            # Prerequisite for Alfred Workflow
   ##- pinta
   - plain-clip
   #- postman
@@ -343,6 +344,7 @@ brew_casks:
   - telegram
   - the-unarchiver
   - transmit
+  - utm                           # Virtual machines for Mac - QEMU wrapper
   - vagrant
   #- vagrant-manager
   #- viscosity

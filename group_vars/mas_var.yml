@@ -21,7 +21,7 @@ mas_installed_apps:
   #- { id: 1258189976, name: "Mail Designer 365" }
   #- { id: 451444120, name: "Memory Clean" }
   - { id: 1510445899, name: "Meeter" }
-  - { id: 1116599239, name: "NordVPN IKE" }
+  - { id: 905953485, name: "NordVPN" }
   - { id: 409203825, name: "Numbers" }
   #- { id: 882812218, name: "Owly" }
   - { id: 409201541, name: "Pages" }
