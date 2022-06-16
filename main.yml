@@ -15,10 +15,10 @@
     - role: Comcast.sdkman
       sdkman_update: true
       sdkman_install_packages:
-        - { candidate: java, version: 11.0.5.hs-adpt }
+        - { candidate: java, version: 11.0.15-tem }
         - { candidate: springboot, version: 2.2.0.RELEASE}
       sdkman_defaults:
-        java: 11.0.5.hs-adpt
+        java: 11.0.15-tem
         springboot: 2.2.0.RELEASE
       when: configure_sdkman
   
