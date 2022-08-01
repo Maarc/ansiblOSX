@@ -210,6 +210,7 @@ brew_apps:
   ##- sfnt2woff                   # Font tools
   ##- sfnt2woff-zopfli            # Font tools
   - shellcheck                    # Validates the syntax of shell scripts
+  - shfmt                         # Utility to reformat shell scripts
   ##- sip
   #- sloccount
   ##- socat
@@ -343,6 +344,7 @@ brew_casks:
   - sublime-text
   - telegram
   - the-unarchiver
+  - there                         # Time zones for distributed teams
   - transmit
   - utm                           # Virtual machines for Mac - QEMU wrapper
   - vagrant
