@@ -138,5 +138,8 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
+# https://github.com/gsamokovarov/jump
+eval "$(jump shell)"
+
 # SDKMAN - MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 [[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"
