@@ -283,6 +283,7 @@ brew_casks:
   - flycut
   - font-awesome-terminal-fonts
   - font-liberation
+  - foobar2000
   - font-hack-nerd-font            # Cask Fonts from NerdFonts (https://nerdfonts.com/#cheat-sheet)
   - free-ruler                     # Ruler application to check layouts
   ##- freemind
@@ -328,6 +329,7 @@ brew_casks:
   - php                            # Prerequisite for Alfred Workflow
   ##- pinta
   - plain-clip
+  - portfolioperformance
   #- postman
   ##- pycharm
   ##- reaper

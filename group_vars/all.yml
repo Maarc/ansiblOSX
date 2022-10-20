@@ -1,8 +1,8 @@
 ---
 
 # Enables/disables installation tasks
-configure_osx: yes
-configure_sdkman: yes
+configure_osx: no
+configure_sdkman: no
 configure_brew: yes
 configure_mas: no
 configure_gem: no

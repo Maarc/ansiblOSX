@@ -154,32 +154,39 @@ $ chsh -s /bin/zsh
 # This would change the default shell
 ## chsh -s /usr/local/Cellar/bash/5.1.8/bin/bash
 
+
+2.21) MoneyMoney
+
+Configure the software by importing the database.
+https://www.heise.de/ratgeber/Tipp-MoneyMoney-Datenbank-auf-neuen-Mac-uebertragen-6054587.html
+
+
 <OPTIONAL>
 
-	2.17) (optional) Install synergy 1 Pro
+	2.22) (optional) Install synergy 1 Pro
 	-> Downalod, configure & register from the web page
 
-	2.18) (optional) Toggl
+	2.23) (optional) Toggl
 	-> Login
 	-> Preferences -> General -> untick "Show dock icon"
 
-	2.19) (optional) Install Kindle Upload
+	2.24) (optional) Install Kindle Upload
 	Install send to kindle: https://www.amazon.com/gp/sendtokindle/mac
 
-	2.20) (optional) Steam
+	2.25) (optional) Steam
 	-> Login
 
-	2.21) (optional) Install Paragon NTFS
+	2.26) (optional) Install Paragon NTFS
 	-> run the installer manually in "/usr/local/Caskroom/parafon-ntfs/15/Install/..‚"
 	-> login & restart
 
-	2.22) (optional) Install music software
+	2.27) (optional) Install music software
 	-> Foobar2000 (https://www.foobar2000.org/mac)
 	-> Hauptwerk + organs
 	-> Midi interface
 	-> Cakewalk
 
-	2.23) (optional) Install photo software
+	2.28) (optional) Install photo software
 	-> CaptureOne -> install manually as cask has been removed & register
 	-> Photo Mechanic (http://www.camerabits.com/downloads/)
 	-> Photo Lemur (https://photolemur.com/rd/s_Mac)
@@ -187,15 +194,14 @@ $ chsh -s /bin/zsh
 	-> MySides (https://github.com/mosen/mysides)
 
 
-	2.24) Install software for scanner:
+	2.29) Install software for scanner:
 	- open http://scansnap.com/d/, download the installer and follow the instructions to add the WLAN scanner
 	- download and install nuance pdf for man: http://scansnap.com/r/nuance3/ -> redirect to "kofax"
 
-	2.25) Install Pictogram App
+	2.30) Install Pictogram App
 	https://pictogramapp.com/
 
 </OPTIONAL>
-
 
 
 3) Further configuration
