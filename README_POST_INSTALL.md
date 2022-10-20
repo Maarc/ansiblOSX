@@ -189,7 +189,7 @@ https://www.heise.de/ratgeber/Tipp-MoneyMoney-Datenbank-auf-neuen-Mac-uebertrage
 	2.28) (optional) Install photo software
 	-> CaptureOne -> install manually as cask has been removed & register
 	-> Photo Mechanic (http://www.camerabits.com/downloads/)
-	-> Photo Lemur (https://photolemur.com/rd/s_Mac)
+	-> Photo Lemur (https://photolemur.com/rd/s_Mac - https://photolemur.en.softonic.com/mac)
 	-> Topaz Denoise
 	-> MySides (https://github.com/mosen/mysides)
 
