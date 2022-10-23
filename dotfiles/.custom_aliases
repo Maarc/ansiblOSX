@@ -29,7 +29,7 @@ alias k='kubectl'
 alias kc="source ${ANSIBLOSX_DIR}/scripts/select_kubeconfig.sh"
 alias m='minikube'
 #alias t='cd ~/Work/Tools/appmod/content/cookbooks/transformation-recipes-aggregator'
-alias t='cd ~/Work/Tools/appmod/content/github_tanzu-dev-portal_CNLP_update'
+#alias t='cd ~/Work/Tools/appmod/content/github_tanzu-dev-portal_CNLP_update'
 alias ic='cd ~/Work/Tools/appmod/content/github_cookbooks/modernization-cookbook-master-internal'
 
 alias i='itermocil --here '
