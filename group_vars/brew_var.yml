@@ -16,6 +16,7 @@ brew_taps:
 
 brew_apps:
   - ack                           # Search tool like grep, but optimized for programmers
+  - ag
   #- aircrack-ng                  # CTF tools
   - ansible
   - ansible-lint
