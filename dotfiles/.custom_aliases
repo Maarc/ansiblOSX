@@ -61,6 +61,8 @@ alias download_as_pdf="${ANSIBLOSX_DIR}/scripts/download_as_pdf.sh"
 
 alias wordle="${ANSIBLOSX_DIR}/scripts/wordle.sh"
 
+alias muse="npx msdl "
+
 ##############################################################
 # ls
 ##############################################################
