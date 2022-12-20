@@ -36,7 +36,7 @@ DIR_ASCIIDOC_TEMPLATE=${DIR_BACKUP}/ASCIIDOCTOR_PDF
 DIR_SERVICES=${DIR_BACKUP}/SERVICES
 
 # Atom configuration
-DIR_ATOM=${DIR_BACKUP}/ATOM
+#DIR_ATOM=${DIR_BACKUP}/ATOM
 
 DIR_CHROME=${DIR_BACKUP}/CHROME
 
@@ -64,8 +64,8 @@ function save() {
   mkdir -p ${DIR_ZAP} ${DIR_FONTS} ${DIR_ASCIIDOC_TEMPLATE} ${DIR_SERVICES} ${DIR_ATOM} ${DIR_CHROME}
 
   # Atom
-  apm list --installed --bare > ${DIR_ATOM}/packages.list
-  cp ~/.atom/*.json ~/.atom/*.cson ~/.atom/*.coffee ~/.atom/*.less ${DIR_ATOM}
+  #apm list --installed --bare > ${DIR_ATOM}/packages.list
+  #cp ~/.atom/*.json ~/.atom/*.cson ~/.atom/*.coffee ~/.atom/*.less ${DIR_ATOM}
 
   # AppZap scripts
   cp -Rfp ~/Library/Application\ Support/ZAP/scripts/scripts/standalone/* ${DIR_ZAP}/.
@@ -102,8 +102,8 @@ function save() {
 # Restore savec configuration
 function restore() {
   # Atom
-  echo apm install --packages-file ${DIR_ATOM}/packages.list
-  echo cp ${DIR_ATOM}/*.json ${DIR_ATOM}/*.cson ${DIR_ATOM}/*.coffee ${DIR_ATOM}/*.less ~/.atom/.
+  #echo apm install --packages-file ${DIR_ATOM}/packages.list
+  #echo cp ${DIR_ATOM}/*.json ${DIR_ATOM}/*.cson ${DIR_ATOM}/*.coffee ${DIR_ATOM}/*.less ~/.atom/.
 
   # AppZap scripts
   DIR_ZAP_TARGET="~/Library/Application\ Support/ZAP/scripts/scripts/standalone"
