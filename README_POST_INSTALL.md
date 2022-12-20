@@ -201,6 +201,9 @@ https://www.heise.de/ratgeber/Tipp-MoneyMoney-Datenbank-auf-neuen-Mac-uebertrage
 	2.30) Install Pictogram App
 	https://pictogramapp.com/
 
+	2.18) Install AskCommand
+	https://askcommand.com/
+
 </OPTIONAL>
 
 
