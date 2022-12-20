@@ -62,6 +62,7 @@ alias download_as_pdf="${ANSIBLOSX_DIR}/scripts/download_as_pdf.sh"
 alias wordle="${ANSIBLOSX_DIR}/scripts/wordle.sh"
 
 alias muse="npx msdl "
+alias killdeck="lsof -d txt|grep "Deck$"|tr -s ' '| cut -d' ' -f 2| xargs kill"
 
 ##############################################################
 # ls
