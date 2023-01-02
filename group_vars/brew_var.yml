@@ -266,6 +266,7 @@ brew_casks:
   - bartender
   - beyond-compare
   - bluejeans
+  - brave-browser
   - caffeine
   - calibre
   #- caption                       # Findet Untertitel
@@ -290,7 +291,7 @@ brew_casks:
   ##- freemind
   - gemini
   - gimp
-  - google-chrome
+  ##- google-chrome                # Replaced with brave-browser
   - google-cloud-sdk
   - grammarly
   ##- gutenprint                   # Top quality Mac printer drivers (http://thebackpackr.com/borderless-pdf-printing-mac/)
@@ -348,6 +349,7 @@ brew_casks:
   - telegram
   - the-unarchiver
   - there                         # Time zones for distributed teams
+  - tor-browser
   - transmit
   - utm                           # Virtual machines for Mac - QEMU wrapper
   - vagrant
