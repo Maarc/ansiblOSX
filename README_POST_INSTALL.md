@@ -209,27 +209,14 @@ https://www.heise.de/ratgeber/Tipp-MoneyMoney-Datenbank-auf-neuen-Mac-uebertrage
 
 3) Further configuration
 
-3.1) System preferences
+3.1) iCloud & storage
+
+-> Turn off the Optimize Storage option. Apple menu > System Preferences > Apple ID > Optimize Mac Storage.
+
+3.2) System preferences
 -> General -> Use dark menu bar and Dockbash
 -> Date & Time -> "Clock" -> don't show the day of the week, show the seconds, 24-hour clock
 -> Keyboard -> Key repeat: fastest & Delay until repeat: shortest
-
-
-3.2) Create an applescript to add a date shortcut
-
-Follow: https://discussions.apple.com/thread/8651300#:~:text=It%20just%20works.,for%20the%20first%20time%20only.
-
-
-```
-on run {input, parameters}
-	set thedate to (do shell script "date \"+%Y.%m.%d\"") as string
-	tell application "System Events"
-		keystroke thedate
-	end tell
-end run
-```
-
-
 
 
 4) Install additional software (currently missing)
