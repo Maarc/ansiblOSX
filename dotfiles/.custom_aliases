@@ -100,6 +100,7 @@ alias color='colour'
 alias vm='vi ${M3_HOME}/conf/settings.xml'
 alias grunt='/opt/nodes/0.12.0/lib/node_modules/grunt-cli/bin/grunt'
 alias st='stree'
+alias gt='gittower .'
 alias py='python'
 
 # Print each PATH entry on a separate line
