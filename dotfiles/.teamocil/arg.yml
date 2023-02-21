@@ -7,7 +7,7 @@ windows:
         - export DISABLE_AUTO_TITLE='true'
         - echo -ne '\\e]1;App Report Generator\\a'
         - clear
-        - ./util/02__update/check_tools_versions.sh
+        - ./util/02__update/check_latest_versions.sh
         focus: true
       - commands:
         - v .
