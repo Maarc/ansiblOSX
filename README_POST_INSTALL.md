@@ -218,6 +218,21 @@ https://www.heise.de/ratgeber/Tipp-MoneyMoney-Datenbank-auf-neuen-Mac-uebertrage
 -> Date & Time -> "Clock" -> don't show the day of the week, show the seconds, 24-hour clock
 -> Keyboard -> Key repeat: fastest & Delay until repeat: shortest
 
+3.3) Dock configuration
+
+Group apps by creating folders and app symlinks, for example:
+`ln -s ../../Paintbrush.app Paintbrush.app`
+
+Add icons to the folders
+https://support.apple.com/en-gb/guide/mac-help/mchlp2313/mac
+
+Import / export dock icons - add separators
+$ defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="small-spacer-tile";}'
+$ killall Dock
+
+
+
+
 
 4) Install additional software (currently missing)
 
@@ -276,6 +291,3 @@ brew install kubernetes-cli
 
 * Checkout content of: https://github.com/tiiiecherle/osx_install_config
 
-Import / export dock icons - add separators
-$ defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="small-spacer-tile";}'
-$ killall Dock
