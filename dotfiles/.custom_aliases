@@ -13,7 +13,7 @@ alias .....="cd ../../../.."
 alias c='cd ${ANSIBLOSX_DIR}'
 alias p='cd ${CURRENT_PROJECT}'
 alias r='cd ${CURRENT_PROJECT}/reports'
-alias b='cd ~/Work/Tools/appmod/tools/gitlab_app-report-gen-tmp/backup'
+alias b='cd ~/Work/Tools/appmod/tools/gitlab_application-portfolio-auditor-tmp/backup'
 
 alias d="cd ~/Downloads"
 alias db="cd ~/Sync/Dropbox"
