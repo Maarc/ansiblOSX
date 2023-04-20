@@ -24,7 +24,7 @@ alias i='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
 alias o='cd ~/Library/CloudStorage/OneDrive-VMware,Inc'
 
 # Possible additional argument: docker system prune;
-alias dclean='docker kill $(docker ps -a -q);docker rm -vf $(docker ps -a -q);docker rmi -f $(docker images -aq);docker system prune -f'
+alias dclean='docker system prune -f; docker kill $(docker ps -a -q);docker rm -vf $(docker ps -a -q);docker rmi -f $(docker images -aq);docker system prune -f'
 alias kclean='kubectl delete "$(kubectl api-resources --namespaced=true --verbs=delete -o name | tr "\n" "," | sed -e '"'"'s/,$//'"'"')" --all'
 
 alias k='kubectl'
