@@ -25,6 +25,8 @@ alias o='cd ~/Library/CloudStorage/OneDrive-VMware,Inc'
 
 # Possible additional argument: docker system prune;
 alias dclean='docker system prune -f; docker kill $(docker ps -a -q);docker rm -vf $(docker ps -a -q);docker rmi -f $(docker images -aq);docker system prune -f'
+alias pclean='podman system prune -f; podman kill $(podman ps -a -q);podman rm -vf $(podman ps -a -q);podman rmi -f $(podman images -aq);podman system prune -f'
+
 alias kclean='kubectl delete "$(kubectl api-resources --namespaced=true --verbs=delete -o name | tr "\n" "," | sed -e '"'"'s/,$//'"'"')" --all'
 
 alias k='kubectl'
