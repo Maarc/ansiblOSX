@@ -55,6 +55,8 @@ brew_apps:
   #- dns2tcp
   - docker
   - dos2unix
+  - elgato-control-center
+  - elgato-stream-deck
   - erlang
   - exiftool
   - expat
