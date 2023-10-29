@@ -293,7 +293,7 @@ brew_casks:
   ##- freemind
   - gemini
   - gimp
-  ##- google-chrome                # Replaced with brave-browser
+  - google-chrome
   - google-cloud-sdk
   - grammarly
   ##- gutenprint                   # Top quality Mac printer drivers (http://thebackpackr.com/borderless-pdf-printing-mac/)

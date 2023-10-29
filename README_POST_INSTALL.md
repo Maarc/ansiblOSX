@@ -231,6 +231,20 @@ $ defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="small-
 $ killall Dock
 
 
+3.3) Create an applescript to add a date shortcut
+
+Follow: https://discussions.apple.com/thread/8651300#:~:text=It%20just%20works.,for%20the%20first%20time%20only.
+
+
+```
+on run {input, parameters}
+	set thedate to (do shell script "date \"+%Y.%m.%d\"") as string
+	tell application "System Events"
+		keystroke thedate
+	end tell
+end run
+```
+
 
 
 
