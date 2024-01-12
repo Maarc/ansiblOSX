@@ -104,7 +104,7 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{custom_exports,custom_path,custom_functions,custom_aliases,custom_extra}; do
+for file in ~/.{custom_exports,custom_functions,custom_aliases,custom_extra,custom_path}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
