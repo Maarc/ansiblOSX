@@ -18,7 +18,7 @@ cd ansiblOSX
 ansible-galaxy install -r roles/requirements.yml -p roles --force # <4>
 ansible-playbook -K main.yml # <5>
 cd dotfiles/
-./update_dotfiles.sh <6>
+./conf/update_conf_files.sh <6>
 ```
 
 * <1> Setup [Homebrew](http://brew.sh/)
@@ -26,7 +26,7 @@ cd dotfiles/
 * <3> Clone this project, making sure you have the GitHub SSH key configured properly  
 * <4> Import the used roles
 * <5> Install the used software
-* <6> Seed the dotfiles
+* <6> Seed the conf files (dot and espanso)
 
 ## Update software lists
 

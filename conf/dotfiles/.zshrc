@@ -143,3 +143,5 @@ eval "$(jump shell)"
 
 # SDKMAN - MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 [[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"
+
+export HOMEBREW_GITHUB_API_TOKEN=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^

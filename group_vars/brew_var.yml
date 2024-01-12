@@ -281,6 +281,7 @@ brew_casks:
   - dropbox
   #- duet
   #- eclipse-jee
+  - espanso                        # Powerful text expander
   - fing                           # scans and displays all active hosts in the current WLAN
   - firefox
   #- flux
