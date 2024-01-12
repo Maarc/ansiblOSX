@@ -275,6 +275,7 @@ brew_casks:
   #- cheatsheet                    # https://www.mediaatelier.com/CheatSheet/
   - cleanmymac
   #- db-browser-for-sqlite         # Used to open sqlite files
+  - deskpad                        # Create virtual displays for video conferences
   #- discord
   - docker                         # previously "docker-toolbox". I prefer docker as it directly integrates with the OS X native hypervisor.
   - dotnet
