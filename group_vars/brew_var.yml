@@ -295,6 +295,7 @@ brew_casks:
   ##- freemind
   - gemini
   - gimp
+  - google-chat
   - google-chrome
   - google-cloud-sdk
   - grammarly
