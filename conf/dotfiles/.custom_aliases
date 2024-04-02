@@ -29,6 +29,8 @@ alias pclean='podman system prune -f; podman kill $(podman ps -a -q);podman rm -
 alias kclean='kubectl delete "$(kubectl api-resources --namespaced=true --verbs=delete -o name | tr "\n" "," | sed -e '"'"'s/,$//'"'"')" --all'
 
 alias k='kubectl'
+alias kd='kubectl get deployments'
+alias kp='kubectl get pods'
 alias kc="source ${ANSIBLOSX_DIR}/scripts/select_kubeconfig.sh"
 alias m='minikube'
 #alias t='cd ~/Work/Tools/appmod/content/cookbooks/transformation-recipes-aggregator'
@@ -80,9 +82,9 @@ fi
 
 # Always use color output for `ls`
 alias ls="command ls ${colorflag}"
-alias ll='ls -all'
-alias l='ls -all'
-alias lr='ls -allrt'
+alias ll='ls -ahl'
+alias l='ls -ahl'
+alias lr='ls -ahlrt'
 
 ##############################################################
 # Standard
