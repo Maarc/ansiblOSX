@@ -230,6 +230,7 @@ brew_apps:
   - tesseract                     # Required for Alfred OCR workflow
   ##- testssl
   ##- texi2html
+  - thefuck
   - tldc                          # Better man page with examples - https://github.com/tldr-pages/tlrc
   ##- the_silver_searcher         # https://github.com/ggreer/the_silver_searcher
   ##- tokyo-cabinet

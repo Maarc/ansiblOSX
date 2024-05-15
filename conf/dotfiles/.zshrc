@@ -149,3 +149,6 @@ eval "$(jump shell)"
 
 # zsh auto-suggestion activation
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# thef*ck
+eval $(thefuck --alias f)
