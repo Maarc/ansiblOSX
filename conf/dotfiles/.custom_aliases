@@ -160,6 +160,7 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 alias vb='code ${ANSIBLOSX_DIR}'
 alias sb='${ANSIBLOSX_DIR}/conf/update_conf_files.sh --force; source ~/.zshrc'
 
+alias b='bat '
 alias a='atom .'
 alias s='subl .'
 alias v='code .'
