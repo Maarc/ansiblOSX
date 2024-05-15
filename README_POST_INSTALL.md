@@ -263,6 +263,8 @@ Load testing: install ad / JMeter / Locust / The Grinder
 Install Sony Imaging Edge
 https://imagingedge.sony.net/de-de/ie-desktop.html
 
+Install BAT themes
+https://github.com/catppuccin/bat?tab=readme-ov-file
 
 
 # gradle
@@ -304,4 +306,9 @@ brew install kubernetes-cli
 ## Todo
 
 * Checkout content of: https://github.com/tiiiecherle/osx_install_config
+
+## OTHER TO BE DOCUMENTED
+
+
+https://github.com/TomAnthony/itermocil
 
