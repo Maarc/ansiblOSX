@@ -29,6 +29,7 @@ brew_apps:
   ##- automake
   - bash
   - bash-completion
+  - bat
   ##- bazel
   #- berkeley-db
   #- bfg                          # CTF tools
