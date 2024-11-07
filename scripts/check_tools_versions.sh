@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# set -x 
+# set -x
 
 ##############################################################################################################
 # Independant utility script to check for updates of the used tools.
