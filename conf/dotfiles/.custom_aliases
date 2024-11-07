@@ -22,7 +22,7 @@ alias gd="cd ~/Sync/Google\ Drive"
 alias dt="cd ~/Desktop"
 alias i='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
 alias o='cd ~/Library/CloudStorage/OneDrive-VMware,Inc'
-alias s="${HOME}/git/bins/fabric/summarize.sh "
+alias s="${ANSIBLOSX_DIR}/scripts/fabric_summarize.sh"
 
 # Possible additional argument: docker system prune;
 alias dclean='docker system prune -f; docker kill $(docker ps -a -q);docker rm -vf $(docker ps -a -q);docker rmi -f $(docker images -aq);docker system prune -f'
@@ -146,7 +146,7 @@ alias bu='brew update; brew upgrade;'
 
 # FIXME issue with bash to be able to do a cleanup...
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias up='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; mas upgrade; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup; sdk update; sdk upgrade'
+alias up='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; mas upgrade; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup; sdk update; sdk upgrade; $ZSH/tools/upgrade.sh'
 
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete; find . -name \"Icon*\" -type f -size 0 -ls -delete"
@@ -213,8 +213,6 @@ alias mvnc='mvn -T 4 clean eclipse:clean'
 alias mvna='mvn -T 4 clean eclipse:clean eclipse:eclipse install'
 alias mvnt='mvn -T 4 clean eclipse:clean eclipse:eclipse install -Dmaven.test.skip=true -DskipTests'
 alias mvn=color_maven
-
-
 
 ###############################################################
 ## Docker
