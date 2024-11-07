@@ -11,6 +11,9 @@
   * Fabric
     `go install github.com/danielmiessler/fabric@latest`
 
+  * Bombardier
+    `go install github.com/codesenberg/bombardier@latest`
+
 * [ ] Add bits for Load testing: install ad / JMeter / Locust / The Grinder
 
 * [ ] Check https://github.com/sam-hosseini/dotfiles
