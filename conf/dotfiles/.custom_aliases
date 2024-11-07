@@ -22,6 +22,7 @@ alias gd="cd ~/Sync/Google\ Drive"
 alias dt="cd ~/Desktop"
 alias i='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
 alias o='cd ~/Library/CloudStorage/OneDrive-VMware,Inc'
+alias s="${HOME}/git/bins/fabric/summarize.sh "
 
 # Possible additional argument: docker system prune;
 alias dclean='docker system prune -f; docker kill $(docker ps -a -q);docker rm -vf $(docker ps -a -q);docker rmi -f $(docker images -aq);docker system prune -f'
@@ -163,7 +164,7 @@ alias sb='${ANSIBLOSX_DIR}/conf/update_conf_files.sh --force; source ~/.zshrc'
 
 alias b='bat '
 alias a='atom .'
-alias s='subl .'
+#alias s='subl .'
 alias v='code .'
 alias ad='asciidoctor-pdf Report.adoc ; open Report.pdf'
 alias html2pdf='wkhtmltopdf -B 25 -L 25 -R 25 -T 25 -s A4 --print-media-type'
