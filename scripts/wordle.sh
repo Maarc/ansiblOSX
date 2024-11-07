@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 ## Taken from https://gist.github.com/huytd/6a1a6a7b34a0d0abcac00b47e3d01513
 words=($(grep '^\w\w\w\w\w$' /usr/share/dict/words | tr '[a-z]' '[A-Z]'))

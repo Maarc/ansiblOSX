@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Script to Download Google Drive Documents as pdf and compress them
 

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Script by Mik Freedman to Copy Files Between Google Drive and One Drive
 # https://gitlab.eng.vmware.com/-/snippets/1780
