@@ -6,8 +6,7 @@ OS X environment provisioning using Ansible.
 
 Open a "Terminal" of a fresh macOS installation and execute the following commands:
 
-
-```
+```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"  # <1>
 brew install ansible # <2>
 mkdir -p ~/git/private/OSX ~/Sync
@@ -18,12 +17,12 @@ cd ansiblOSX
 ansible-galaxy install -r roles/requirements.yml -p roles --force # <4>
 ansible-playbook -K main.yml # <5>
 cd dotfiles/
-./conf/update_conf_files.sh <6>
+./conf/update_conf_files.sh # <6>
 ```
 
 * <1> Setup [Homebrew](http://brew.sh/)
-* <2> Install Ansible
-* <3> Clone this project, making sure you have the GitHub SSH key configured properly  
+* <2> Install [Ansible](https://www.ansible.com/)
+* <3> Clone this project, making sure you have the GitHub SSH key configured properly
 * <4> Import the used roles
 * <5> Install the used software
 * <6> Seed the conf files (dot and espanso)
@@ -35,27 +34,32 @@ This section helps you to update the lists of software to install (group_vars/*_
 ### Brew
 
 Dump all installed taps:
-
-    $ brew tap | sort | sed 's/^/  - /'
+```sh
+brew tap | sort | sed 's/^/  - /'
+````
 
 Dump all installed apps:
-
-    $ brew list | sort | sed 's/^/  - /'
+```sh
+brew list | sort | sed 's/^/  - /'
+```
 
 Dump all installed casks:
-
-    $ brew cask list | sort | sed 's/^/  - /'
-
+```sh
+brew cask list | sort | sed 's/^/  - /'
+```
 
 ### Ruby gem
 
 Dump all installed gems and their version:
-
-    $ gem list | tail -n+1 | sed 's/^/  - { name: /' |sed 's/ (/, version: /' | sed 's/)/, pre: false }/' | sed 's/ default: / /'
+```sh
+gem list | tail -n+1 | sed 's/^/  - { name: /' |sed 's/ (/, version: /' | sed 's/)/, pre: false }/' | sed 's/ default: / /'
+```
 
 ... or without version:
 
-    $ gem list | tail -n+1 | sed 's/^/  - { name: /' |sed 's/ (.*/ }/'
+```sh
+gem list | tail -n+1 | sed 's/^/  - { name: /' |sed 's/ (.*/ }/'
+```
 
 Update the field "pre" to "true" for "asciidoctor-pdf" and remove the duplicated versions.
 
@@ -64,8 +68,9 @@ Update the field "pre" to "true" for "asciidoctor-pdf" and remove the duplicated
 
 Dump all installed applications from the app store and their unique id:
 
-    $ mas list |sort -k2 |rev |cut -f2- -d' ' |rev |sed 's/ /, name: "/1' |sed 's/^/  - { id: /' |sed 's/$/" }/'
-
+```sh
+mas list |sort -k2 |rev |cut -f2- -d' ' |rev |sed 's/ /, name: "/1' |sed 's/^/  - { id: /' |sed 's/$/" }/'
+```
 
 ## Sources
 
