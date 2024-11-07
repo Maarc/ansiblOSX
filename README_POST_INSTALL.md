@@ -211,6 +211,8 @@ Turn off the Optimize Storage option. Apple menu > System Preferences > Apple ID
 * General -> Use dark menu bar and Dockbash
 * Date & Time -> "Clock" -> don't show the day of the week, show the seconds, 24-hour clock
 * Keyboard -> Key repeat: fastest & Delay until repeat: shortest
+* Trackpad -> Look up & data detectors -> Off (disables dictionnary - see https://macpaw.com/how-to/turn-off-dictionary-mac)
+
 
 ### 3.3) Dock configuration
 
