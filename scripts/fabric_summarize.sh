@@ -25,7 +25,7 @@ OUT_DIR="${HOME}/git/bins/fabric/results"
 # Model to be used. Available model can be listed executing 'fabric -L'
 MODEL='gpt-4o-mini'
 # Fabric pattern to use. Available patterns can be found here: https://github.com/danielmiessler/fabric/tree/main/patterns
-PATTERN='summarize_marc'
+PATTERN='extract_wisdom_marc'
 
 function usage() {
 	echo "Usage:"
