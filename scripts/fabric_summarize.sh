@@ -2,13 +2,16 @@
 
 ##############################################################################################################
 # Generate the summary of a Youtube video / HTML article with Fabric
+#
+# - Install readability-cli: `git clone https://gitlab.com/gardenappl/readability-cli/; cd readability-cli; deno install`
+# - Install youtube-transcript-api: `pipx install --system youtube-transcript-api`
 ##############################################################################################################
 
 export URL PREFIX YT_BIN LYNX_BIN READABILITY_BIN FABRIC_BIN OUT_DIR MODEL PATTERN
 
 #----- Binary executable used
-# YouTube downloader binary
-YT_BIN="${HOME}/.local/bin/yt"
+# YouTube transcript downloader binary - https://github.com/jdepoix/youtube-transcript-api
+YT_TRANSCRIPT_API_BIN="${HOME}/.local/bin/youtube_transcript_api"
 # Text web browser used to convert HTML to text - https://lynx.invisible-island.net/
 LYNX_BIN="/usr/local/bin/lynx"
 # Used to clean HTML markup before passing it to Lynx - https://gitlab.com/gardenappl/readability-cli (Setup with Deno)
@@ -90,16 +93,21 @@ function process_article() {
 }
 
 function process_youtube_video() {
-	local LANG YOUTUBE_ID OUT OUTPUT ORIGINAL
-	LANG=en
-	if [[ -n "${2}" ]]; then
-		LANG=${2}
-	fi
+	local TITLE TITLE_CLEAN YOUTUBE_ID LANG OUT OUTPUT ORIGINAL
+
+	set -x
+	TITLE=$(${READABILITY_BIN} "${URL}" 2>/dev/null | head -1 | sed 's/ - YouTube.*//')
+
+	TITLE_CLEAN=$(echo "${TITLE}" | tr -cs '[:alpha:]' '_')
 	YOUTUBE_ID=$(echo "${URL}" | sed -E 's|.*\?v\=(.+)$|\1|' | sed -E 's|^(.+)&.*|\1|')
-	OUT="${OUT_DIR}/${PREFIX}__Youtube__${YOUTUBE_ID}"
+
+	LANG=$(${YT_TRANSCRIPT_API_BIN} "${YOUTUBE_ID}" --list-transcripts | grep "' -" | head -1 | cut -d' ' -f 4)
+
+	OUT="${OUT_DIR}/${PREFIX}__Youtube__[${LANG^^}]__${TITLE_CLEAN}"
 	OUTPUT="${OUT}__Extract_wisdom.txt"
 	ORIGINAL="${OUT}___Original_transcript.txt"
-	${YT_BIN} --transcript "${URL}" --lang "${LANG}" >"${ORIGINAL}"
+	${YT_TRANSCRIPT_API_BIN} --language "${LANG}" --format text "${YOUTUBE_ID}" >"${ORIGINAL}"
+
 	if [[ -s "${ORIGINAL}" ]]; then
 		if (head -n 1 "${ORIGINAL}" | grep -q "Transcript not available in the selected language"); then
 			echo "[ERROR] Empty YouTube video transcript" >"${OUT_DIR}/wisdom.txt"
@@ -110,7 +118,7 @@ function process_youtube_video() {
 		echo "[ERROR] Empty YouTube video transcript" >"${OUT_DIR}/wisdom.txt"
 	fi
 	{
-		echo "# Youtube - ${YOUTUBE_ID}"
+		echo "# [${LANG^^}] ${TITLE} (Youtube - ${YOUTUBE_ID})"
 		echo ""
 		echo "#fabric_summary"
 		echo ""
