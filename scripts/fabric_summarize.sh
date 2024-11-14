@@ -25,7 +25,7 @@ OUT_DIR="${HOME}/git/bins/fabric/results"
 # Model to be used. Available model can be listed executing 'fabric -L'
 MODEL='gpt-4o-mini'
 # Fabric pattern to use. Available patterns can be found here: https://github.com/danielmiessler/fabric/tree/main/patterns
-PATTERN='extract_wisdom'
+PATTERN='summarize_marc'
 
 function usage() {
 	echo "Usage:"
@@ -42,7 +42,7 @@ function process_article() {
 	TITLE=$(echo "${URL}" | sed -E 's|(.+)/$|\1|' | sed -E 's|(.+)\.html$|\1|' | rev | cut -d'/' -f 1 | rev)
 	TITLE_READABLE=$(echo "${TITLE}" | tr '-' ' ' | tr '-' ' ' | tr '&' ' ' | awk '{print toupper(substr($0,1,1)) substr($0,2)}')
 	OUT="${OUT_DIR}/${PREFIX}__Article__${TITLE}"
-	OUTPUT="${OUT}__Extract_wisdom.txt"
+	OUTPUT="${OUT}__${PATTERN}.txt"
 	ORIGINAL="${OUT}___Original_article.txt"
 	curl -s "${URL}" \
 		-H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8' \
@@ -94,17 +94,15 @@ function process_article() {
 
 function process_youtube_video() {
 	local TITLE TITLE_CLEAN YOUTUBE_ID LANG OUT OUTPUT ORIGINAL
-
-	set -x
+	
 	TITLE=$(${READABILITY_BIN} "${URL}" 2>/dev/null | head -1 | sed 's/ - YouTube.*//')
-
 	TITLE_CLEAN=$(echo "${TITLE}" | tr -cs '[:alpha:]' '_')
 	YOUTUBE_ID=$(echo "${URL}" | sed -E 's|.*\?v\=(.+)$|\1|' | sed -E 's|^(.+)&.*|\1|')
 
 	LANG=$(${YT_TRANSCRIPT_API_BIN} "${YOUTUBE_ID}" --list-transcripts | grep "' -" | head -1 | cut -d' ' -f 4)
 
 	OUT="${OUT_DIR}/${PREFIX}__Youtube__[${LANG^^}]__${TITLE_CLEAN}"
-	OUTPUT="${OUT}__Extract_wisdom.txt"
+	OUTPUT="${OUT}__${PATTERN}.txt"
 	ORIGINAL="${OUT}___Original_transcript.txt"
 	${YT_TRANSCRIPT_API_BIN} --language "${LANG}" --format text "${YOUTUBE_ID}" >"${ORIGINAL}"
 
@@ -136,7 +134,7 @@ function process_local_file() {
 	FILE="${CURRENT_DIR}/${URL}"
 	if [ -f "${FILE}" ]; then
 		OUT="${OUT_DIR}/${PREFIX}__Local_file__${URL}"
-		OUTPUT="${OUT}__Extract_wisdom.txt"
+		OUTPUT="${OUT}__${PATTERN}.txt"
 		ORIGINAL="${OUT}___Original_file.txt"
 		cp -f "${FILE}" "${ORIGINAL}"
 		if [[ -s "${ORIGINAL}" ]]; then
@@ -159,8 +157,13 @@ function process_local_file() {
 }
 
 function main() {
-	URL="${1}"
 	PREFIX=$(date -u +%Y.%m.%d)
+	URL="${1}"
+
+	# Override pattern used if necessary
+	if [[ -n "${2}" ]]; then
+		PATTERN=${2}
+	fi
 
 	if [[ ! -d ${OUT_DIR} ]]; then
 		echo "[WARNING] Missing local result directory: ${OUT_DIR}"
