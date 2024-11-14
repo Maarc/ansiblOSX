@@ -10,6 +10,7 @@
 
   * Fabric
     `go install github.com/danielmiessler/fabric@latest`
+    `go install github.com/danielmiessler/fabric/plugins/tools/to_pdf@latest`
 
   * Bombardier
     `go install github.com/codesenberg/bombardier@latest`
