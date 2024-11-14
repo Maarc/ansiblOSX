@@ -3,24 +3,34 @@
 ##############################################################################################################
 # Generate the summary of a Youtube video / HTML article with Fabric
 ##############################################################################################################
-
-export URL PREFIX
+export URL PREFIX MODEL PATTERN
 FABRIC_DIR="/Users/marc/git/bins/fabric"
 OUT_DIR="${FABRIC_DIR}/results"
+# Available model can be listed executing 'fabric -L'
+MODEL='gpt-4o-mini'
+# Available patterns can be found here: https://github.com/danielmiessler/fabric/tree/main/patterns
+PATTERN='extract_wisdom'
 
 function usage() {
 	echo "Usage:"
 	printf "    %s <url>\n" "$(basename "$0")"
 }
 
+function output() {
+	echo "Checkout: ${1}"
+	code "${OUT_DIR}" -g "${1}"
+}
+
 function process_article() {
-	local TITLE TITLE_READABLE OUTPUT
+	local TITLE TITLE_READABLE OUT OUTPUT ORIGINAL
 	TITLE=$(echo "${URL}" | sed -E 's|(.+)/$|\1|' | sed -E 's|(.+)\.html$|\1|' | rev | cut -d'/' -f 1 | rev)
 	TITLE_READABLE=$(echo "${TITLE}" | tr '-' ' ' | tr '-' ' ' | tr '&' ' ' | awk '{print toupper(substr($0,1,1)) substr($0,2)}')
-	OUTPUT="${OUT_DIR}/${PREFIX}__Article__${TITLE}__Extract_wisdom.txt"
+	OUT="${OUT_DIR}/${PREFIX}__Article__${TITLE}"
+	OUTPUT="${OUT}__Extract_wisdom.txt"
+	ORIGINAL="${OUT}___Original_article.txt"
 	curl -s "${URL}" -o "${OUT_DIR}/page.html"
-	lynx -dump -nolist --display_charset=utf-8 "${OUT_DIR}/page.html" >"${OUT_DIR}/page.txt"
-	cat "${OUT_DIR}/page.txt" | fabric -sp extract_wisdom >"${OUT_DIR}/wisdom.txt"
+	lynx -dump -nolist --display_charset=utf-8 "${OUT_DIR}/page.html" >"${ORIGINAL}"
+	(fabric -m "${MODEL}" -p "${PATTERN}" <"${ORIGINAL}") >"${OUT_DIR}/wisdom.txt"
 	{
 		echo "# ${TITLE_READABLE}"
 		echo ""
@@ -28,21 +38,24 @@ function process_article() {
 		echo ""
 		echo "URL: ${URL}"
 		echo ""
-		cat "${OUT_DIR}/wisdom.txt" | sed -E 's|([A-Z -]*):|## \1|'
+		sed -E 's|([A-Z -]*):|## \1|' "${OUT_DIR}/wisdom.txt"
 	} >"${OUTPUT}"
-	rm -f "${OUT_DIR}/wisdom.txt" "${OUT_DIR}/page.txt" "${OUT_DIR}/page.html"
-	echo "Checkout: ${OUTPUT}"
+	rm -f "${OUT_DIR}/wisdom.txt" "${OUT_DIR}/page.html"
+	output "${OUTPUT}"
 }
 
 function process_youtube_video() {
-	local LANG
+	local LANG YOUTUBE_ID OUT OUTPUT ORIGINAL
 	LANG=en
 	if [[ -n "${2}" ]]; then
 		LANG=${2}
 	fi
 	YOUTUBE_ID=$(echo "${URL}" | sed -E 's|.*\?v\=(.+)$|\1|' | sed -E 's|^(.+)&.*|\1|')
-	OUTPUT="${OUT_DIR}/${PREFIX}__Youtube__${YOUTUBE_ID}__Extract_wisdom.txt"
-	yt --transcript "${URL}" --lang "${LANG}" | fabric -p extract_wisdom >"${OUT_DIR}/wisdom.txt"
+	OUT="${OUT_DIR}/${PREFIX}__Youtube__${YOUTUBE_ID}"
+	OUTPUT="${OUT}__Extract_wisdom.txt"
+	ORIGINAL="${OUT}___Original_transcript.txt"
+	yt --transcript "${URL}" --lang "${LANG}" >"${ORIGINAL}"
+	(fabric -m "${MODEL}" -p "${PATTERN}" <"${ORIGINAL}") >"${OUT_DIR}/wisdom.txt"
 	{
 		echo "# Youtube - ${YOUTUBE_ID}"
 		echo ""
@@ -50,27 +63,31 @@ function process_youtube_video() {
 		echo ""
 		echo "URL: ${URL}"
 		echo ""
-		cat "${OUT_DIR}/wisdom.txt" | sed -E 's|([A-Z -]*):|## \1|'
+		sed -E 's|([A-Z -]*):|## \1|' "${OUT_DIR}/wisdom.txt"
 	} >"${OUTPUT}"
 	rm -f "${OUT_DIR}/wisdom.txt"
-	echo "Checkout: ${OUTPUT}"
+	output "${OUTPUT}"
 }
 
 function process_local_file() {
-	local CURRENT_DIR FILE
+	local CURRENT_DIR FILE OUT OUTPUT ORIGINAL
 	CURRENT_DIR=$(pwd)
 	FILE="${CURRENT_DIR}/${URL}"
-	if [ -f "$FILE" ]; then
-		OUTPUT="${OUT_DIR}/${PREFIX}__Local_file__${URL}__Extract_wisdom.txt"
-		cat "${FILE}" | fabric -p extract_wisdom >"${OUT_DIR}/wisdom.txt"
+	if [ -f "${FILE}" ]; then
+		OUT="${OUT_DIR}/${PREFIX}__Local_file__${URL}"
+		OUTPUT="${OUT}__Extract_wisdom.txt"
+		ORIGINAL="${OUT}___Original_file.txt"
+		cp -f "${FILE}" "${ORIGINAL}"
+		(fabric -m "${MODEL}" -p "${PATTERN}" <"${FILE}") >"${OUT_DIR}/wisdom.txt"
 		{
 			echo "# File - ${URL} (${CURRENT_DIR})"
 			echo ""
 			echo "#fabric_summary"
 			echo ""
-			cat "${OUT_DIR}/wisdom.txt" | sed -E 's|([A-Z -]*):|## \1|'
+			sed -E 's|([A-Z -]*):|## \1|' "${OUT_DIR}/wisdom.txt"
 		} >"${OUTPUT}"
-		echo "Checkout: ${OUTPUT}"
+		rm -f "${OUT_DIR}/wisdom.txt"
+		output "${OUTPUT}"
 	else
 		echo "[ERROR] File does not exist: ${FILE}"
 	fi
@@ -96,7 +113,7 @@ function main() {
 
 	if [[ "${URL}" == *www.youtube.com* ]]; then
 		process_youtube_video "$@"
-	elif [[ "${URL}" == *http://* ]]; then
+	elif [[ "${URL}" == *http[s]*://* ]]; then
 		process_article "$@"
 	else
 		process_local_file "$@"
