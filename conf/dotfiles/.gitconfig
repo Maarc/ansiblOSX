@@ -56,7 +56,7 @@
 	rank = shortlog -sn --no-merges
 	# Remove all merged branches
 	#bdm = "!git branch --merged | grep -v '*' | xargs -n 1 git branch -d"
-	url = ! open -a 'Google Chrome' $(git remote show 'origin' | grep 'Fetch.URL' | sed 's/.*http/http/' | sed 's|git@github.com:|https://github.com/|' | sed 's|^.*http|http|')
+	url = ! open -a 'Brave Browser' $(git remote show 'origin' | grep 'Fetch.URL' | sed 's/.*http/http/' | sed 's|git@github.com:|https://github.com/|' | sed 's|^.*http|http|')
 
 	# https://githowto.com/aliases
 	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
