@@ -162,7 +162,6 @@ alias vb='code ${ANSIBLOSX_DIR}'
 alias sb='${ANSIBLOSX_DIR}/conf/update_conf_files.sh --force; source ~/.zshrc'
 
 alias b='bat '
-alias a='atom .'
 #alias s='subl .'
 alias v='code .'
 alias ad='asciidoctor-pdf Report.adoc ; open Report.pdf'

@@ -63,10 +63,6 @@ function save_info() {
 function save() {
   mkdir -p ${DIR_ZAP} ${DIR_FONTS} ${DIR_ASCIIDOC_TEMPLATE} ${DIR_SERVICES} ${DIR_ATOM} ${DIR_CHROME}
 
-  # Atom
-  #apm list --installed --bare > ${DIR_ATOM}/packages.list
-  #cp ~/.atom/*.json ~/.atom/*.cson ~/.atom/*.coffee ~/.atom/*.less ${DIR_ATOM}
-
   # AppZap scripts
   cp -Rfp ~/Library/Application\ Support/ZAP/scripts/scripts/standalone/* ${DIR_ZAP}/.
 
@@ -101,10 +97,6 @@ function save() {
 
 # Restore savec configuration
 function restore() {
-  # Atom
-  #echo apm install --packages-file ${DIR_ATOM}/packages.list
-  #echo cp ${DIR_ATOM}/*.json ${DIR_ATOM}/*.cson ${DIR_ATOM}/*.coffee ${DIR_ATOM}/*.less ~/.atom/.
-
   # AppZap scripts
   DIR_ZAP_TARGET="~/Library/Application\ Support/ZAP/scripts/scripts/standalone"
   echo mkdir -p ${DIR_ZAP_TARGET}
