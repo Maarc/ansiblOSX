@@ -2,15 +2,23 @@
 
 OS X environment provisioning using Ansible.
 
+
+## Preparation
+
+* Set name of Mac in `System Settings` -> `General` -> `About`
+* Activate universal control: https://support.apple.com/en-us/102459 or install Synergy
+
+
 ## Installation
 
 Open a "Terminal" of a fresh macOS installation and execute the following commands:
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"  # <1>
-brew install ansible # <2>
+brew install ansible git iterm2 zsh brave-browser visual-studio-code # <2>
 mkdir -p ~/git/private/OSX ~/Sync
 cd ~/git/private/OSX
+# Configure public key following ... https://docs.github.com/de/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 git clone git@github.com:Maarc/ansiblOSX.git # <3>
 cd ansiblOSX
 # Edit the group_wars/*_vars.yml file to select the software you want to install
@@ -21,7 +29,7 @@ cd dotfiles/
 ```
 
 * <1> Setup [Homebrew](http://brew.sh/)
-* <2> Install [Ansible](https://www.ansible.com/)
+* <2> Install [Ansible](https://www.ansible.com/) and some additional software
 * <3> Clone this project, making sure you have the GitHub SSH key configured properly
 * <4> Import the used roles
 * <5> Install the used software
