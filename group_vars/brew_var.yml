@@ -261,6 +261,7 @@ brew_apps:
 # $ brew cask list | sort | sed 's/^/  - /'
 
 brew_casks:
+  - 1password@7
   - adobe-acrobat-reader
   #- adobe-creative-cloud
   #- aerial
