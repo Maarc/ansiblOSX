@@ -66,7 +66,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git dotenv macos rake rbenv ruby brew sdk vagrant cf)
+plugins=(git dotenv macos rake rbenv ruby brew sdk vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -144,11 +144,12 @@ eval "$(jump shell)"
 # SDKMAN - MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 [[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"
 
-# Rust / Cargo
-. "$HOME/.cargo/env"
-
 # zsh auto-suggestion activation
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# powerlevel10k theme activation
+source ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k/powerlevel10k.zsh-theme
+
 # thef*ck
 eval $(thefuck --alias f)
+

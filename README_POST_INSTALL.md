@@ -108,7 +108,9 @@ Alternative: Copy the `.ssh` directory from another mac
 ### 2.16) Configure ZSH & My Zsh
 
 #### Install Oh My Zsh
-`sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+
+`sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+
 
 #### Install and configure Power10k according to https://github.com/romkatv/powerlevel10k#homebrew
 
@@ -117,18 +119,24 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 echo 'source ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 ```
 
-#### Execute and configure zsh (install font, set font as defautl in iTerm2 ...)
-`zsh`
+#### Install fonts
 
-#### Add cf completion following instructions here:
-https://github.com/norman-abramovitz/cf-zsh-autocomplete-plugin
+Download "Hack" and "" from here: https://www.nerdfonts.com/font-downloads
+
+Then unzip and execute `open *.ttf` to install the font on MacOS.
+
 
 #### Fix terminal in visual studio code
 Follow these instructions: https://gist.github.com/480/3b41f449686a089f34edb45d00672f28
+
 ```yml
 "terminal.integrated.fontFamily": "Hack Nerd Font",
 "terminal.integrated.shell.osx": "/bin/zsh"
 ```
+
+#### (Optional) Add cf completion following instructions here:
+https://github.com/norman-abramovitz/cf-zsh-autocomplete-plugin
+
 
 ### 2.17) Configure Google Chrome
 * Sync plugins and bookmarks with sync mechanism

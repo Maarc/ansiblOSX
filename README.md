@@ -14,26 +14,44 @@ OS X environment provisioning using Ansible.
 Open a "Terminal" of a fresh macOS installation and execute the following commands:
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"  # <1>
-brew install ansible git iterm2 zsh brave-browser visual-studio-code # <2>
+# Setup [Homebrew](http://brew.sh/)
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install essentials formulaes 
+brew install ansible git zsh nvm jump thefuck zsh-autosuggestions rust rustup mas
+# Install essential casks
+brew install --cask iterm2 sourcetree spotify brave-browser visual-studio-code dropboxdrop 1password@7
+
+# Install OhMyZsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Install PowerLevel10k Theme
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+# Initialize rust
+rustup default stable
+
+# Optional: configure Dropbox / 1Password / zsh
+
+# Retrieve this project including its configuration
 mkdir -p ~/git/private/OSX ~/Sync
 cd ~/git/private/OSX
-# Configure public key following ... https://docs.github.com/de/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
-git clone git@github.com:Maarc/ansiblOSX.git # <3>
-cd ansiblOSX
-# Edit the group_wars/*_vars.yml file to select the software you want to install
-ansible-galaxy install -r roles/requirements.yml -p roles --force # <4>
-ansible-playbook -K main.yml # <5>
-cd dotfiles/
-./conf/update_conf_files.sh # <6>
-```
 
-* <1> Setup [Homebrew](http://brew.sh/)
-* <2> Install [Ansible](https://www.ansible.com/) and some additional software
-* <3> Clone this project, making sure you have the GitHub SSH key configured properly
-* <4> Import the used roles
-* <5> Install the used software
-* <6> Seed the conf files (dot and espanso)
+# Clone this project, making sure you have the GitHub SSH key configured properly following https://docs.github.com/de/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+git clone git@github.com:Maarc/ansiblOSX.git
+cd ansiblOSX
+
+# Edit the group_wars/*_vars.yml file to select the software you want to install
+# Import the used roles
+ansible-galaxy install -r roles/requirements.yml -p roles --force
+
+# Install all used software and dependencies
+ansible-playbook -K main.yml
+
+# Seed the conf files (dot and espanso)
+cd dotfiles/
+./conf/update_conf_files.sh
+```
 
 ## Update software lists
 
