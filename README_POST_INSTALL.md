@@ -230,6 +230,7 @@ killall Dock
 
 ## (4) Install additional software (currently missing)
 
+* __Captvty__ https://captvty.fr/ (See https://captvty.fr/faq#macos)
 * __WebCam Driver__ https://support.logi.com/hc/en-us/articles/360024699934--Downloads-C922-Pro-Stream-Webcam
 * __Docfetcher__
 * __Tinker Tool__ (not TT System) (https://www.bresink.com/osx/-TinkerTool.html)
