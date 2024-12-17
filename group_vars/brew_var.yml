@@ -26,22 +26,22 @@ brew_apps:
   #- atk
   #- autoconf
   - autojump                      # autojump - a faster way to navigate your filesystem
-  ##- automake
+  #- automake
   - bash
   - bash-completion
   - bat
-  ##- bazel
+  #- bazel
   #- berkeley-db
   #- bfg                          # CTF tools
-  ##- binutils
-  ##- binwalk
+  #- binutils
+  #- binwalk
   - bluetoothconnector            # Prerequisite for the alfred-airpods-connector plugin
   - brew-cask-completion
   - brew-gem
   #- cairo
   #- camlp4
-  ##- cask-repair
-  ##- chromedriver
+  #- cask-repair
+  #- chromedriver
   #- cf-cli                       # CloudFoundry CLI
   #- cifer
   #- clasp
@@ -83,11 +83,11 @@ brew_apps:
   - glib
   #- gmp
   - gnu-sed                       # Install GNU `sed`, overwriting the built-in `sed`.
-  ##- gnutls
+  #- gnutls
   - go
   #- gobject-introspection
   #- gpatch
-  ##- goaccess
+  #- goaccess
   - gradle
   - gradle-completion
   #- graphite2
@@ -101,9 +101,9 @@ brew_apps:
   #- gtk-mac-integration
   #- gtksourceview
   #- gts
-  ##- hashpump
-  ##- hr
-  ##- httpie
+  #- hashpump
+  #- hr
+  #- httpie
   #- harfbuzz
   #- hicolor-icon-theme
   - hub                           # Github extension
@@ -112,20 +112,20 @@ brew_apps:
   #- icu4c
   - iftop
   - imagemagick                   # Converts images to various formats
-  ##- iperf3
+  #- iperf3
   #- isl
   #- jasper
-  ##- jbig2dec
-  ##- jmeter
-  ##- john
+  #- jbig2dec
+  #- jmeter
+  #- john
   #- jpeg
   - jq                            # Lightweight and flexible command-line JSON processor
-  ##- knock
+  #- knock
   - krew                          # A tool for installing kubernetes plugins (https://krew.sigs.k8s.io)   
   - kubernetes-cli
   - kubernetes-helm
   #- lablgtk
-  ##- lame
+  #- lame
   #- ldns                         # DNS library written in C
   #- libarchive
   #- libcroco
@@ -198,7 +198,7 @@ brew_apps:
   #- py2cairo
   #- pygobject
   #- pygtk  
-  ##- pyqt
+  #- pyqt
   - python
   - qt
   #- rabbitmq
@@ -207,37 +207,37 @@ brew_apps:
   #- rename                       # File renaming
   - ruby
   - ruby-build
-  ##- sane-backends
-  ##- screen     # more recent versions of some macOS tools
-  ##- sdl2
-  ##- sdl2_image
-  ##- sfnt2woff                   # Font tools
-  ##- sfnt2woff-zopfli            # Font tools
+  #- sane-backends
+  #- screen     # more recent versions of some macOS tools
+  #- sdl2
+  #- sdl2_image
+  #- sfnt2woff                   # Font tools
+  #- sfnt2woff-zopfli            # Font tools
   - shellcheck                    # Validates the syntax of shell scripts
   - shfmt                         # Utility to reformat shell scripts
-  ##- sip
+  #- sip
   #- sloccount
-  ##- socat
-  ##- sphinx-doc
+  #- socat
+  #- sphinx-doc
   #- sqlite
   #- sqlmap
-  ##- ssdeep
-  ##- ssh-copy-id
-  ##- swig
-  ##- tcpflow
-  ##- tcpreplay
-  ##- tcptrace
+  #- ssdeep
+  #- ssh-copy-id
+  #- swig
+  #- tcpflow
+  #- tcpreplay
+  #- tcptrace
   - tesseract                     # Required for Alfred OCR workflow
-  ##- testssl
-  ##- texi2html
+  #- testssl
+  #- texi2html
   - thefuck
   - tldc                          # Better man page with examples - https://github.com/tldr-pages/tlrc
-  ##- the_silver_searcher         # https://github.com/ggreer/the_silver_searcher
-  ##- tokyo-cabinet
+  #- the_silver_searcher         # https://github.com/ggreer/the_silver_searcher
+  #- tokyo-cabinet
   - tree
   - TomAnthony/brews/itermocil
-  ##- ucspi-tcp
-  ##- umlet                       # UML diagram editor
+  #- ucspi-tcp
+  #- umlet                       # UML diagram editor
   #- unixodbc
   - vim                           # More recent version of default macos tool
   - watch
@@ -296,14 +296,14 @@ brew_casks:
   - foobar2000
   - font-hack-nerd-font            # Cask Fonts from NerdFonts (https://nerdfonts.com/#cheat-sheet)
   - free-ruler                     # Ruler application to check layouts
-  ##- freemind
+  #- freemind
   - gemini
   - gimp
   - google-chat
   - google-chrome
   - google-cloud-sdk
   - grammarly
-  ##- gutenprint                   # Top quality Mac printer drivers (http://thebackpackr.com/borderless-pdf-printing-mac/)
+  #- gutenprint                    # Top quality Mac printer drivers (http://thebackpackr.com/borderless-pdf-printing-mac/)
   #- hands-off
   - hazel
   #- intellij-idea
@@ -311,49 +311,49 @@ brew_casks:
   - istat-menus
   - iterm2
   - jd-gui
-  ##- jprofiler
+  #- jprofiler
   - karabiner-elements             # Used to remap the shift lock key to launch alfred
   - kindle
   #- krisp                         # Removes environment noise
-  ##- libreoffice
-  ##- licecap
-  ##- limechat
+  #- libreoffice
+  #- licecap
+  #- limechat
   #- little-snitch                 # Firewall
-  ###- mac-informer                # Similar to macupdate
-  ##- macupdate                    # Previously macupdate-desktop
+  #- mac-informer                  # Similar to macupdate
+  #- macupdate                     # Previously macupdate-desktop
   #- mat
   - mediathekview
-  ##- microsoft-office-2011
+  #- microsoft-office-2011
   - miro                           # Previously realtimeboard
-  ##- mono-mdk
+  #- mono-mdk
   #- mysides                       # CLI to add Finder favorites
-  ##- mysqlworkbench
+  #- mysqlworkbench
   - namechanger
   #- netspot                       # Builds a Wifi heat map
   - nvim
   #- obs                           # Open Broadcaster Software (https://obsproject.com/welcome)
   #- onedrive
   - onyx
-  ##- osxfuse
+  #- osxfuse
   - owasp-zap
   - paintbrush                     # Simple and efficient image editor
-  ##- paragon-ntfs
+  #- paragon-ntfs
   - php                            # Prerequisite for Alfred Workflow
-  ##- pinta
+  #- pinta
   - plain-clip
   - portfolioperformance
   #- postman
-  ##- pycharm
-  ##- reaper
+  #- pycharm
+  #- reaper
+  - rectangle
   #- reflector
-  ##- rocket-chat
-  ##- screaming-frog-seo-spider
+  #- rocket-chat
+  #- screaming-frog-seo-spider
   #- send-to-kindle
   #- sequel-pro
   - skype
   #- slack
   - sourcetree
-  - spectacle
   - spotify
   - sublime-text
   - telegram

@@ -73,7 +73,7 @@ Alternative: Copy the `.ssh` directory from another mac
 * Add license
 * File -> Import settings from dropbox
 
-### 2.8) Spectacle
+### 2.8) Rectangle (replacing old Spectable)
 * Open and finish install
 * Change shortcut for fullscreen (alt+command+-)
 * Launch at login
