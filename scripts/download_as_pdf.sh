@@ -7,7 +7,7 @@ set -o pipefail
 #set -x # SET THIS FOR DEBUGGING
 
 GDRIVE_REMOTE='drive'
-LOCAL_DOWNLOAD_FOLDER='/Users/mzottner/Downloads/'
+LOCAL_DOWNLOAD_FOLDER="${HOME}/Downloads/"
 GOOGLE_DRIVE_ID=$(pbpaste | perl -n -e'/([-\w]{25,})/ && print $1')
 OBJECT_NAME=$(rclone -vv backend copyid --use-json-log "${GDRIVE_REMOTE}:" "${GOOGLE_DRIVE_ID}" "${LOCAL_DOWNLOAD_FOLDER}" --drive-export-formats pdf 2<&1 | sed 'x;$!d' | jq --raw-output .object)
 

@@ -3,9 +3,18 @@
 ##############################################################################################################
 # Generate the summary of a Youtube video / HTML article with Fabric
 #
-# - Install readability-cli: `git clone https://gitlab.com/gardenappl/readability-cli/; cd readability-cli; deno install`
+# - - - - - Installations - - - - -
+# - Install prerequisites: brew install lynx go
+# - mkdir -p /Users/marc/git/bins
 # - Install youtube-transcript-api: `pipx install --system youtube-transcript-api`
+# - Install Fabric: `go install github.com/danielmiessler/fabric@latest`
+# 
+# - - - - - Setup - - - - -
+# - `fabric --setup` -> 1 OpenAI / 10 40 gpt-4o-mini / 12 Youtube / 11 Patterns
+# - Reset and update the local custom pattern repository (`sb`)
+# - cd readability; pnpm install
 ##############################################################################################################
+set -x
 
 export URL PREFIX YT_BIN LYNX_BIN READABILITY_BIN FABRIC_BIN OUT_DIR MODEL PATTERN
 
@@ -15,7 +24,8 @@ YT_TRANSCRIPT_API_BIN="${HOME}/.local/bin/youtube_transcript_api"
 # Text web browser used to convert HTML to text - https://lynx.invisible-island.net/
 LYNX_BIN="/usr/local/bin/lynx"
 # Used to clean HTML markup before passing it to Lynx - https://gitlab.com/gardenappl/readability-cli (Setup with Deno)
-READABILITY_BIN="/${HOME}/git/bins/readability-cli/readable.ts"
+READABILITY_BIN="node ${HOME}/git/private/OSX/ansiblOSX/scripts/readability/cleanup.js "
+
 # Fabric - https://github.com/danielmiessler/fabric
 FABRIC_BIN="/${HOME}/go/bin/fabric"
 
@@ -62,7 +72,7 @@ function process_article() {
 		-H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36' \
 		-o "${OUT_DIR}/page_curl.html"
 
-	if [[ -f "${READABILITY_BIN}" ]]; then
+	if [[ -f "${ANSIBLOSX_DIR}/scripts/readability/cleanup.js" ]]; then
 		${READABILITY_BIN} "${OUT_DIR}/page_curl.html" -o "${OUT_DIR}/page.html" >/dev/null 2>&1
 	else
 		mv "${OUT_DIR}/page_curl.html" "${OUT_DIR}/page.html"

@@ -1,6 +1,6 @@
 windows:
   - name: cookbook
-    root: /Users/mzottner/Work/Tools/appmod/content/github_cookbooks/modernization-cookbook-master-internal
+    root: /Users/marc/Work/Tools/appmod/content/github_cookbooks/modernization-cookbook-master-internal
     layout: even-vertical
     panes:
       - commands:

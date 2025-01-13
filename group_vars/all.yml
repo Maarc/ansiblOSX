@@ -6,6 +6,6 @@ configure_sdkman: no
 configure_brew: no
 configure_mas: no
 configure_gem: no
-configure_dock: yes
+configure_dock: no
 
-computername: Apricot
+computername: Midnight

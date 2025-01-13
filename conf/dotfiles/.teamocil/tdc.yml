@@ -1,6 +1,6 @@
 windows:
   - name: tdc
-    root: /Users/mzottner/Work/Tools/appmod/content/github_tanzu-dev-portal
+    root: /Users/marc/Work/Tools/appmod/content/github_tanzu-dev-portal
     layout: even-vertical
     panes:
       - commands:

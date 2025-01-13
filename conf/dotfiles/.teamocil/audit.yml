@@ -1,6 +1,6 @@
 windows:
   - name: arg
-    root: /Users/mzottner/Work/Tools/appmod/gitlab_app-report-gen
+    root: /Users/marc/Work/Tools/appmod/gitlab_app-report-gen
     layout: even-vertical
     panes:
       - commands:

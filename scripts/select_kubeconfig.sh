@@ -5,7 +5,7 @@
 PS3="Select the KUBECONFIG you want: "
 
 CONFIG_FILE=""
-CONFIG_DIR="/Users/mzottner/.decc"
+CONFIG_DIR="${HOME}/.decc"
 VALID=FALSE
 OPTION="${1}"
 

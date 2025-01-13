@@ -10,3 +10,6 @@ save_*
 
 # Roles
 roles/Comcast.sdkman
+
+# Node modules
+node_modules
