@@ -20,7 +20,7 @@ Open a "Terminal" of a fresh macOS installation and execute the following comman
 # Install essentials formulaes 
 brew install ansible git zsh nvm jump thefuck zsh-autosuggestions rust rustup mas
 # Install essential casks
-brew install --cask iterm2 sourcetree spotify brave-browser visual-studio-code dropboxdrop 1password@7 karabiner-elements espanso rectangle
+brew install --cask iterm2 sourcetree spotify brave-browser visual-studio-code dropbox 1password@7 karabiner-elements espanso rectangle
 
 # Install OhMyZsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
