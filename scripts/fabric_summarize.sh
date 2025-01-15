@@ -14,40 +14,44 @@
 # - Reset and update the local custom pattern repository (`sb`)
 # - cd readability; pnpm install
 ##############################################################################################################
-set -x
 
-export URL PREFIX YT_BIN LYNX_BIN READABILITY_BIN FABRIC_BIN OUT_DIR MODEL PATTERN
+set -e          # Exit immediately if a command exits with a non-zero status.
+set -o pipefail # Return exit status of last command in a pipeline that failed.
 
-#----- Binary executable used
-# YouTube transcript downloader binary - https://github.com/jdepoix/youtube-transcript-api
-YT_TRANSCRIPT_API_BIN="${HOME}/.local/bin/youtube_transcript_api"
-# Text web browser used to convert HTML to text - https://lynx.invisible-island.net/
-LYNX_BIN="/usr/local/bin/lynx"
-# Used to clean HTML markup before passing it to Lynx - https://gitlab.com/gardenappl/readability-cli (Setup with Deno)
-READABILITY_BIN="node ${HOME}/git/private/OSX/ansiblOSX/scripts/readability/cleanup.js "
+export MODEL PATTERN OUT_DIR READABILITY_SCRIPT YT_TRANSCRIPT_API_BIN LYNX_BIN FABRIC_BIN URL PREFIX
 
-# Fabric - https://github.com/danielmiessler/fabric
-FABRIC_BIN="/${HOME}/go/bin/fabric"
-
-#----- Parameters
-# Local directory to store results
-OUT_DIR="${HOME}/git/bins/fabric/results"
+#----- Configuration: Please adjust the following variables according to your environment
 # Model to be used. Available model can be listed executing 'fabric -L'
 MODEL='gpt-4o-mini'
 # Fabric pattern to use. Available patterns can be found here: https://github.com/danielmiessler/fabric/tree/main/patterns
 PATTERN='extract_wisdom_marc'
+# Local directory to store results
+OUT_DIR="${HOME}/git/bins/fabric/results"
 
-function usage() {
+#----- Binary executable used
+# Used to clean HTML markup before passing it to Lynx - https://gitlab.com/gardenappl/readability-cli (Setup with Deno)
+READABILITY_SCRIPT="${HOME}/git/private/OSX/ansiblOSX/scripts/readability/cleanup.js"
+# YouTube transcript downloader binary - https://github.com/jdepoix/youtube-transcript-api
+YT_TRANSCRIPT_API_BIN="${HOME}/.local/bin/youtube_transcript_api"
+# Text web browser used to convert HTML to text - https://lynx.invisible-island.net/
+LYNX_BIN="/opt/homebrew/bin/lynx"
+# Fabric - https://github.com/danielmiessler/fabric
+FABRIC_BIN="/${HOME}/go/bin/fabric"
+
+# Function to print script usage
+usage() {
 	echo "Usage:"
 	printf "    %s <url>\n" "$(basename "$0")"
 }
 
-function output() {
+# Function to display the output file in a code viewer
+output() {
 	echo "Checkout: ${1}"
 	code "${OUT_DIR}" -g "${1}"
 }
 
-function process_article() {
+# Function to process an HTML article
+process_article() {
 	local TITLE TITLE_READABLE OUT OUTPUT ORIGINAL
 	TITLE=$(echo "${URL}" | sed -E 's|(.+)/$|\1|' | sed -E 's|(.+)\.html$|\1|' | rev | cut -d'/' -f 1 | rev)
 	TITLE_READABLE=$(echo "${TITLE}" | tr '-' ' ' | tr '-' ' ' | tr '&' ' ' | awk '{print toupper(substr($0,1,1)) substr($0,2)}')
@@ -72,8 +76,8 @@ function process_article() {
 		-H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36' \
 		-o "${OUT_DIR}/page_curl.html"
 
-	if [[ -f "${ANSIBLOSX_DIR}/scripts/readability/cleanup.js" ]]; then
-		${READABILITY_BIN} "${OUT_DIR}/page_curl.html" -o "${OUT_DIR}/page.html" >/dev/null 2>&1
+	if [[ -f "${READABILITY_SCRIPT}" ]]; then
+		node "${READABILITY_SCRIPT}" "${OUT_DIR}/page_curl.html" 1>"${OUT_DIR}/page.html" 2>/dev/null
 	else
 		mv "${OUT_DIR}/page_curl.html" "${OUT_DIR}/page.html"
 	fi
@@ -102,10 +106,11 @@ function process_article() {
 	output "${OUTPUT}"
 }
 
-function process_youtube_video() {
+# Function to process a YouTube video
+process_youtube_video() {
 	local TITLE TITLE_CLEAN YOUTUBE_ID LANG OUT OUTPUT ORIGINAL
 
-	TITLE=$(${READABILITY_BIN} "${URL}" 2>/dev/null | head -1 | sed 's/ - YouTube.*//')
+	TITLE=$(node "${READABILITY_SCRIPT}" "${URL}" 2>/dev/null | head -1 | sed 's/ - YouTube.*//')
 	TITLE_CLEAN=$(echo "${TITLE}" | tr -cs '[:alpha:]' '_')
 	YOUTUBE_ID=$(echo "${URL}" | sed -E 's|.*\?v\=(.+)$|\1|' | sed -E 's|^(.+)&.*|\1|')
 
@@ -138,7 +143,8 @@ function process_youtube_video() {
 	output "${OUTPUT}"
 }
 
-function process_local_file() {
+# Function to process a local file
+process_local_file() {
 	local CURRENT_DIR FILE OUT OUTPUT ORIGINAL
 	CURRENT_DIR=$(pwd)
 	FILE="${CURRENT_DIR}/${URL}"
@@ -166,7 +172,8 @@ function process_local_file() {
 	fi
 }
 
-function main() {
+# Main script logic
+main() {
 	PREFIX=$(date -u +%Y.%m.%d)
 	URL="${1}"
 
@@ -185,13 +192,18 @@ function main() {
 		exit 1
 	fi
 
-	if [[ "${URL}" == *www.youtube.com* ]]; then
+	case "${URL}" in
+	*www.youtube.com*)
 		process_youtube_video "$@"
-	elif [[ "${URL}" == *http[s]*://* ]]; then
+		;;
+	*http[s]*://*)
 		process_article "$@"
-	else
+		;;
+	*)
 		process_local_file "$@"
-	fi
+		;;
+	esac
+
 }
 
 main "$@"

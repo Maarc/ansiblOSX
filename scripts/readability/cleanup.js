@@ -1,5 +1,6 @@
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
 const { JSDOM } = require('jsdom');
+const fs = require('fs/promises'); // Use promises for file operations
 const DOMPurify = require('dompurify');
 const { Readability } = require('@mozilla/readability');
 
@@ -14,20 +15,40 @@ async function getHTML(document, window) {
     return await sanitizeDOM(document, window);
 }
 
-async function extractContent(url) {
+// Function to check if a string is a valid URL
+function isValidUrl(string) {
     try {
-        // Fetch the webpage
-        const response = await fetch(url);
-        const html = await response.text();
-        const dom = new JSDOM(html, { url });
-        const window = dom.window;
+        new URL(string);
+        return true;
+    } catch (_) {
+        return false; // Not a valid URL
+    }
+}
+async function extractContent(input) {
+    try {
+        let html;
+        let domInstance;
 
-        // Create DOMPurify instance bound to the window
+        if (isValidUrl(input)) {
+            // Fetch the webpage if input is a valid URL
+            const response = await fetch(input);
+            html = await response.text();
+            domInstance = new JSDOM(html, { url: input });
+        } else {
+            // Read content from file if input is not a URL
+            html = await fs.readFile(input, 'utf-8');
+            domInstance = new JSDOM(html);
+        }
+
+        // Create DOMPurify instance bound to the window and clean HTML
+        const { window } = domInstance;
         const purify = DOMPurify(window);
-        // Clean the HTML
-        const purifiedHtml = purify.sanitize(html,  {IN_PLACE: true, WHOLE_DOCUMENT: true});
-        // Create a new DOM from cleaned HTML
-        const purifiedDom = new JSDOM(purifiedHtml, { url });
+        const purifiedHtml = purify.sanitize(html, { IN_PLACE: true, WHOLE_DOCUMENT: true });
+
+        // Create a new DOM from cleaned HTML with the original URL if applicable
+        const purifiedDom = new JSDOM(purifiedHtml, {
+            url: isValidUrl(input) ? input : undefined
+        });
 
         // Parse the content with Readability
         const reader = new Readability(purifiedDom.window.document, { debug: false });
