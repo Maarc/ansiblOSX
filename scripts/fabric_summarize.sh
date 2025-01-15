@@ -8,7 +8,7 @@
 # - mkdir -p /Users/marc/git/bins
 # - Install youtube-transcript-api: `pipx install --system youtube-transcript-api`
 # - Install Fabric: `go install github.com/danielmiessler/fabric@latest`
-# 
+#
 # - - - - - Setup - - - - -
 # - `fabric --setup` -> 1 OpenAI / 10 40 gpt-4o-mini / 12 Youtube / 11 Patterns
 # - Reset and update the local custom pattern repository (`sb`)
@@ -104,7 +104,7 @@ function process_article() {
 
 function process_youtube_video() {
 	local TITLE TITLE_CLEAN YOUTUBE_ID LANG OUT OUTPUT ORIGINAL
-	
+
 	TITLE=$(${READABILITY_BIN} "${URL}" 2>/dev/null | head -1 | sed 's/ - YouTube.*//')
 	TITLE_CLEAN=$(echo "${TITLE}" | tr -cs '[:alpha:]' '_')
 	YOUTUBE_ID=$(echo "${URL}" | sed -E 's|.*\?v\=(.+)$|\1|' | sed -E 's|^(.+)&.*|\1|')
