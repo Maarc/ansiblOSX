@@ -24,9 +24,14 @@ export MODEL PATTERN OUT_DIR READABILITY_SCRIPT YT_TRANSCRIPT_API_BIN LYNX_BIN F
 # Model to be used. Available model can be listed executing 'fabric -L'
 MODEL='gpt-4o-mini'
 # Fabric pattern to use. Available patterns can be found here: https://github.com/danielmiessler/fabric/tree/main/patterns
-PATTERN='extract_wisdom_marc'
+PATTERN='cleanup_transcript_marc'
 # Local directory to store results
 OUT_DIR="${HOME}/git/bins/fabric/results"
+HUGO_OUT_DIR="${HOME}/git/private/spoon-of-wisdom/content/articles"
+# Name of the output file
+OUTPUT_FILE="${PATTERN}.md"
+# Name of the temporary file
+TEMP_FILE='temp.txt'
 
 #----- Binary executable used
 # Used to clean HTML markup before passing it to Lynx - https://gitlab.com/gardenappl/readability-cli (Setup with Deno)
@@ -56,8 +61,10 @@ process_article() {
 	TITLE=$(echo "${URL}" | sed -E 's|(.+)/$|\1|' | sed -E 's|(.+)\.html$|\1|' | rev | cut -d'/' -f 1 | rev)
 	TITLE_READABLE=$(echo "${TITLE}" | tr '-' ' ' | tr '-' ' ' | tr '&' ' ' | awk '{print toupper(substr($0,1,1)) substr($0,2)}')
 	OUT="${OUT_DIR}/${PREFIX}__Article__${TITLE}"
-	OUTPUT="${OUT}__${PATTERN}.txt"
+	OUTPUT="${OUT}__${OUTPUT_FILE}"
 	ORIGINAL="${OUT}___Original_article.txt"
+	OUTPUT_HUGO="${HUGO_OUT_DIR}/Article__${TITLE}.md"
+
 	curl -s "${URL}" \
 		-H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8' \
 		-H 'accept-language: de,en-GB;q=0.9,en-US;q=0.8,en;q=0.7,fr;q=0.6' \
@@ -86,13 +93,30 @@ process_article() {
 
 	if [[ -s "${ORIGINAL}" ]]; then
 		if (head -n 1 "${ORIGINAL}" | grep -q "302 Found"); then
-			echo "[ERROR] Empty article - Error 302 Found" >"${OUT_DIR}/wisdom.txt"
+			echo "[ERROR] Empty article - Error 302 Found" >"${OUT_DIR}/${TEMP_FILE}"
 		else
-			(${FABRIC_BIN} -m "${MODEL}" -p "${PATTERN}" <"${ORIGINAL}") >"${OUT_DIR}/wisdom.txt"
+			(${FABRIC_BIN} -m "${MODEL}" -p "${PATTERN}" <"${ORIGINAL}") >"${OUT_DIR}/${TEMP_FILE}"
 		fi
 	else
-		echo "[ERROR] Empty article" >"${OUT_DIR}/wisdom.txt"
+		echo "[ERROR] Empty article" >"${OUT_DIR}/${TEMP_FILE}"
 	fi
+
+	# Hugo output
+	{
+		echo "---"
+		echo "title: \"${TITLE_READABLE}\""
+		echo "date: $(date -u +%Y-%m-%dT%H:%M:%S)"
+		echo 'tags: ["YouTube", "Summary"]'
+		echo "author: LLM ${MODEL}"
+		echo "source: ${URL}"
+		echo "lang: ${LANG}"
+		echo "---"
+		cat "${OUT_DIR}/${TEMP_FILE}"
+		echo ""
+		echo "[Source Article](${URL})"
+	} >"${OUTPUT_HUGO}"
+
+	# Standard output
 	{
 		echo "# ${TITLE_READABLE}"
 		echo ""
@@ -100,9 +124,9 @@ process_article() {
 		echo ""
 		echo "URL: ${URL}"
 		echo ""
-		sed -E 's|([A-Z -]*):|## \1|' "${OUT_DIR}/wisdom.txt"
+		sed -E 's/^#/#&/' "${OUT_DIR}/${TEMP_FILE}"
 	} >"${OUTPUT}"
-	rm -f "${OUT_DIR}/wisdom.txt" "${OUT_DIR}/page.html" "${OUT_DIR}/page_curl.html"
+	rm -f "${OUT_DIR}/${TEMP_FILE}" "${OUT_DIR}/page.html" "${OUT_DIR}/page_curl.html"
 	output "${OUTPUT}"
 }
 
@@ -117,19 +141,38 @@ process_youtube_video() {
 	LANG=$(${YT_TRANSCRIPT_API_BIN} "${YOUTUBE_ID}" --list-transcripts | grep "' -" | head -1 | cut -d' ' -f 4)
 
 	OUT="${OUT_DIR}/${PREFIX}__Youtube__[${LANG^^}]__${TITLE_CLEAN}"
-	OUTPUT="${OUT}__${PATTERN}.txt"
+	OUTPUT="${OUT}__${OUTPUT_FILE}"
 	ORIGINAL="${OUT}___Original_transcript.txt"
+	OUTPUT_HUGO="${HUGO_OUT_DIR}/Youtube__${TITLE_CLEAN}.md"
+
 	${YT_TRANSCRIPT_API_BIN} --language "${LANG}" --format text "${YOUTUBE_ID}" >"${ORIGINAL}"
 
 	if [[ -s "${ORIGINAL}" ]]; then
 		if (head -n 1 "${ORIGINAL}" | grep -q "Transcript not available in the selected language"); then
-			echo "[ERROR] Empty YouTube video transcript" >"${OUT_DIR}/wisdom.txt"
+			echo "[ERROR] Empty YouTube video transcript" >"${OUT_DIR}/${TEMP_FILE}"
 		else
-			(${FABRIC_BIN} -m "${MODEL}" -p "${PATTERN}" <"${ORIGINAL}") >"${OUT_DIR}/wisdom.txt"
+			(${FABRIC_BIN} -m "${MODEL}" -p "${PATTERN}" <"${ORIGINAL}") >"${OUT_DIR}/${TEMP_FILE}"
 		fi
 	else
-		echo "[ERROR] Empty YouTube video transcript" >"${OUT_DIR}/wisdom.txt"
+		echo "[ERROR] Empty YouTube video transcript" >"${OUT_DIR}/${TEMP_FILE}"
 	fi
+
+	# Hugo output
+	{
+		echo "---"
+		echo "title: \"${TITLE}\""
+		echo "date: $(date -u +%Y-%m-%dT%H:%M:%S)"
+		echo 'tags: ["YouTube", "Summary"]'
+		echo "author: LLM ${MODEL}"
+		echo "source: ${URL}"
+		echo "lang: ${LANG}"
+		echo "---"
+		cat "${OUT_DIR}/${TEMP_FILE}"
+		echo ""
+		echo "[Source YouTube Video](${URL})"
+	} >"${OUTPUT_HUGO}"
+
+	# Standard output
 	{
 		echo "# [${LANG^^}] ${TITLE} (Youtube - ${YOUTUBE_ID})"
 		echo ""
@@ -137,9 +180,9 @@ process_youtube_video() {
 		echo ""
 		echo "URL: ${URL}"
 		echo ""
-		sed -E 's|([A-Z -]*):|## \1|' "${OUT_DIR}/wisdom.txt"
+		sed -E 's/^#/#&/' "${OUT_DIR}/${TEMP_FILE}"
 	} >"${OUTPUT}"
-	rm -f "${OUT_DIR}/wisdom.txt"
+	rm -f "${OUT_DIR}/${TEMP_FILE}"
 	output "${OUTPUT}"
 }
 
@@ -150,22 +193,23 @@ process_local_file() {
 	FILE="${CURRENT_DIR}/${URL}"
 	if [ -f "${FILE}" ]; then
 		OUT="${OUT_DIR}/${PREFIX}__Local_file__${URL}"
-		OUTPUT="${OUT}__${PATTERN}.txt"
+		OUTPUT="${OUT}__${OUTPUT_FILE}"
 		ORIGINAL="${OUT}___Original_file.txt"
 		cp -f "${FILE}" "${ORIGINAL}"
 		if [[ -s "${ORIGINAL}" ]]; then
-			(${FABRIC_BIN} -m "${MODEL}" -p "${PATTERN}" <"${FILE}") >"${OUT_DIR}/wisdom.txt"
+			(${FABRIC_BIN} -m "${MODEL}" -p "${PATTERN}" <"${FILE}") >"${OUT_DIR}/${TEMP_FILE}"
 		else
-			echo "[ERROR] Empty provided file" >"${OUT_DIR}/wisdom.txt"
+			echo "[ERROR] Empty provided file" >"${OUT_DIR}/${TEMP_FILE}"
 		fi
 		{
 			echo "# File - ${URL} (${CURRENT_DIR})"
 			echo ""
 			echo "#fabric_summary"
 			echo ""
-			sed -E 's|([A-Z -]*):|## \1|' "${OUT_DIR}/wisdom.txt"
+			#sed -E 's|([A-Z -]*):|## \1|' "${OUT_DIR}/${TEMP_FILE}"
+			sed -E 's/^#/#&/' "${OUT_DIR}/${TEMP_FILE}"
 		} >"${OUTPUT}"
-		rm -f "${OUT_DIR}/wisdom.txt"
+		rm -f "${OUT_DIR}/${TEMP_FILE}"
 		output "${OUTPUT}"
 	else
 		echo "[ERROR] File does not exist: ${FILE}"
