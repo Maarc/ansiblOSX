@@ -12,7 +12,8 @@ alias .....="cd ../../../.."
 
 alias c='cd ${ANSIBLOSX_DIR}'
 alias p='cd ${CURRENT_PROJECT}'
-alias r='cd ${CURRENT_PROJECT}/reports'
+#alias r='cd ${CURRENT_PROJECT}/reports'
+alias r='cd ${HOME}/git/bins/fabric/results'
 
 alias d="cd ~/Downloads"
 alias db="cd ~/Sync/Dropbox"
