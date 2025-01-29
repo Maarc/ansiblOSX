@@ -16,9 +16,11 @@ Alternative: Copy the `.ssh` directory from another mac
 
 * Open system preferences -> Spotlight
   * Restrict search results to "Applications" and "System Preferences"
-  * Untick "Allow Spotlight Suggestions in Look up"
+  * Untick "Help Apple Improve Search"
   * Under "Privacy" add all other local disks to prevent them to be indexed
-  * Keyboard Shortcuts -> remove both shortcuts
+  * system preferences -> Keyboard Shortcuts -> Keyboard Shortcuts -> Spotlight -> remove both shortcuts
+  x Untick "Allow Spotlight Suggestions in Look up"
+
 
 ## (2) Configure the application in the following order
 
@@ -28,7 +30,7 @@ Alternative: Copy the `.ssh` directory from another mac
   * Open transmit and add the new installation
   * Copy Dropbox directory / .extra file
 
-### 2.1) 1Password
+### 2.1) 1Password v7
 * Check that the right licensed version is in use (7)
 * Used 1password before, sync over icloud
 * Answer all questions
@@ -52,7 +54,7 @@ Alternative: Copy the `.ssh` directory from another mac
 * `optional` -> Register Spotify extension (http://alfred-spotify-mini-player.com/setup/)
 
 ### 2.4) Configure Karabiner-Elements
-* simple modification: assign from caps_lock to key "F19" on all keyboards and configure alfred to be launched by F19
+* simple modification: assign from caps_lock to key "F16" on all keyboards and configure alfred to be launched by F16
 * make sure that the "German" (not "German - Standard" keyboard is in use)
 * `optional` for external mac keyboard switch assignments: https://github.com/pqrs-org/Karabiner-Elements/issues/1426
 
@@ -110,7 +112,6 @@ Alternative: Copy the `.ssh` directory from another mac
 #### Install Oh My Zsh
 
 `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
-
 
 #### Install and configure Power10k according to https://github.com/romkatv/powerlevel10k#homebrew
 
@@ -208,6 +209,8 @@ https://www.heise.de/ratgeber/Tipp-MoneyMoney-Datenbank-auf-neuen-Mac-uebertrage
 ### 2.29) Install Pictogram App
 https://pictogramapp.com/
 
+### 2.30) Bear
+Start and launch Synchronization
 
 ## (3) Further configuration
 
