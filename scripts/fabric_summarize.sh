@@ -29,7 +29,8 @@ PATTERN='cleanup_transcript_marc'
 TAG='Transcript'
 # Local directory to store results
 OUT_DIR="${HOME}/git/bins/fabric/results"
-HUGO_OUT_DIR="${HOME}/git/private/spoon-of-wisdom/content/articles"
+HUGO_OUT_GIT_DIR="${HOME}/git/private/spoon-of-wisdom"
+HUGO_OUT_DIR="${HUGO_OUT_GIT_DIR}/content/articles"
 # Name of the output file
 OUTPUT_FILE="${PATTERN}.md"
 # Name of the temporary file
@@ -54,7 +55,7 @@ usage() {
 # Function to display the output file in a code viewer
 output() {
 	echo "Checkout: ${1}"
-	code "${OUT_DIR}" -g "${1}"
+	#code "${OUT_DIR}" -g "${1}"
 }
 
 # Function to process an HTML article
@@ -119,6 +120,12 @@ process_article() {
 		echo "[Source ${TYPE}](${URL})"
 	} >"${OUTPUT_HUGO}"
 
+	pushd "${HUGO_OUT_GIT_DIR}" &>/dev/null || exit
+	git add "${OUTPUT_HUGO}"
+	git commit -m "Add ${TYPE} - ${TITLE_READABLE}"
+	git push
+	popd &>/dev/null || exit
+
 	# Standard output
 	{
 		echo "# ${TITLE_READABLE}"
@@ -176,6 +183,12 @@ process_youtube_video() {
 		echo ""
 		echo "[Source ${TYPE}](${URL})"
 	} >"${OUTPUT_HUGO}"
+
+	pushd "${HUGO_OUT_GIT_DIR}" &>/dev/null || exit
+	git add "${OUTPUT_HUGO}"
+	git commit -m "Add ${TYPE} - ${TITLE_READABLE}"
+	git push
+	popd &>/dev/null || exit
 
 	# Standard output
 	{
