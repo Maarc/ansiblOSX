@@ -121,9 +121,12 @@ process_article() {
 	} >"${OUTPUT_HUGO}"
 
 	pushd "${HUGO_OUT_GIT_DIR}" &>/dev/null || exit
+	git pull
+	git push
 	git add "${OUTPUT_HUGO}"
 	git commit -m "Add ${TYPE} - ${TITLE_READABLE}"
 	git push
+	git pull
 	popd &>/dev/null || exit
 
 	# Standard output
@@ -185,9 +188,12 @@ process_youtube_video() {
 	} >"${OUTPUT_HUGO}"
 
 	pushd "${HUGO_OUT_GIT_DIR}" &>/dev/null || exit
+	git pull
+	git push
 	git add "${OUTPUT_HUGO}"
 	git commit -m "Add ${TYPE} - ${TITLE_READABLE}"
 	git push
+	git pull
 	popd &>/dev/null || exit
 
 	# Standard output
