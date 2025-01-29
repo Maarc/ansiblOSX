@@ -1,48 +1,17 @@
 #!/usr/bin/env bash
 
-# Note: "ag" is way faster than grep
+##############################################################
+# Core shorthands
+##############################################################
 
-##############################################################
-# Shortcuts
-##############################################################
+# General for any Linux-based OS
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
-alias c='cd ${ANSIBLOSX_DIR}'
-alias p='cd ${CURRENT_PROJECT}'
-#alias r='cd ${CURRENT_PROJECT}/reports'
-alias r='cd ${HOME}/git/bins/fabric/results'
-
-alias d="cd ~/Downloads"
-alias db="cd ~/Sync/Dropbox"
-alias 1d="cd ~/Sync/OneDrive\ -\ VMware,\ Inc"
-alias gd="cd ~/Sync/Google\ Drive"
-alias dt="cd ~/Desktop"
-alias i='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
-alias o='cd ~/Library/CloudStorage/OneDrive-VMware,Inc'
-alias s="${ANSIBLOSX_DIR}/scripts/fabric_summarize.sh"
-
-# Possible additional argument: docker system prune;
-alias dclean='docker system prune -f; docker kill $(docker ps -a -q);docker rm -vf $(docker ps -a -q);docker rmi -f $(docker images -aq);docker system prune -f'
-alias pclean='podman system prune -f; podman kill $(podman ps -a -q);podman rm -vf $(podman ps -a -q);podman rmi -f $(podman images -aq);podman system prune -f'
-
-alias kclean='kubectl delete "$(kubectl api-resources --namespaced=true --verbs=delete -o name | tr "\n" "," | sed -e '"'"'s/,$//'"'"')" --all'
-
-alias k='kubectl'
-alias kd='kubectl get deployments'
-alias kp='kubectl get pods'
-alias kc="source ${ANSIBLOSX_DIR}/scripts/select_kubeconfig.sh"
-alias m='minikube'
-#alias t='cd ~/Work/Tools/appmod/content/cookbooks/transformation-recipes-aggregator'
-#alias t='cd ~/Work/Tools/appmod/content/github_tanzu-dev-portal_CNLP_update'
-alias ic='cd ~/Work/Tools/appmod/content/github_cookbooks/modernization-cookbook-master-internal'
-
-alias t='itermocil --here '
-alias rd="cd ~/Sync/Dropbox/Documents/ReadList"
-#alias forge-vulcan='echo "Please open http://localhost:3001"; forge vulcan-ui --database-dir=.'
-
+alias cls='clear'
+alias h="history"
 alias g='git'
 alias got='git '
 alias get='git '
@@ -50,28 +19,6 @@ alias g-alias='git config --get-regexp alias'
 alias git-alias='git config --get-regexp alias'
 ## Show all history of one file
 alias gh='git log --follow -p -- '
-
-alias h="history"
-alias qwd='printf "%q" "$(pwd)"|pbcopy; printf "%q\n" "$(pwd)"'
-alias cls='clear'
-alias dns_clear_cache='sudo killall -HUP mDNSResponder'
-
-alias photo="mkdir -p 00__Source/Archive 00__Source/Selected 00__Source/Selected__JPG__Archive 01__Processed 02__Sorted_out 03__Final CaptureOne; mysides add \"${PWD##*/}\" file://$(pwd|sed -e 's/ /%20/g'); open -a Photo\ Mechanic\ 6 ."
-alias photom='open -a Photo\ Mechanic\ 6 .'
-
-alias drive="${HOME}/go/bin/drive"
-
-alias copy_to_onedrive="${ANSIBLOSX_DIR}/scripts/copy_to_ondedrive.sh"
-alias download_as_pdf="${ANSIBLOSX_DIR}/scripts/download_as_pdf.sh"
-
-alias wordle="${ANSIBLOSX_DIR}/scripts/wordle.sh"
-
-alias muse="npx msdl "
-alias killdeck="lsof -d txt|grep "Deck$"|tr -s ' '| cut -d' ' -f 2| xargs kill"
-
-##############################################################
-# ls
-##############################################################
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -88,12 +35,55 @@ alias ll='ls -ahl'
 alias l='ls -ahl'
 alias lr='ls -ahlrt'
 
+alias dclean='docker system prune -f; docker kill $(docker ps -a -q);docker rm -vf $(docker ps -a -q);docker rmi -f $(docker images -aq);docker system prune -f'
+alias pclean='podman system prune -f; podman kill $(podman ps -a -q);podman rm -vf $(podman ps -a -q);podman rmi -f $(podman images -aq);podman system prune -f'
+alias kclean='kubectl delete "$(kubectl api-resources --namespaced=true --verbs=delete -o name | tr "\n" "," | sed -e '"'"'s/,$//'"'"')" --all'
+alias k='kubectl'
+alias kd='kubectl get deployments'
+alias kp='kubectl get pods'
+
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'
+
+# Get week number
+alias week='date +%V'
+
+##############################################################
+# MacOS specific
+##############################################################
+
+# MacOS - Navigation
+alias qwd='printf "%q" "$(pwd)"|pbcopy; printf "%q\n" "$(pwd)"'
+alias d="cd ~/Downloads"
+alias db="cd ~/Sync/Dropbox"
+alias gd="cd ~/Sync/Google\ Drive"
+alias dt="cd ~/Desktop"
+alias i='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
+alias c='cd ${ANSIBLOSX_DIR}'
+alias p='cd ${CURRENT_PROJECT}'
+#alias r='cd ${CURRENT_PROJECT}/reports'
+alias r='cd ${HOME}/git/bins/fabric/results'
+
+# MacOS - Commands
+alias dns_clear_cache='sudo killall -HUP mDNSResponder'
+alias s="${ANSIBLOSX_DIR}/scripts/fabric_summarize.sh"
+alias kc="source ${ANSIBLOSX_DIR}/scripts/select_kubeconfig.sh"
+alias m='minikube'
+alias t='itermocil --here '
+
+alias photo="mkdir -p 00__Source/Archive 00__Source/Selected 00__Source/Selected__JPG__Archive 01__Processed 02__Sorted_out 03__Final CaptureOne; mysides add \"${PWD##*/}\" file://$(pwd|sed -e 's/ /%20/g'); open -a Photo\ Mechanic\ 6 ."
+alias photom='open -a Photo\ Mechanic\ 6 .'
+alias killdeck="lsof -d txt|grep "Deck$"|tr -s ' '| cut -d' ' -f 2| xargs kill"
+
+#alias drive="${HOME}/go/bin/drive"
+#alias download_as_pdf="${ANSIBLOSX_DIR}/scripts/download_as_pdf.sh"
+#alias wordle="${ANSIBLOSX_DIR}/scripts/wordle.sh"
+#alias muse="npx msdl "
+
 ##############################################################
 # Standard
 ##############################################################
 alias ip='ifconfig en0'
-
-#alias pip='python -m pip'
 
 # Always enable colored `grep` output
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
@@ -107,14 +97,8 @@ alias grunt='/opt/nodes/0.12.0/lib/node_modules/grunt-cli/bin/grunt'
 alias st='stree'
 alias py='python'
 
-# Print each PATH entry on a separate line
-alias path='echo -e ${PATH//:/\\n}'
-
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
-
-# Get week number
-alias week='date +%V'
 
 # Update locate database
 alias updatedb='sudo /usr/libexec/locate.updatedb'
@@ -213,58 +197,5 @@ alias mvna='mvn -T 4 clean eclipse:clean eclipse:eclipse install'
 alias mvnt='mvn -T 4 clean eclipse:clean eclipse:eclipse install -Dmaven.test.skip=true -DskipTests'
 alias mvn=color_maven
 
-###############################################################
-## Docker
-###############################################################
-#alias docker_env='eval "$(docker-machine env default)"'
-#alias docker_clean='docker stop $(docker ps -a -q); docker rm $(docker ps -a -q)'
-#alias drmstopped='docker rm $(docker ps -a -q)'
-#alias drmuntagged='docker rmi $(docker images | grep "^<none>" | awk '"'"'{print $3}'"'"' )'
-#alias dls='docker images -a'
-#alias dps='watch docker ps -a'
-## SSH on the target docker instance
-#alias b2d_ssh='boot2docker ssh -t sudo /var/lib/boot2docker/docker-enter'
-#alias b2d_clean='boot2docker halt; boot2docker delete; boot2docker init; boot2docker start; boot2docker shellinit'
-#alias b2d_update='docker version; boot2docker halt; boot2docker delete; boot2docker upgrade; boot2docker init; boot2docker start; boot2docker shellinit; docker version'
-#
-###############################################################
-## Dropbox
-###############################################################
-#alias dropbox_conflicts='find ${DROPBOX_HOME} -name \"*onflict*\"'
-#alias dropbox_conflicts_remove='find ${DROPBOX_HOME} -name \"*onflict*\" -exec rm -f {} \\;'
-#
-###############################################################
-## Red Hat middleware
-###############################################################
-## Haproxy
-#alias haproxy_start="sudo haproxy -f /opt/tools/jboss/haproxy.cfg"
-#alias haproxy_stop="sudo killall haproxy"
-## Mod_cluster
-#alias mod_cluster_start="sudo /opt/tools/jboss/httpd/sbin/apachectl -k start -d /opt/tools/jboss/httpd/httpd"
-#alias mod_cluster_stop="sudo /opt/tools/jboss/httpd/sbin/apachectl -k stop -d /opt/tools/jboss/httpd/httpd"
-#
-###############################################################
-## RHAMT
-###############################################################
-#alias windup='${WINDUP_HOME}/bin/windup'
-#alias wl='less ~/.windup/log/windup.log'
-#alias win='cd ${WINDUP_SRC}'
-#alias w='cd ${WINDUP_SRC}/../bin'
-#alias ocp="echo \"https://\$(oc config get-contexts | grep "\\*" | awk '{print \$3}' | tr - .)\";echo \"http://\$(oc get route --no-headers -o=custom-columns=HOST:.spec.host rhamt-web-console)\""
-#
-## Starts a local http server (0.0.0.0:8000)
-#alias server='echo "http://$(hostname):8000";python2 -m SimpleHTTPServer'
-#
-###############################################################
-## Mega-command-alias
-###############################################################
-#
-#alias al="find . -iname '*.yml' -exec ansible-lint {} -r ~/git/private/ansible/ansible-lint-rules/rules \;"
-#alias ansible_build='cd ~/vm/vagrant/ansible/ansible_eap_soe; ./init_DEV.sh ; cd ansible/ ; ansible-playbook site.yml -i hosts-dev'
-#alias kali='cd ~/vm/vagrant/pentest-env; PENTESTRC=examples/tor-proxy.pentestrc vagrant up kali'
-#alias install_fuse='cd /opt/tools/jboss/; rm -Rf ${FUSE_VERSION}; unzip ${FUSE_ZIP}; echo -e "\nadmin=admin,admin,manager,viewer,Operator, Maintainer, Deployer, Auditor, Administrator, SuperUser" >> ${FUSE_VERSION}/etc/users.properties'
-
-
 ## Extended aliases
-
 fpdf() { find . -iname "*.pdf" -exec pdfgrep -e $1 {} +; }
