@@ -53,6 +53,7 @@ alias week='date +%V'
 ##############################################################
 
 # MacOS - Navigation
+alias upp='cd /Users/marc/git/private/bonlanden-home-lab/ansible; ./up '
 alias qwd='printf "%q" "$(pwd)"|pbcopy; printf "%q\n" "$(pwd)"'
 alias d="cd ~/Downloads"
 alias db="cd ~/Sync/Dropbox"
