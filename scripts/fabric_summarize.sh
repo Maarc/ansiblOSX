@@ -25,6 +25,8 @@ export MODEL PATTERN OUT_DIR READABILITY_SCRIPT YT_TRANSCRIPT_API_BIN LYNX_BIN F
 MODEL='gpt-4o-mini'
 # Fabric pattern to use. Available patterns can be found here: https://github.com/danielmiessler/fabric/tree/main/patterns
 PATTERN='cleanup_transcript_marc'
+# Hugo tag used for the output file
+TAG='Transcript'
 # Local directory to store results
 OUT_DIR="${HOME}/git/bins/fabric/results"
 HUGO_OUT_DIR="${HOME}/git/private/spoon-of-wisdom/content/articles"
@@ -57,13 +59,14 @@ output() {
 
 # Function to process an HTML article
 process_article() {
-	local TITLE TITLE_READABLE OUT OUTPUT ORIGINAL
+	local TYPE TITLE TITLE_READABLE OUT OUTPUT ORIGINAL
+	TYPE='Article'
 	TITLE=$(echo "${URL}" | sed -E 's|(.+)/$|\1|' | sed -E 's|(.+)\.html$|\1|' | rev | cut -d'/' -f 1 | rev)
 	TITLE_READABLE=$(echo "${TITLE}" | tr '-' ' ' | tr '-' ' ' | tr '&' ' ' | awk '{print toupper(substr($0,1,1)) substr($0,2)}')
-	OUT="${OUT_DIR}/${PREFIX}__Article__${TITLE}"
+	OUT="${OUT_DIR}/${PREFIX}__${TYPE}__${TITLE}"
 	OUTPUT="${OUT}__${OUTPUT_FILE}"
 	ORIGINAL="${OUT}___Original_article.txt"
-	OUTPUT_HUGO="${HUGO_OUT_DIR}/Article__${TITLE}.md"
+	OUTPUT_HUGO="${HUGO_OUT_DIR}/${TYPE}__${TITLE}.md"
 
 	curl -s "${URL}" \
 		-H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8' \
@@ -106,14 +109,14 @@ process_article() {
 		echo "---"
 		echo "title: \"${TITLE_READABLE}\""
 		echo "date: $(date -u +%Y-%m-%dT%H:%M:%S)"
-		echo 'tags: ["YouTube", "Summary"]'
-		echo "author: LLM ${MODEL}"
+		echo "tags: [\"${TYPE}\", \"${TAG}\"]"
+		echo "author: ${MODEL}"
 		echo "source: ${URL}"
 		echo "lang: ${LANG}"
 		echo "---"
 		cat "${OUT_DIR}/${TEMP_FILE}"
 		echo ""
-		echo "[Source Article](${URL})"
+		echo "[Source ${TYPE}](${URL})"
 	} >"${OUTPUT_HUGO}"
 
 	# Standard output
@@ -132,18 +135,20 @@ process_article() {
 
 # Function to process a YouTube video
 process_youtube_video() {
-	local TITLE TITLE_CLEAN YOUTUBE_ID LANG OUT OUTPUT ORIGINAL
+	local TYPE TITLE TITLE_CLEAN YOUTUBE_ID LANG OUT OUTPUT ORIGINAL
 
+	TYPE='YouTube'
 	TITLE=$(node "${READABILITY_SCRIPT}" "${URL}" 2>/dev/null | head -1 | sed 's/ - YouTube.*//')
+	TITLE_READABLE="${TITLE}"
 	TITLE_CLEAN=$(echo "${TITLE}" | tr -cs '[:alpha:]' '_')
 	YOUTUBE_ID=$(echo "${URL}" | sed -E 's|.*\?v\=(.+)$|\1|' | sed -E 's|^(.+)&.*|\1|')
 
 	LANG=$(${YT_TRANSCRIPT_API_BIN} "${YOUTUBE_ID}" --list-transcripts | grep "' -" | head -1 | cut -d' ' -f 4)
 
-	OUT="${OUT_DIR}/${PREFIX}__Youtube__[${LANG^^}]__${TITLE_CLEAN}"
+	OUT="${OUT_DIR}/${PREFIX}__${TYPE}__[${LANG^^}]__${TITLE_CLEAN}"
 	OUTPUT="${OUT}__${OUTPUT_FILE}"
 	ORIGINAL="${OUT}___Original_transcript.txt"
-	OUTPUT_HUGO="${HUGO_OUT_DIR}/Youtube__${TITLE_CLEAN}.md"
+	OUTPUT_HUGO="${HUGO_OUT_DIR}/${TYPE}__${TITLE_CLEAN}.md"
 
 	${YT_TRANSCRIPT_API_BIN} --language "${LANG}" --format text "${YOUTUBE_ID}" >"${ORIGINAL}"
 
@@ -160,16 +165,16 @@ process_youtube_video() {
 	# Hugo output
 	{
 		echo "---"
-		echo "title: \"${TITLE}\""
+		echo "title: \"${TITLE_READABLE}\""
 		echo "date: $(date -u +%Y-%m-%dT%H:%M:%S)"
-		echo 'tags: ["YouTube", "Summary"]'
-		echo "author: LLM ${MODEL}"
+		echo "tags: [\"${TYPE}\", \"${TAG}\"]"
+		echo "author: ${MODEL}"
 		echo "source: ${URL}"
 		echo "lang: ${LANG}"
 		echo "---"
 		cat "${OUT_DIR}/${TEMP_FILE}"
 		echo ""
-		echo "[Source YouTube Video](${URL})"
+		echo "[Source ${TYPE}](${URL})"
 	} >"${OUTPUT_HUGO}"
 
 	# Standard output
