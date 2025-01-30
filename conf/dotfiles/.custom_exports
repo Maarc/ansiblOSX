@@ -5,7 +5,8 @@
 export WORK_DIR="${HOME}/Work"
 export TOOLS_DIR="${WORK_DIR}/Tools"
 export ANSIBLOSX_DIR="${HOME}/git/private/OSX/ansiblOSX"
-export CURRENT_PROJECT="${HOME}/Work/Tools/appmod/application-portfolio-auditor"
+#export CURRENT_PROJECT="${HOME}/Work/Tools/appmod/application-portfolio-auditor"
+export CURRENT_PROJECT="${HOME}/git/private/spoon-of-wisdom"
 export DROPBOX_HOME="${HOME}/Dropbox"
 export CSA_DIR="${TOOLS_DIR}/appmod/application-portfolio-auditor/bin/cloud-suitability-analyzer"
 
