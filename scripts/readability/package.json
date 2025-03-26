@@ -8,7 +8,7 @@
   "keywords": [],
   "author": "Marc Zottner",
   "dependencies": {
-    "@mozilla/readability": "^0.5.0",
+    "@mozilla/readability": "^0.6.0",
     "dompurify": "^3.2.3",
     "jsdom": "^26.0.0",
     "node-fetch": "^3.3.2"
