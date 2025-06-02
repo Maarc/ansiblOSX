@@ -241,6 +241,9 @@ killall Dock
 
 ## (4) Install additional software (currently missing)
 
+* SDKMan - `curl -s "https://get.sdkman.io" | bash` -> https://sdkman.io/install/
+  -> Note: might have to re-run `chsh -s /bin/zsh` to fix new default terminal
+
 * __Captvty__ https://captvty.fr/ (See https://captvty.fr/faq#macos)
 * __WebCam Driver__ https://support.logi.com/hc/en-us/articles/360024699934--Downloads-C922-Pro-Stream-Webcam
 * __Docfetcher__
